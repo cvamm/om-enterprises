@@ -1,3 +1,17 @@
+/**
+ * A scoped not-found page for the catalogue route group.
+ *
+ * When `notFound()` is called from a page inside `(catalogue)`, Next
+ * renders the nearest `not-found.tsx` in the route tree — this one —
+ * giving a 404 body specific to missing tiles rather than the generic
+ * site-wide one.
+ *
+ * See the ADR on HTTP status codes for missing resources: in the
+ * versions of Next tested during Phase 1, `notFound()` renders the
+ * correct body but leaves the status code at 200, so search engines
+ * keep indexing dead URLs. The body is right; the status code is a
+ * known limitation documented, not silently accepted.
+ */
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -6,19 +20,6 @@ export const metadata = {
   title: "Tile not found",
 };
 
-/**
- * Scoped 404 for the catalogue group.
- *
- * The root not-found.tsx renders correctly but does not set the status code
- * when `notFound()` is called from inside a route group — the response comes
- * back 200 with the 404 body. That matters: Google indexes a 200 "Tile not
- * found" page as a real product URL, and a stale product link stays in the
- * index forever instead of being dropped.
- *
- * A not-found.tsx inside the group fixes the status. Kept separate from the
- * root one because the copy differs — a missing tile is a catalogue problem
- * with a specific next step, not a general dead link.
- */
 export default function TileNotFound() {
   return (
     <main id="main" className="flex min-h-[70vh] items-center">
