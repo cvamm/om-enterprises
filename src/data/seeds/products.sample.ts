@@ -14,6 +14,10 @@ import type { Product } from "@/types";
  * this file is imported from a Server Component that ships — the sample set is
  * reachable only via the query layer's fallback path.
  *
+ * Slugs are URL-safe (lowercase, hyphenated). The marker deliberately
+ * rides on `nameEn` only — a slug is a URL path segment, and spaces or
+ * brackets in one produce a link that 404s the moment anyone shares it.
+ *
  * Prices are plausible round numbers for a vitrified tile in India, chosen to
  * exercise the pricing maths at both ends: ₹18,000 for a 50 sq ft slab box
  * (tilesPerBox = 1) and ₹480 for a small mosaic box.
@@ -41,7 +45,7 @@ function seed(
 export const SAMPLE_PRODUCTS: Product[] = [
   seed({
     id: "10000000-0000-4000-8000-000000000001",
-    slug: SAMPLE + "-polished-vitrified-600x600",
+    slug: "sample-polished-vitrified-600x600",
     nameEn: "SAMPLE Product A " + SAMPLE,
     nameHi: null,
     originId: null,
@@ -63,7 +67,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000002",
-    slug: SAMPLE + "-matte-vitrified-800x800",
+    slug: "sample-matte-vitrified-800x800",
     nameEn: "SAMPLE Product B " + SAMPLE,
     nameHi: null,
     originId: null,
@@ -85,7 +89,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000003",
-    slug: SAMPLE + "-jaisalmer-sandstone-slab",
+    slug: "sample-jaisalmer-sandstone-slab",
     nameEn: "SAMPLE Product C " + SAMPLE,
     nameHi: null,
     originId: ORIGIN_RAJASTHAN,
@@ -108,7 +112,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000004",
-    slug: SAMPLE + "-engineered-marble-600x1200",
+    slug: "sample-engineered-marble-600x1200",
     nameEn: "SAMPLE Product D " + SAMPLE,
     nameHi: null,
     originId: null,
@@ -130,7 +134,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000005",
-    slug: SAMPLE + "-bathroom-matte-300x300",
+    slug: "sample-bathroom-matte-300x300",
     nameEn: "SAMPLE Product E " + SAMPLE,
     nameHi: null,
     originId: null,
@@ -152,7 +156,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000006",
-    slug: SAMPLE + "-kitchen-wood-plank",
+    slug: "sample-kitchen-wood-plank",
     nameEn: "SAMPLE Product F " + SAMPLE,
     nameHi: null,
     originId: null,
@@ -174,7 +178,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000007",
-    slug: SAMPLE + "-mosaic-hex-300",
+    slug: "sample-mosaic-hex-300",
     nameEn: "SAMPLE Product G " + SAMPLE,
     nameHi: null,
     originId: ORIGIN_GUJARAT,
@@ -196,7 +200,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000008",
-    slug: SAMPLE + "-terrazzo-600x600",
+    slug: "sample-terrazzo-600x600",
     nameEn: "SAMPLE Product H " + SAMPLE,
     nameHi: null,
     originId: null,
@@ -218,7 +222,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000009",
-    slug: SAMPLE + "-quartz-worktop-slab",
+    slug: "sample-quartz-worktop-slab",
     nameEn: "SAMPLE Product I " + SAMPLE,
     nameHi: null,
     originId: ORIGIN_TN,
@@ -240,7 +244,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000010",
-    slug: SAMPLE + "-exterior-anti-skid-600x600",
+    slug: "sample-exterior-anti-skid-600x600",
     nameEn: "SAMPLE Product J " + SAMPLE,
     nameHi: null,
     originId: null,
@@ -262,7 +266,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000011",
-    slug: SAMPLE + "-herringbone-marble",
+    slug: "sample-herringbone-marble",
     nameEn: "SAMPLE Product K " + SAMPLE,
     nameHi: null,
     originId: null,
@@ -284,7 +288,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
   }),
   seed({
     id: "10000000-0000-4000-8000-000000000012",
-    slug: SAMPLE + "-sold-out-leathered-tile",
+    slug: "sample-sold-out-leathered-tile",
     nameEn: "SAMPLE Product L " + SAMPLE,
     nameHi: null,
     originId: null,
