@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "collections": "संग्रह",
+    "tiles": "टाइल्स",
+    "origins": "उत्पत्ति",
+    "craft": "कला",
+    "portfolio": "काम का नमूना",
+    "tileLab": "टाइल लैब",
+    "calculator": "गणक",
+    "about": "हमारे बारे में",
+    "contact": "संपर्क",
+    "signIn": "लॉग इन",
+    "requestQuote": "कोटेशन पाएं",
+    "menu": "मेन्यू",
+    "closeMenu": "मेन्यू बंद करें"
+  },
+  "actions": {
+    "viewAll": "सब देखें",
+    "viewCatalogue": "कैटलॉग देखें",
+    "requestQuote": "कोटेशन पाएं",
+    "sendWhatsApp": "वॉट्सऐप पर भेजें",
+    "sendMockup": "यह नमूना भेजें",
+    "sendQuote": "कोटेशन वॉट्सऐप पर भेजें",
+    "startAgain": "फिर से शुरू करें",
+    "learnMore": "और जानें",
+    "getDirections": "रास्ता देखें",
+    "backToCatalogue": "कैटलॉग पर वापस"
+  },
+  "product": {
+    "perBox": "प्रति बॉक्स",
+    "derivedSqft": "प्रति वर्ग फुट",
+    "moq": "न्यूनतम ऑर्डर",
+    "boxes": "बॉक्स",
+    "inStock": "स्टॉक में उपलब्ध",
+    "madeToOrder": "ऑर्डर पर निर्माण",
+    "preorder": "प्रीऑर्डर",
+    "soldOut": "स्टॉक खत्म",
+    "dimensions": "आयाम",
+    "finish": "फिनिश",
+    "material": "सामग्री",
+    "shape": "आकार",
+    "tilesPerBox": "प्रति बॉक्स टाइलें",
+    "boxArea": "बॉक्स क्षेत्रफल",
+    "grade": "ग्रेड",
+    "warranty": "वैकल्पिक गारंटी",
+    "related": "आपको यह भी पसंद आ सकता है"
+  },
+  "calculator": {
+    "title": "क्षेत्रफल और लागत गणक",
+    "lengthFt": "लंबाई, फीट",
+    "widthFt": "चौड़ाई, फीट",
+    "wastage": "वारिश अनुमति",
+    "product": "उत्पाद",
+    "netArea": "शुद्ध क्षेत्रफल",
+    "totalArea": "कुल क्षेत्रफल, वारिश सहित",
+    "boxesRequired": "आवश्यक बॉक्स",
+    "tilesRequired": "आवश्यक टाइलें",
+    "estimatedCost": "अनुमानित लागत",
+    "unitCost": "प्रति वर्ग फुट लागत",
+    "sqft": "वर्ग फुट",
+    "inr": "रुपए",
+    "note": "यह अनुमान है। अंतिम मूल्य मात्रा, डिलीवरी दूरी और पैटर्न कार्य पर निर्भर करता है।",
+    "emptyProduct": "संख्या देखने के लिए एक उत्पाद चुनें।"
+  },
+  "tileLab": {
+    "title": "टाइल लैब",
+    "surface": "सतह",
+    "format": "फॉर्मेट",
+    "bond": "बॉन्ड पैटर्न",
+    "groutShade": "ग्राउट छाया",
+    "groutWidth": "ग्राउट लाइन, मिमी",
+    "gloss": "ग्लॉस स्तर",
+    "bondStacked": "स्टैक्ड",
+    "bondBrick": "ब्रिक बॉन्ड",
+    "bondDiagonal": "डायगोनल",
+    "groutIvory": "आइवरी",
+    "groutPewter": "प्यूटर",
+    "groutCharcoal": "चारकोल",
+    "groutBrass": "ब्रास",
+    "intro": "बॉनड, ग्राउठ और फिनिष सैठ करे। फिर नमुना सीधे डुकाण पर भेजें।"
+  },
+  "contact": {
+    "title": "संपर्क",
+    "name": "आपका नाम",
+    "phone": "फ़ोन नंबर",
+    "locality": " इलाक़ा",
+    "message": "आप क्या ढूंढ रहे हैं?",
+    "submit": "कोटेशन पाएं",
+    "success": "नोट कर लिया गया। हम एक कार्यदिन में उत्तर देते हैं।",
+    "hours": "खुलने के समय",
+    "visit": "दुकान पर आएं"
+  },
+  "footer": {
+    "tagline": "टाइल्स और प्राकृतिक पत्थर, पूरे भारत से स्रोत।",
+    "shop": "दुकान",
+    "company": "कंपनी",
+    "help": "सहायता",
+    "warranty": "गारंटी",
+    "faq": "FAQ",
+    "rights": "सर्वाधिकार सुरक्षित।"
+  },
+  "trust": {
+    "warranty": "10 साल की सतह गारंटी",
+    "verifiedSuppliers": "केवल सत्यापित आपूर्तिकर्ता",
+    "traceable": "हर बॉक्स खान से जुड़ा",
+    "years": "दुकान पर वर्ष"
+  },
+  "a11y": {
+    "skipToContent": "सामग्री पर जाएं",
+    "heroImage": "खान निकला पत्थर की सतह",
+    "close": "बंद करें"
+  }
+}

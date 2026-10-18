@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "collections": "Collections",
+    "tiles": "Tiles",
+    "origins": "Origins",
+    "craft": "The Craft",
+    "portfolio": "Portfolio",
+    "tileLab": "Tile Lab",
+    "calculator": "Calculator",
+    "about": "About",
+    "contact": "Contact",
+    "signIn": "Sign in",
+    "requestQuote": "Request a Quote",
+    "menu": "Menu",
+    "closeMenu": "Close menu"
+  },
+  "actions": {
+    "viewAll": "View all",
+    "viewCatalogue": "View the catalogue",
+    "requestQuote": "Request a Quote",
+    "sendWhatsApp": "Send on WhatsApp",
+    "sendMockup": "Send this mock-up",
+    "sendQuote": "Send quote to WhatsApp",
+    "startAgain": "Start again",
+    "learnMore": "Learn more",
+    "getDirections": "Get directions",
+    "backToCatalogue": "Back to the catalogue"
+  },
+  "product": {
+    "perBox": "per box",
+    "derivedSqft": "per sqft",
+    "moq": "MOQ",
+    "boxes": "boxes",
+    "inStock": "In stock",
+    "madeToOrder": "Made to order",
+    "preorder": "Preorder",
+    "soldOut": "Sold out",
+    "dimensions": "Dimensions",
+    "finish": "Finish",
+    "material": "Material",
+    "shape": "Shape",
+    "tilesPerBox": "Tiles per box",
+    "boxArea": "Box area",
+    "grade": "Grade",
+    "warranty": "Warranty",
+    "related": "You may also like"
+  },
+  "calculator": {
+    "title": "Area and cost calculator",
+    "lengthFt": "Length, feet",
+    "widthFt": "Width, feet",
+    "wastage": "Wastage allowance",
+    "product": "Product",
+    "netArea": "Net area",
+    "totalArea": "Total area incl. wastage",
+    "boxesRequired": "Boxes required",
+    "tilesRequired": "Tiles required",
+    "estimatedCost": "Estimated cost",
+    "unitCost": "Cost per sqft",
+    "sqft": "sqft",
+    "inr": "INR",
+    "note": "This is an estimate. The final price follows the quantity, delivery distance and any pattern work involved.",
+    "emptyProduct": "Pick a product to see the numbers."
+  },
+  "tileLab": {
+    "title": "Tile Lab",
+    "surface": "Surface",
+    "format": "Format",
+    "bond": "Bond pattern",
+    "groutShade": "Grout shade",
+    "groutWidth": "Grout line, mm",
+    "gloss": "Gloss level",
+    "bondStacked": "Stacked",
+    "bondBrick": "Brick bond",
+    "bondDiagonal": "Diagonal",
+    "groutIvory": "Ivory",
+    "groutPewter": "Pewter",
+    "groutCharcoal": "Charcoal",
+    "groutBrass": "Brass",
+    "intro": "Set the bond, the grout and the finish, then send the mock-up straight to the shop."
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Your name",
+    "phone": "Phone number",
+    "locality": "Locality",
+    "message": "What are you looking for?",
+    "submit": "Request a Quote",
+    "success": "Noted. We reply within one working day.",
+    "hours": "Opening hours",
+    "visit": "Visit the store"
+  },
+  "footer": {
+    "tagline": "Tiles and natural stone, sourced across India.",
+    "shop": "Shop",
+    "company": "Company",
+    "help": "Help",
+    "warranty": "Warranty",
+    "faq": "FAQ",
+    "rights": "All rights reserved."
+  },
+  "trust": {
+    "warranty": "10-year surface warranty",
+    "verifiedSuppliers": "Verified suppliers only",
+    "traceable": "Every box traceable to its quarry",
+    "years": "Years on the shop floor"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "heroImage": "Quarried stone surface",
+    "close": "Close"
+  }
+}

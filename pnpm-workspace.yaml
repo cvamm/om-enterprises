@@ -1,0 +1,15 @@
+# pnpm 10 blocks postinstall scripts from unapproved packages by default.
+# Every entry below is a package whose native build step is load-bearing:
+#   sharp          — next/image optimization (AVIF/WebP encoding)
+#   @tailwindcss/* — Tailwind v4 native oxide engine
+#   unrs-resolver  — TS/native resolver used by next and eslint
+#   esbuild        — dev server + vitest transforms
+onlyBuiltDependencies:
+  - sharp
+  - "@tailwindcss/oxide"
+  - "@tailwindcss/oxide-linux-x64-gnu"
+  - "@tailwindcss/oxide-linux-x64-musl"
+  - unrs-resolver
+  - "@unrs/resolver-binding-linux-x64-gnu"
+  - "@unrs/resolver-binding-linux-x64-musl"
+  - esbuild
