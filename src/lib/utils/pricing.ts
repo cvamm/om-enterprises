@@ -45,6 +45,50 @@ export function derivePricing(product: ProductPricing): DerivedPricing {
 }
 
 /**
+ * Indian-locale currency, grouped the way a shop quotes: ₹12,000.
+ *
+ * `Intl.NumberFormat("en-IN")` gives lakh/crore grouping (1,20,000), which is
+ * what the shop's customers read on invoices. Worth the explicit locale
+ * because the default `en-US` grouping (120,000) looks wrong to them.
+ */
+export function formatInr(value: number): string {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
+/**
+ * Per-sqft price formatted to 2dp. The paise matter here: ₹77.72 and ₹77.72
+ * against a competitor's ₹78.00 is a real comparison, and truncating it hides
+ * the difference.
+ */
+export function formatInrPerSqft(value: number): string {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+
+/** Formatted pair for a whole product, ready to render. */
+export function formatProductPricing(product: ProductPricing): {
+  pricePerSqftInr: number;
+  tilesPerSqft: number;
+  formattedPricePerBox: string;
+  formattedPricePerSqft: string;
+} {
+  const derived = derivePricing(product);
+  return {
+    ...derived,
+    formattedPricePerBox: formatInr(product.pricePerBoxInr),
+    formattedPricePerSqft: formatInrPerSqft(derived.pricePerSqftInr),
+  };
+}
+
+/**
  * Half-up is NOT used anywhere in this project. A customer cannot buy half a
  * box, so every quantity rounds up. `Math.round` is deliberately avoided for
  * quantities — see `calculator.ts`.
