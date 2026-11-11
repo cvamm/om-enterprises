@@ -5,6 +5,7 @@ import "./globals.css";
 import { AppProviders } from "@/components/providers/AppProviders";
 import { Navbar } from "@/components/marketing/Navbar";
 import { Footer } from "@/components/marketing/Footer";
+import { WhatsAppFab } from "@/components/marketing/WhatsAppFab";
 import { siteConfig } from "@/lib/config/site";
 
 /**
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           {children}
           <Footer />
+          <WhatsAppFab />
         </AppProviders>
       </body>
     </html>
