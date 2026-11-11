@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f5f0e6",
+  themeColor: "#f6f4ee",
   // Tile photography is heavy; allow pinch-zoom on a product page.
   maximumScale: 3,
 };

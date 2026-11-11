@@ -12,9 +12,11 @@
      brass that stays readable on cream. `oklch()`/hex both work with Tailwind
      v4 opacity modifiers — `text-bone/55` compiles to
      `color-mix(in oklab, var(--color-bone) 55%, transparent)`. */
-  /* Cream surfaces, tinted not pure white. */
-  --color-ink: #f5f0e6; /* page cream — the dominant field */
-  --color-ink-2: #ece4d6; /* deeper cream for alternating sections & cards */
+  /* Cream surfaces, tinted not pure white. A warm-neutral alabaster rather
+     than a yellow-beige — it reads more premium and lets the near-black ink
+     and deep brass accent carry the warmth. */
+  --color-ink: #f6f4ee; /* page cream — the dominant field */
+  --color-ink-2: #eee9e0; /* deeper cream for alternating sections & cards */
   /* Soft black ink — the primary text colour on cream. */
   --color-bone: #232323;
   --color-sand: #6f5a33; /* deep sand, readable on cream */
@@ -43,7 +45,7 @@
   }
 
   body {
-    background-color: #f5f0e6;
+    background-color: #f6f4ee;
     color: #232323;
     font-family: var(--font-sans);
     font-size: 15px;
@@ -227,7 +229,7 @@
   }
 
   .btn-primary:hover:not(:disabled) {
-    background-color: #e9e4dc;
+    background-color: #efe9de;
   }
 
   /* Secondary: brass outline on cream, fills to brass with cream text on hover. */

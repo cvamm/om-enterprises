@@ -11,7 +11,7 @@ import Link from "next/link";
  */
 export default function NotFoundPage() {
   return (
-    <section className="relative flex min-h-[70vh] items-center bg-[#f5f0e6] py-24 md:py-32">
+    <section className="relative flex min-h-[70vh] items-center bg-[#f6f4ee] py-24 md:py-32">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-24 right-[8%] h-[300px] w-[300px] rounded-full blur-[130px]"

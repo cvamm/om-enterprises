@@ -13,7 +13,7 @@ export default function Loading() {
       role="status"
       aria-live="polite"
       aria-label="Loading"
-      className="flex min-h-[60vh] items-center justify-center bg-[#f5f0e6]"
+      className="flex min-h-[60vh] items-center justify-center bg-[#f6f4ee]"
     >
       <span
         className="font-display animate-pulse text-2xl text-bone/72"
