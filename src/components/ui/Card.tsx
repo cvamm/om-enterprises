@@ -7,7 +7,7 @@ type CardProps = HTMLAttributes<HTMLElement> & {
 };
 
 /**
- * `rounded-2xl border border-white/10 bg-ink-2 p-7 md:p-9`.
+ * `rounded-2xl border border-bone/10 bg-ink-2 p-7 md:p-9`.
  * Inner elements use `rounded-xl`. No soft grey shadow — the brief bans a
  * shadow under every card.
  */

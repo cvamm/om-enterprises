@@ -60,6 +60,14 @@ Notes on the numbers:
 
 _(none yet)_
 
+## Tile Lab (added 2026-05-29)
+
+The pattern configurator is a client component with no image fetching on
+the critical path: the CSS grid re-renders instantly, and the WhatsApp
+hand-off builds a text-only link with no round trip. No performance
+measurements were taken yet — add a Lighthouse row when the product
+photos land and the preview tiles have real images.
+
 ## Re-measure before touching
 
 Any of the above that stops holding, or a Lighthouse regression, gets a new

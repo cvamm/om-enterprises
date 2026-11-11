@@ -1,0 +1,20 @@
+{
+  "name": "OM ENTERPRISES — Marble & Granites",
+  "short_name": "OM Enterprises",
+  "description": "A Kanpur, Uttar Pradesh tiles and natural stone shop. Glazed vitrified, full body, marble look and natural stone sourced state by state, with every box traceable to its origin quarry.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f0e6",
+  "theme_color": "#f5f0e6",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -45,7 +45,7 @@ export function Pagination({
         type="button"
         onClick={() => go(page - 1)}
         disabled={page <= 1}
-        className={cn(buttonClass, "border-white/12 text-bone/70 hover:border-white/30 hover:text-bone",
+        className={cn(buttonClass, "border-bone/12 text-bone/70 hover:border-bone/30 hover:text-bone",
           "disabled:pointer-events-none disabled:opacity-30")}
       >
         Previous
@@ -54,7 +54,7 @@ export function Pagination({
       <div className="hidden items-center gap-2 sm:flex">
         {pages.map((p, index) =>
           p === "gap" ? (
-            <span key={`gap-${index}`} className="px-1 text-bone/30" aria-hidden="true">
+            <span key={`gap-${index}`} className="px-1 text-bone/68" aria-hidden="true">
               …
             </span>
           ) : (
@@ -66,8 +66,8 @@ export function Pagination({
               className={cn(
                 buttonClass,
                 p === page
-                  ? "border-[#c9a96a]/60 bg-[#c9a96a]/10 text-[#c9a96a]"
-                  : "border-white/12 text-bone/70 hover:border-white/30 hover:text-bone",
+                  ? "border-gold/60 bg-gold/10 text-gold"
+                  : "border-bone/12 text-bone/70 hover:border-bone/30 hover:text-bone",
               )}
             >
               {p}
@@ -80,7 +80,7 @@ export function Pagination({
         type="button"
         onClick={() => go(page + 1)}
         disabled={page >= pageCount}
-        className={cn(buttonClass, "border-white/12 text-bone/70 hover:border-white/30 hover:text-bone",
+        className={cn(buttonClass, "border-bone/12 text-bone/70 hover:border-bone/30 hover:text-bone",
           "disabled:pointer-events-none disabled:opacity-30")}
       >
         Next

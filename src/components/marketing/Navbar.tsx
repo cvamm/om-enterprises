@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
@@ -21,7 +21,7 @@ const NAV = [
 ] as const;
 
 const LINK_CLASS =
-  "text-[12px] uppercase tracking-[0.16em] text-bone/60 transition-colors duration-300 hover:text-bone";
+  "text-[12px] uppercase tracking-[0.16em] text-bone/79 transition-colors duration-300 hover:text-bone";
 
 /**
  * Fixed header over a translucent near-black backdrop.
@@ -38,13 +38,30 @@ export function Navbar() {
 
   const close = () => setOpen(false);
 
+  // The header is the only persistent chrome on the page. Hide it while the
+  // visitor scrolls down so no branded bar sits over the content mid-scroll;
+  // it returns on scroll-up, near the top, or whenever the menu is open.
+  const [hidden, setHidden] = useState(false);
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setHidden(y > lastY && y > 96);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-bone/10 bg-ink/82 backdrop-blur-xl">
+    <motion.header
+      animate={{ y: hidden && !open ? "-100%" : "0%" }}
+      transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+      className="border-bone/10 bg-ink/82 fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl"
+    >
       <Container className="flex h-16 items-center justify-between gap-6">
         <Link href="/" onClick={close} className="flex items-center gap-2.5">
-          <span className="font-display text-[22px] leading-none text-bone">
-            {siteConfig.name}
-          </span>
+          <span className="font-display text-bone text-[22px] leading-none">{siteConfig.name}</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
@@ -71,7 +88,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-bone/14 text-bone/80 lg:hidden"
+          className="border-bone/14 text-bone/80 flex h-10 w-10 items-center justify-center rounded-full border lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -92,7 +109,7 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-bone/10 bg-ink lg:hidden"
+            className="border-bone/10 bg-ink overflow-hidden border-t lg:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {NAV.map((item) => (
@@ -100,7 +117,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={close}
-                  className="py-2.5 font-display text-2xl text-bone/85"
+                  className="font-display text-bone/85 py-2.5 text-2xl"
                 >
                   {item.label}
                 </a>
@@ -114,6 +131,6 @@ export function Navbar() {
           </motion.nav>
         ) : null}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }

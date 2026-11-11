@@ -50,7 +50,7 @@ export function MaterialMarquee({ className, items = MATERIALS, ...rest }: Marqu
             <div key={copy} className="flex shrink-0 items-center gap-10">
               {items.map((material) => (
                 <span key={`${copy}-${material}`} className="flex items-center gap-10">
-                  <span className="font-display whitespace-nowrap text-2xl text-bone/45 md:text-3xl">
+                  <span className="font-display whitespace-nowrap text-2xl text-bone/73 md:text-3xl">
                     {material}
                   </span>
                   <span

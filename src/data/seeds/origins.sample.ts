@@ -50,7 +50,7 @@ export const SAMPLE_ORIGINS: Origin[] = [
       "The largest tile manufacturing cluster in India. Vitrified, porcelain " +
       "and mosaic come out of Gujarat at volume, which is why most of the " +
       "engineered formats are sourced here. " + SAMPLE,
-    primaryRegions: ["Morbi", "Rajkot", "Surat"],
+    primaryRegions: ["North Gujarat", "Rajkot", "Surat"],
     createdAt: "2026-01-01T00:00:00Z",
     updatedAt: "2026-01-01T00:00:00Z",
   },

@@ -7,7 +7,7 @@ const TONE_CLASS: Record<Tone, string> = {
   gold: "border-gold/60 bg-gold/10 text-gold",
   sand: "border-sand/50 bg-sand/10 text-sand",
   neutral: "border-bone/20 bg-bone/5 text-bone/80",
-  muted: "border-bone/12 bg-transparent text-bone/55",
+  muted: "border-bone/12 bg-transparent text-bone/77",
 };
 
 type BadgeProps = {

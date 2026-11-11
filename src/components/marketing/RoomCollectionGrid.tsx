@@ -35,7 +35,7 @@ export function RoomCollectionGrid() {
             <Eyebrow index="02" label="COLLECTIONS" className="mb-6" />
             <h2 className="font-display text-4xl leading-[1.05] text-bone md:text-6xl">
               Six signature
-              <span className="font-italic-em text-bone/55"> families of stone. </span>
+              <span className="font-italic-em text-bone/77"> families of stone. </span>
             </h2>
           </div>
           <Link href="/collections" className="btn btn-secondary">
@@ -68,8 +68,8 @@ export function RoomCollectionGrid() {
                 <h3 className="mt-12 font-display text-3xl leading-[1.1] text-bone">
                   {room.title}
                 </h3>
-                <p className="mt-3 text-[14px] text-bone/55">{room.note}</p>
-                <p className="mt-7 text-[10px] uppercase tracking-[0.24em] text-bone/45 transition-colors duration-500 group-hover:text-gold">
+                <p className="mt-3 text-[14px] text-bone/77">{room.note}</p>
+                <p className="mt-7 text-[10px] uppercase tracking-[0.24em] text-bone/73 transition-colors duration-500 group-hover:text-gold">
                   Browse this room
                 </p>
               </Link>

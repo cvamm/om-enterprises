@@ -67,17 +67,17 @@ export function SearchBar() {
           onChange={(e) => setValue(e.target.value)}
           placeholder="Search tiles and stone"
           autoComplete="off"
-          className="w-full rounded-lg border border-white/12 bg-transparent px-5 py-4
-                     text-[15px] text-bone placeholder:text-bone/35
-                     transition-colors duration-300 hover:border-white/30
-                     focus:border-[#c9a96a]/60 focus:outline-none"
+          className="w-full rounded-lg border border-bone/12 bg-transparent px-5 py-4
+                     text-[15px] text-bone placeholder:text-bone/70
+                     transition-colors duration-300 hover:border-bone/30
+                     focus:border-gold/60 focus:outline-none"
         />
         <button
           type="submit"
           disabled={pending}
           className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full
                      bg-[#c9a96a] px-4 py-2 text-[10px] uppercase tracking-[0.24em]
-                     text-black transition-colors duration-300 hover:bg-bone
+                     text-black transition-colors duration-300 hover:bg-ink
                      disabled:opacity-50"
         >
           {pending ? "Searching" : "Search"}

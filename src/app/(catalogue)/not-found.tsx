@@ -28,10 +28,10 @@ export default function TileNotFound() {
 
         <h1 className="font-display text-5xl leading-[1.02] text-bone md:text-7xl">
           That tile is not
-          <span className="font-italic-em text-bone/55"> in our catalogue. </span>
+          <span className="font-italic-em text-bone/77"> in our catalogue. </span>
         </h1>
 
-        <p className="mx-auto mt-6 max-w-[52ch] text-bone/58">
+        <p className="mx-auto mt-6 max-w-[52ch] text-bone/78">
           It may have sold out and been retired, or the link may be out of date.
           If you saw this tile somewhere and want the same thing, tell us what
           it looked like and we will find the closest match we can source.

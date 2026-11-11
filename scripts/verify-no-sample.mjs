@@ -127,7 +127,8 @@ for (const { rel, full } of walk(ROOT)) {
   }
 
   for (const pattern of FORBIDDEN) {
-    for (const match of text.matchAll(pattern)) {
+    const re = new RegExp(pattern.source, "g" + (pattern.flags.includes("i") ? "i" : ""));
+    for (const match of text.matchAll(re)) {
       violations.push({ file: rel, term: match[0], pattern: pattern.toString() });
     }
   }

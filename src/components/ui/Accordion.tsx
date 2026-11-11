@@ -60,7 +60,7 @@ function AccordionRow({ item, baseId }: { item: AccordionItem; baseId: string })
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 pr-8 text-bone/62">{item.answer}</p>
+            <p className="pb-6 pr-8 text-bone/79">{item.answer}</p>
           </motion.div>
         </AnimatePresence>
       </div>

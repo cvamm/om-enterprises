@@ -58,7 +58,7 @@ export function CatalogueFilters({
 
         return (
           <fieldset key={group.key}>
-            <legend className="text-[10px] uppercase tracking-[0.45em] text-[#c9a96a]">
+            <legend className="text-[10px] uppercase tracking-[0.45em] text-gold">
               {group.label}
             </legend>
             <div className="mt-4 space-y-1">
@@ -94,8 +94,8 @@ export function CatalogueFilters({
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="filter-panel"
-          className="flex items-center gap-3 rounded-full border border-[#c9a96a]/60 px-5 py-2.5
-                     text-[11px] uppercase tracking-[0.24em] text-[#c9a96a]"
+          className="flex items-center gap-3 rounded-full border border-gold/60 px-5 py-2.5
+                     text-[11px] uppercase tracking-[0.24em] text-gold"
         >
           Filters
           {activeCount > 0 && (
@@ -108,7 +108,7 @@ export function CatalogueFilters({
           <button
             type="button"
             onClick={() => router.push(pathname)}
-            className="text-[11px] uppercase tracking-[0.24em] text-bone/50 hover:text-bone"
+            className="text-[11px] uppercase tracking-[0.24em] text-bone/75 hover:text-bone"
           >
             Clear all
           </button>
@@ -123,7 +123,7 @@ export function CatalogueFilters({
         <button
           type="button"
           onClick={() => router.push(pathname)}
-          className="mt-9 hidden text-[11px] uppercase tracking-[0.24em] text-bone/50
+          className="mt-9 hidden text-[11px] uppercase tracking-[0.24em] text-bone/75
                      underline underline-offset-4 hover:text-bone lg:block"
         >
           Clear all filters
@@ -148,7 +148,7 @@ function FilterOption({
     <label
       className={`flex cursor-pointer items-center justify-between rounded-lg px-3 py-2
                   text-[13px] transition-colors duration-300
-                  ${checked ? "bg-white/5 text-bone" : "text-bone/60 hover:bg-white/[0.03] hover:text-bone"}`}
+                  ${checked ? "bg-white/5 text-bone" : "text-bone/79 hover:bg-white/[0.03] hover:text-bone"}`}
     >
       <span className="flex items-center gap-3">
         <input
@@ -160,7 +160,7 @@ function FilterOption({
         <span className="capitalize">{label}</span>
       </span>
       {count !== undefined && (
-        <span className="text-[11px] tabular-nums text-bone/35">{count}</span>
+        <span className="text-[11px] tabular-nums text-bone/70">{count}</span>
       )}
     </label>
   );

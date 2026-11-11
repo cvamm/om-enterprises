@@ -21,14 +21,14 @@ export function EmptyState({
 }) {
   return (
     <div
-      className={`rounded-2xl border border-white/10 bg-[#0b0b0c] px-7 py-16 md:px-9 md:py-20 ${className ?? ""}`}
+      className={`rounded-2xl border border-bone/10 bg-ink-2 px-7 py-16 md:px-9 md:py-20 ${className ?? ""}`}
       data-testid="empty-state"
     >
       <div className="mx-auto max-w-2xl text-center">
         <h3 className="font-display text-3xl leading-tight text-bone md:text-4xl">
           {title}
         </h3>
-        <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-bone/60">
+        <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-bone/79">
           {body}
         </p>
 
@@ -40,8 +40,8 @@ export function EmptyState({
                 href={action.href}
                 className={
                   index === 0
-                    ? "inline-flex items-center rounded-full bg-[#c9a96a] px-6 py-4 text-[11px] uppercase tracking-[0.24em] text-black transition-colors duration-300 hover:bg-bone"
-                    : "inline-flex items-center rounded-full border border-[#c9a96a]/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.24em] text-[#c9a96a] transition-colors duration-300 hover:bg-[#c9a96a] hover:text-black"
+                    ? "inline-flex items-center rounded-full bg-[#c9a96a] px-6 py-4 text-[11px] uppercase tracking-[0.24em] text-black transition-colors duration-300 hover:bg-ink"
+                    : "inline-flex items-center rounded-full border border-gold/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.24em] text-gold transition-colors duration-300 hover:bg-[#c9a96a] hover:text-black"
                 }
               >
                 {action.label}

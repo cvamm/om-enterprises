@@ -92,7 +92,7 @@ export function ProductImagePlaceholder({
           should not. This is the one thing a customer checks first. */}
       <div className="absolute inset-0 flex items-end justify-center p-6">
         <span
-          className="rounded-full border border-white/20 bg-black/30 px-3 py-1
+          className="rounded-full border border-bone/20 bg-ink/80 px-3 py-1
                      font-sans text-[10px] uppercase tracking-[0.24em] text-bone/70
                      backdrop-blur-sm"
         >
@@ -101,9 +101,9 @@ export function ProductImagePlaceholder({
       </div>
 
       <span
-        className="absolute right-4 top-4 rounded-full border border-[#c9a96a]/40
-                   bg-black/50 px-2.5 py-1 font-sans text-[9px] uppercase
-                   tracking-[0.2em] text-[#c9a96a] backdrop-blur-sm"
+        className="absolute right-4 top-4 rounded-full border border-gold/40
+                   bg-ink/85 px-2.5 py-1 font-sans text-[9px] uppercase
+                   tracking-[0.2em] text-gold backdrop-blur-sm"
       >
         no photo yet
       </span>

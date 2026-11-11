@@ -35,8 +35,8 @@ export function ProductCard({
   return (
     <article
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0b0b0c]",
-        "transition-colors duration-300 hover:border-white/30",
+        "group relative overflow-hidden rounded-2xl border border-bone/10 bg-ink-2",
+        "transition-colors duration-300 hover:border-bone/30",
         className,
       )}
       data-testid="product-card"
@@ -58,7 +58,7 @@ export function ProductCard({
             />
           )}
 
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b0b0c] via-transparent to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-2 via-transparent to-transparent" />
 
           <div className="absolute left-5 top-5 flex flex-wrap gap-2">
             {product.stockStatus === "sold-out" && (
@@ -77,11 +77,11 @@ export function ProductCard({
               <h3 className="font-display text-2xl leading-tight text-bone">
                 {product.nameEn}
               </h3>
-              <p className="mt-1 text-[11px] uppercase tracking-[0.24em] text-bone/45">
+              <p className="mt-1 text-[11px] uppercase tracking-[0.24em] text-bone/73">
                 {product.materialType.replace(/-/g, " ")} — {product.finish}
               </p>
             </div>
-            <p className="shrink-0 text-right text-[11px] leading-relaxed text-bone/45">
+            <p className="shrink-0 text-right text-[11px] leading-relaxed text-bone/73">
               {product.dimensionsMm[0]}×{product.dimensionsMm[1]}
               <span className="block">mm</span>
             </p>

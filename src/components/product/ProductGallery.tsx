@@ -18,14 +18,14 @@ export function ProductGallery({ product }: { product: Product }) {
     return (
       <div
         className="relative flex h-[330px] items-center justify-center overflow-hidden rounded-2xl
-                   border border-white/10 bg-[#0b0b0c] md:h-[420px]"
+                   border border-bone/10 bg-ink-2 md:h-[420px]"
         data-testid="product-gallery-empty"
       >
         <div className="max-w-md px-7 text-center">
-          <p className="text-[10px] uppercase tracking-[0.45em] text-[#c9a96a]">
+          <p className="text-[10px] uppercase tracking-[0.45em] text-gold">
             Photography coming
           </p>
-          <p className="mt-5 text-[14px] leading-relaxed text-bone/55">
+          <p className="mt-5 text-[14px] leading-relaxed text-bone/77">
             We have not photographed this tile yet. The specification below is
             accurate — the surface is the part we want you to see before you
             commit to a room.
@@ -40,8 +40,8 @@ export function ProductGallery({ product }: { product: Product }) {
       {photos.map((photo, index) => (
         <div
           key={photo}
-          className="relative h-[330px] overflow-hidden rounded-2xl border border-white/10
-                     bg-[#0b0b0c] md:h-[380px]"
+          className="relative h-[330px] overflow-hidden rounded-2xl border border-bone/10
+                     bg-ink-2 md:h-[380px]"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

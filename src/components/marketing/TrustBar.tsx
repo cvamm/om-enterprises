@@ -21,10 +21,10 @@ export function TrustBar() {
             <Eyebrow index="05" label="WHY THIS SHOP" className="mb-6" />
             <h2 className="font-display text-4xl leading-[1.05] text-bone md:text-6xl">
               Claims a shop
-              <span className="font-italic-em text-bone/55"> stands behind. </span>
+              <span className="font-italic-em text-bone/77"> stands behind. </span>
             </h2>
           </div>
-          <p className="max-w-sm text-bone/58">
+          <p className="max-w-sm text-bone/78">
             The warranty is written, the certificates are held, and the batch log runs back to the
             quarry. Not slogans.
           </p>
@@ -44,7 +44,7 @@ export function TrustBar() {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display text-2xl leading-[1.15] text-bone">{claim.label}</h3>
-              <p className="text-[14px] text-bone/55">{claim.detail}</p>
+              <p className="text-[14px] text-bone/77">{claim.detail}</p>
             </motion.article>
           ))}
         </div>

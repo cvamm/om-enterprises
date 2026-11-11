@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils/cn";
 
 const FIELD_CLASS =
   "w-full rounded-lg border border-bone/14 bg-ink-2 px-4 py-3 text-[15px] text-bone " +
-  "placeholder:text-bone/35 outline-none transition-colors duration-300 " +
+  "placeholder:text-bone/70 outline-none transition-colors duration-300 " +
   "focus:border-gold/60 hover:border-bone/26";
 
-const LABEL_CLASS = "mb-2 block text-[10px] uppercase tracking-[0.24em] text-bone/60";
+const LABEL_CLASS = "mb-2 block text-[10px] uppercase tracking-[0.24em] text-bone/79";
 
 /** Inline error/hint line. Same voice as the field labels, quieter weight. */
 function FieldNote({ error, hint }: { error?: FieldError; hint?: ReactNode }) {
@@ -20,7 +20,7 @@ function FieldNote({ error, hint }: { error?: FieldError; hint?: ReactNode }) {
     );
   }
   if (hint !== undefined && hint !== null && hint !== "")
-    return <p className="mt-2 text-[12px] text-bone/45">{hint}</p>;
+    return <p className="mt-2 text-[12px] text-bone/73">{hint}</p>;
   return null;
 }
 

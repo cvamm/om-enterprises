@@ -22,15 +22,15 @@ export function SpecTable({ product }: { product: Product }) {
       {derived.map((row) => (
         <div
           key={row.label}
-          className="flex items-baseline justify-between gap-6 border-b border-white/10 py-4"
+          className="flex items-baseline justify-between gap-6 border-b border-bone/10 py-4"
         >
-          <dt className="text-[10px] uppercase tracking-[0.24em] text-bone/45">
+          <dt className="text-[10px] uppercase tracking-[0.24em] text-bone/73">
             {row.label}
           </dt>
           <dd className="text-right text-[14px] text-bone">
             {row.value}
             {row.note !== undefined && (
-              <span className="mt-1 block text-[10px] normal-case tracking-normal text-bone/35">
+              <span className="mt-1 block text-[10px] normal-case tracking-normal text-bone/70">
                 {row.note}
               </span>
             )}

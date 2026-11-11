@@ -42,17 +42,17 @@ export default async function TilesPage({
 
   return (
     <>
-      <section className="border-b border-white/10 bg-[#050505] py-24 md:py-32">
+      <section className="border-b border-bone/10 bg-ink py-24 md:py-32">
         <Container>
           <div className="max-w-3xl">
             <Eyebrow label="THE CATALOGUE" />
             <h1 className="mt-8 font-display text-5xl leading-[1.02] text-bone md:text-7xl">
               Every tile we carry,{" "}
-              <span className="font-light italic text-white/55">
+              <span className="font-light italic text-bone/77">
                 priced the way a shop quotes
               </span>
             </h1>
-            <p className="mt-8 max-w-2xl text-[15px] leading-relaxed text-bone/60">
+            <p className="mt-8 max-w-2xl text-[15px] leading-relaxed text-bone/79">
               Prices are per box, because that is how tiles are sold and how you
               will be invoiced. The per-square-foot figure on each card is derived
               from the box, never stored, and always updated when the box price
@@ -71,7 +71,7 @@ export default async function TilesPage({
         </Container>
       </section>
 
-      <section className="bg-[#0b0b0c] py-24 md:py-32">
+      <section className="bg-ink-2 py-24 md:py-32">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[280px_1fr] lg:gap-12">
             <Suspense fallback={null}>
@@ -79,7 +79,7 @@ export default async function TilesPage({
             </Suspense>
 
             <div>
-              <p className="mb-8 text-[11px] uppercase tracking-[0.24em] text-bone/45">
+              <p className="mb-8 text-[11px] uppercase tracking-[0.24em] text-bone/73">
                 {page.total} {page.total === 1 ? "product" : "products"}
                 {filters.room !== undefined && ` for ${filters.room.replace(/-/g, " ")}`}
               </p>

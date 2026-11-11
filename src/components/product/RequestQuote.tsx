@@ -125,10 +125,10 @@ export function RequestQuote({ product }: { product: Product }) {
   if (submitted) {
     return (
       <div
-        className="rounded-2xl border border-[#c9a96a]/40 bg-[#0b0b0c] p-7 md:p-9"
+        className="rounded-2xl border border-gold/40 bg-ink-2 p-7 md:p-9"
         data-testid="quote-success"
       >
-        <p className="text-[10px] uppercase tracking-[0.45em] text-[#c9a96a]">
+        <p className="text-[10px] uppercase tracking-[0.45em] text-gold">
           Enquiry received
         </p>
         <p className="mt-5 text-[15px] leading-relaxed text-bone/70">
@@ -139,8 +139,8 @@ export function RequestQuote({ product }: { product: Product }) {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center rounded-full border border-[#c9a96a]/60 px-5 py-2.5
-                     text-[11px] uppercase tracking-[0.24em] text-[#c9a96a] transition-colors
+          className="mt-8 inline-flex items-center rounded-full border border-gold/60 px-5 py-2.5
+                     text-[11px] uppercase tracking-[0.24em] text-gold transition-colors
                      duration-300 hover:bg-[#c9a96a] hover:text-black"
         >
           Send the same details on WhatsApp
@@ -151,14 +151,14 @@ export function RequestQuote({ product }: { product: Product }) {
 
   return (
     <div
-      className="rounded-2xl border border-white/10 bg-[#0b0b0c] p-7 md:p-9"
+      className="rounded-2xl border border-bone/10 bg-ink-2 p-7 md:p-9"
       data-testid="request-quote"
     >
-      <p className="text-[10px] uppercase tracking-[0.45em] text-[#c9a96a]">
+      <p className="text-[10px] uppercase tracking-[0.45em] text-gold">
         REQUEST A QUOTE
       </p>
 
-      <p className="mt-5 text-[14px] leading-relaxed text-bone/60">
+      <p className="mt-5 text-[14px] leading-relaxed text-bone/79">
         Tell us how much you need and we will confirm stock and send a final
         price. We do not take payment on this site — this is an enquiry, not an
         order.
@@ -170,14 +170,14 @@ export function RequestQuote({ product }: { product: Product }) {
         rel="noopener noreferrer"
         className="mt-8 flex w-full items-center justify-center rounded-full bg-[#c9a96a] px-6 py-4
                    text-[11px] uppercase tracking-[0.24em] text-black transition-colors
-                   duration-300 hover:bg-bone"
+                   duration-300 hover:bg-ink"
       >
         Send on WhatsApp
       </a>
 
       <div className="my-8 flex items-center gap-4">
         <span className="h-px flex-1 bg-white/10" />
-        <span className="text-[10px] uppercase tracking-[0.24em] text-bone/35">or</span>
+        <span className="text-[10px] uppercase tracking-[0.24em] text-bone/70">or</span>
         <span className="h-px flex-1 bg-white/10" />
       </div>
 
@@ -253,7 +253,7 @@ export function RequestQuote({ product }: { product: Product }) {
         </Field>
 
         {estimated > 0 && (
-          <p className="border-t border-white/10 pt-6 text-[13px] text-bone/55">
+          <p className="border-t border-bone/10 pt-6 text-[13px] text-bone/77">
             Estimated tile cost{" "}
             <span className="text-bone" data-testid="quote-estimate">
               {formatInr(estimated)}
@@ -263,7 +263,7 @@ export function RequestQuote({ product }: { product: Product }) {
         )}
 
         {error !== null && (
-          <p className="text-[13px] text-[#c9a96a]" role="alert">
+          <p className="text-[13px] text-gold" role="alert">
             {error}
           </p>
         )}
@@ -271,17 +271,17 @@ export function RequestQuote({ product }: { product: Product }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full rounded-full border border-[#c9a96a]/60 px-5 py-4 text-[11px]
-                     uppercase tracking-[0.24em] text-[#c9a96a] transition-colors
+          className="w-full rounded-full border border-gold/60 px-5 py-4 text-[11px]
+                     uppercase tracking-[0.24em] text-gold transition-colors
                      duration-300 hover:bg-[#c9a96a] hover:text-black
                      disabled:opacity-50"
         >
           {isSubmitting ? "Sending" : "Send enquiry"}
         </button>
 
-        <p className="text-[11px] leading-relaxed text-bone/35">
+        <p className="text-[11px] leading-relaxed text-bone/70">
           We use your number only to answer this enquiry.{" "}
-          <Link href="/faq" className="underline underline-offset-2 hover:text-bone/60">
+          <Link href="/faq" className="underline underline-offset-2 hover:text-bone/79">
             See our privacy note
           </Link>
           .
@@ -292,9 +292,9 @@ export function RequestQuote({ product }: { product: Product }) {
 }
 
 const inputClass =
-  "w-full rounded-lg border border-white/12 bg-transparent px-5 py-4 text-[15px] text-bone " +
-  "placeholder:text-bone/30 transition-colors duration-300 hover:border-white/30 " +
-  "focus:border-[#c9a96a]/60 focus:outline-none";
+  "w-full rounded-lg border border-bone/12 bg-transparent px-5 py-4 text-[15px] text-bone " +
+  "placeholder:text-bone/68 transition-colors duration-300 hover:border-bone/30 " +
+  "focus:border-gold/60 focus:outline-none";
 
 function Field({
   label,
@@ -313,16 +313,16 @@ function Field({
     <div>
       <label
         htmlFor={id}
-        className="block text-[10px] uppercase tracking-[0.24em] text-bone/45"
+        className="block text-[10px] uppercase tracking-[0.24em] text-bone/73"
       >
         {label}
       </label>
       <div className="mt-3">{children}</div>
       {hint !== undefined && error === undefined && (
-        <p className="mt-2 text-[11px] text-bone/35">{hint}</p>
+        <p className="mt-2 text-[11px] text-bone/70">{hint}</p>
       )}
       {error !== undefined && (
-        <p className="mt-2 text-[11px] text-[#c9a96a]" role="alert">
+        <p className="mt-2 text-[11px] text-gold" role="alert">
           {error}
         </p>
       )}

@@ -26,13 +26,12 @@
 const SAMPLE = "[SAMPLE — replace before deploy]" as const;
 
 /**
- * Dev brand. "Parbat Stone Works" is invented for this build and must be
- * replaced by the shop's real name. Kept clean of the marker string so the
- * wordmark renders as a wordmark; the marker rides alongside it via
- * `brandSample` and `SampleTag` so it stays visible in the UI and greppable
- * by CI.
+ * Real brand, taken from the shop's signboard: "OM ENTERPRISES (Marble &
+ * Granites)". Kept clean of the marker string so the wordmark renders as a
+ * wordmark; the marker rides alongside it via `brandSample` and `SampleTag`
+ * so it stays visible in the UI and greppable by CI.
  */
-const BRAND = "Parbat Stone Works" as const;
+const BRAND = "OM ENTERPRISES" as const;
 
 export type DeliveryZone = {
   id: string;

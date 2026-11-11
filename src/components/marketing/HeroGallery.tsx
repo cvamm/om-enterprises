@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLayoutEffect, useRef, useState } from "react";
 import {
   motion,
@@ -9,6 +10,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { Eyebrow } from "../ui/Eyebrow";
+import { heroTileImages } from "@/lib/utils/hero-tiles";
 
 /**
  * The hero eyebrow. Short form of the brand, because a tracked-out ALL-CAPS
@@ -110,26 +112,39 @@ export function HeroGallery() {
           />
         </div>
 
-        {/* 3D slab matrix */}
+        {/* Dense tile matrix — 48 varied stone/ceramic tiles, grouped into
+            4 parallax columns so the shelf feels layered, not flat. Each
+            column drifts on Y at a different rate over the scroll spring. */}
         <div
           className="absolute inset-0 z-[2] overflow-hidden"
           style={{ transformStyle: "preserve-3d" }}
         >
           <motion.div
             style={{ rotateY, rotateX, rotateZ, width: "100%", height: "100%" }}
-            className="preserve-3d grid h-full w-full grid-cols-4 gap-px"
+            className="preserve-3d grid h-full w-full grid-cols-4 gap-[3px] bg-bone/[0.06] p-[3px] md:gap-1 md:p-1"
           >
-            {colY.map((y, i) => (
+            {colY.map((y, col) => (
               <motion.div
-                key={i}
-                style={{
-                  y,
-                  backgroundImage: `linear-gradient(${155 + i * 14}deg, rgba(201,169,106,${
-                    0.32 - i * 0.05
-                  }), transparent 58%), linear-gradient(180deg, #0e0e10, #070708)`,
-                }}
-                className="h-full w-full"
-              />
+                key={col}
+                style={{ y }}
+                className="grid h-full w-full grid-cols-2 grid-rows-6 gap-[3px] md:gap-1"
+              >
+                {Array.from({ length: 12 }, (_, row) => {
+                  const tileIndex = col * 12 + row;
+                  return (
+                    <div
+                      key={row}
+                      className="h-full w-full overflow-hidden rounded-[2px] bg-ink/[0.08]"
+                      style={{
+                        backgroundImage: `url("${heroTileImages(48)[tileIndex]}")`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                      aria-hidden="true"
+                    />
+                  );
+                })}
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -137,12 +152,12 @@ export function HeroGallery() {
         {/* Ambient shadow masks */}
         <div
           className="pointer-events-none absolute inset-x-0 top-0 z-[3] h-1/2"
-          style={{ boxShadow: "inset 0 100px 150px -50px rgba(0,0,0,1)" }}
+          style={{ boxShadow: "inset 0 100px 150px -50px var(--color-ink)" }}
           aria-hidden="true"
         />
         <div
           className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-1/2"
-          style={{ boxShadow: "inset 0 -100px 150px -50px rgba(0,0,0,1)" }}
+          style={{ boxShadow: "inset 0 -100px 150px -50px var(--color-ink)" }}
           aria-hidden="true"
         />
 
@@ -154,7 +169,7 @@ export function HeroGallery() {
           <div className="text-center">
             <Eyebrow index="01" label={SITE_EYEBROW} className="mb-7 justify-center" />
             <h1 className="font-display text-[15vw] leading-[0.95] md:text-[9rem]">Stone</h1>
-            <p className="font-italic-em mt-2 text-2xl text-bone/55 md:text-4xl">
+            <p className="font-italic-em mt-2 text-2xl text-bone/77 md:text-4xl">
               kept in Kanpur
             </p>
           </div>
@@ -168,9 +183,9 @@ export function HeroGallery() {
           <div className="max-w-3xl text-center">
             <p className="font-display text-3xl leading-[1.1] md:text-5xl">
               Eight origin states,
-              <span className="font-italic-em text-bone/55"> one shop floor. </span>
+              <span className="font-italic-em text-bone/77"> one shop floor. </span>
             </p>
-            <p className="mt-5 text-sm text-bone/58 md:text-base">
+            <p className="mt-5 text-sm text-bone/78 md:text-base">
               Every box is traceable to the quarry it came out of, and every slab is weight-tested
               before it leaves.
             </p>
@@ -194,28 +209,44 @@ export function HeroGallery() {
 /**
  * Static hero used on mobile, `prefers-reduced-motion`, and weak connections.
  * Same voice, no scroll rig: the LCP element is then a plain <h1>.
+ *
+ * It still carries the signature tile wall, dimmed and masked, so the brand's
+ * material moment survives in every phone case — including Save-Data/weak
+ * links and reduce-motion, which used to fall back to bare text. The wall uses
+ * the same inline-SVG data URIs as the scroll hero, so it adds no network
+ * cost, and the global reduce-motion block neutralises any of its motion.
  */
 function HeroStatic() {
+  const tiles = heroTileImages(24);
   return (
     <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-ink">
+      <div className="tile-wall" aria-hidden="true">
+        {tiles.map((src, i) => (
+          <div
+            key={i}
+            className="tile-wall__cell"
+            style={{ backgroundImage: `url("${src}")` }}
+          />
+        ))}
+      </div>
       <div className="glow-gold left-[70%] top-[6%] h-80 w-80" aria-hidden="true" />
       <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 md:px-10">
         <Eyebrow index="01" label={SITE_EYEBROW} className="mb-8" />
         <h1 className="font-display text-5xl leading-[1.02] md:text-7xl">
           Stone, quarried in the country
-          <span className="font-italic-em text-bone/55"> — kept in Kanpur. </span>
+          <span className="font-italic-em text-bone/77"> — kept in Kanpur. </span>
         </h1>
-        <p className="mt-6 max-w-[60ch] text-bone/62">
+        <p className="mt-6 max-w-[60ch] text-bone/79">
           Tiles and natural stone sourced state by state, with every surface traceable to the
           quarry it came out of.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
-          <a href="/collections" className="btn btn-primary">
+          <Link href="/collections" className="btn btn-primary">
             Explore the collections
-          </a>
-          <a href="/contact" className="btn btn-secondary">
+          </Link>
+          <Link href="/contact" className="btn btn-secondary">
             Visit the store
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ export function SortDropdown() {
     <div className="flex items-center gap-3">
       <label
         htmlFor="sort"
-        className="shrink-0 text-[10px] uppercase tracking-[0.45em] text-[#c9a96a]"
+        className="shrink-0 text-[10px] uppercase tracking-[0.45em] text-gold"
       >
         Sort
       </label>
@@ -45,12 +45,12 @@ export function SortDropdown() {
         id="sort"
         value={current}
         onChange={onChange}
-        className="rounded-lg border border-white/12 bg-[#0b0b0c] px-5 py-4 text-[13px]
-                   text-bone transition-colors duration-300 hover:border-white/30
-                   focus:border-[#c9a96a]/60 focus:outline-none"
+        className="rounded-lg border border-bone/12 bg-ink-2 px-5 py-4 text-[13px]
+                   text-bone transition-colors duration-300 hover:border-bone/30
+                   focus:border-gold/60 focus:outline-none"
       >
         {OPTIONS.map((option) => (
-          <option key={option.value} value={option.value} className="bg-[#0b0b0c]">
+          <option key={option.value} value={option.value} className="bg-ink-2">
             {option.label}
           </option>
         ))}

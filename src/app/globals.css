@@ -7,19 +7,18 @@
    ──────────────────────────────────────────────────────────────────────────── */
 
 @theme {
-  /* Palette, in oklch. The brief specifies exact hex values, which are kept
-     as comments below — and `oklch()` here is what makes the opacity
-     modifiers work: Tailwind v4 compiles `text-bone/55` to
-     `color-mix(in oklab, var(--color-bone) 55%, transparent)`, and it
-     refuses to mix a plain hex token with `transparent`. oklch is
-     perceptually uniform, so tints hold their hue where hex sRGB blends
-     drift towards grey. Conversion is a pure format change; the perceived
-     colour is unchanged. */
-  --color-ink: oklch(11.492% 0 89.88);   /* #050505 */
-  --color-ink-2: oklch(15.004% 0.0021 286.14); /* #0b0b0c */
-  --color-bone: oklch(92.057% 0.012 79.78); /* #e9e4dc */
-  --color-sand: oklch(70.406% 0.0741 80.19); /* #b89b6a */
-  --color-gold: oklch(74.924% 0.0896 83.45); /* #c9a96a */
+  /* Premium cream-paper palette. The field is a warm ivory, the "bone" layer
+     is now the soft black ink that carries all type, and the accent is a deep
+     brass that stays readable on cream. `oklch()`/hex both work with Tailwind
+     v4 opacity modifiers — `text-bone/55` compiles to
+     `color-mix(in oklab, var(--color-bone) 55%, transparent)`. */
+  /* Cream surfaces, tinted not pure white. */
+  --color-ink: #f5f0e6; /* page cream — the dominant field */
+  --color-ink-2: #ece4d6; /* deeper cream for alternating sections & cards */
+  /* Soft black ink — the primary text colour on cream. */
+  --color-bone: #232323;
+  --color-sand: #6f5a33; /* deep sand, readable on cream */
+  --color-gold: #7a622c; /* deep brass accent, clears AA on both creams */
 
   /* Fonts are wired to next/font CSS variables in layout.tsx. */
   --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
@@ -35,7 +34,7 @@
   *,
   *::before,
   *::after {
-    border-color: color-mix(in srgb, #e9e4dc 10%, transparent);
+    border-color: color-mix(in srgb, #232323 12%, transparent);
   }
 
   html {
@@ -44,8 +43,8 @@
   }
 
   body {
-    background-color: #050505;
-    color: #e9e4dc;
+    background-color: #f5f0e6;
+    color: #232323;
     font-family: var(--font-sans);
     font-size: 15px;
     font-weight: 400;
@@ -93,13 +92,13 @@
   }
 
   ::selection {
-    background: rgba(201, 169, 106, 0.32);
-    color: #f4f0e8;
+    background: rgba(201, 169, 106, 0.42);
+    color: #232323;
   }
 
   /* WCAG 2.2: a real 2px ring. Never rely on the UA default. */
   :focus-visible {
-    outline: 2px solid #c9a96a;
+    outline: 2px solid var(--color-gold);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -126,7 +125,7 @@
     appearance: none;
     width: 100%;
     height: 2px;
-    background: rgba(233, 228, 220, 0.18);
+    background: color-mix(in srgb, var(--color-bone) 18%, transparent);
     border-radius: 9999px;
     outline-offset: 6px;
   }
@@ -177,12 +176,12 @@
     font-weight: 500;
     letter-spacing: var(--tracking-eyebrow);
     text-transform: uppercase;
-    color: #c9a96a;
+    color: var(--color-gold);
     line-height: 1.4;
   }
 
   .eyebrow--muted {
-    color: rgba(233, 228, 220, 0.55);
+    color: color-mix(in srgb, var(--color-bone) 55%, transparent);
   }
 
   /* The numbered marker, e.g. `01` in `01 — COLLECTIONS`. */
@@ -231,36 +230,36 @@
     background-color: #e9e4dc;
   }
 
-  /* Secondary: gold outline, fills on hover. */
+  /* Secondary: brass outline on cream, fills to brass with cream text on hover. */
   .btn-secondary {
-    border-color: rgba(201, 169, 106, 0.6);
-    color: #c9a96a;
+    border-color: color-mix(in srgb, var(--color-gold) 60%, transparent);
+    color: var(--color-gold);
     padding: 0.625rem 1.25rem;
   }
 
   .btn-secondary:hover:not(:disabled) {
-    background-color: #c9a96a;
-    border-color: #c9a96a;
-    color: #050505;
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: var(--color-ink);
   }
 
   /* Quiet: no fill, no border. For tertiary actions inside a flow. */
   .btn-quiet {
-    color: rgba(233, 228, 220, 0.72);
+    color: color-mix(in srgb, var(--color-bone) 72%, transparent);
     padding: 0.625rem 1.25rem;
-    border-color: rgba(233, 228, 220, 0.14);
+    border-color: color-mix(in srgb, var(--color-bone) 14%, transparent);
   }
 
   .btn-quiet:hover:not(:disabled) {
-    color: #e9e4dc;
-    border-color: rgba(233, 228, 220, 0.36);
+    color: var(--color-bone);
+    border-color: color-mix(in srgb, var(--color-bone) 36%, transparent);
   }
 
   /* ── Cards ──────────────────────────────────────────────────────────────── */
   .card {
     border-radius: 1rem;
-    border: 1px solid rgba(233, 228, 220, 0.1);
-    background-color: #0b0b0c;
+    border: 1px solid color-mix(in srgb, var(--color-bone) 10%, transparent);
+    background-color: var(--color-ink-2);
     padding: 1.75rem;
   }
 
@@ -271,7 +270,7 @@
 
   /* ── Structural section divider ─────────────────────────────────────────── */
   .section-rule {
-    border-top: 1px solid rgba(233, 228, 220, 0.1);
+    border-top: 1px solid color-mix(in srgb, var(--color-bone) 10%, transparent);
   }
 
   /* ── Ambient gold light. Corner glows on dark sections. ─────────────────── */
@@ -315,7 +314,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
-    background-color: #0b0b0c;
+    background-color: var(--color-ink-2);
   }
 
   .media-frame img {
@@ -330,6 +329,41 @@
     transform: scale(1.1);
   }
 
+  /* ── Static tile wall, shown by the fallback hero on weak connections
+     and reduce-motion. Same inline-SVG data URIs as the scroll hero, but
+     rendered as a dimmed, masked backdrop so the tiles stay visible where
+     the full rig falls back. Costs nothing to download. ───────────────── */
+  .tile-wall {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    padding: 3px;
+    opacity: 0.45;
+    pointer-events: none;
+    /* Fade the wall down so copy at the bottom of the hero stays legible. */
+    -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 88%);
+    mask-image: linear-gradient(to bottom, #000 30%, transparent 88%);
+  }
+
+  @media (min-width: 768px) {
+    .tile-wall {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      padding: 4px;
+    }
+  }
+
+  .tile-wall__cell {
+    overflow: hidden;
+    border-radius: 2px;
+    background-color: var(--color-ink-2);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1;
+  }
+
   /* ── Dev-only placeholder, never shipped as content ─────────────────────── */
   .ph-sample {
     display: inline-flex;
@@ -339,8 +373,8 @@
     font-size: 10px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #b89b6a;
-    border: 1px dashed rgba(184, 155, 106, 0.5);
+    color: var(--color-gold);
+    border: 1px dashed color-mix(in srgb, var(--color-gold) 50%, transparent);
     border-radius: 0.375rem;
     padding: 0.25rem 0.5rem;
   }

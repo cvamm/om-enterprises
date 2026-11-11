@@ -36,7 +36,7 @@ export function ToolTeaser() {
           <Eyebrow index="03" label="TILE LAB" className="mb-6" />
           <h2 className="font-display text-4xl leading-[1.05] text-bone md:text-6xl">
             Two tools that
-            <span className="font-italic-em text-bone/55"> do the maths. </span>
+            <span className="font-italic-em text-bone/77"> do the maths. </span>
           </h2>
         </div>
 
@@ -67,8 +67,8 @@ export function ToolTeaser() {
                   <h3 className="mt-10 font-display text-4xl leading-[1.05] text-bone md:text-5xl">
                     {tool.title}
                   </h3>
-                  <p className="mt-4 max-w-[46ch] text-bone/58">{tool.body}</p>
-                  <p className="mt-8 border-t border-bone/10 pt-5 text-[12px] text-bone/45">
+                  <p className="mt-4 max-w-[46ch] text-bone/78">{tool.body}</p>
+                  <p className="mt-8 border-t border-bone/10 pt-5 text-[12px] text-bone/73">
                     {tool.detail}
                   </p>
                 </div>

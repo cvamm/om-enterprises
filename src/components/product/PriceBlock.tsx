@@ -33,12 +33,12 @@ export function PriceBlock({
         >
           {formattedPricePerBox}
         </span>
-        <span className="text-[10px] uppercase tracking-[0.24em] text-bone/45">
+        <span className="text-[10px] uppercase tracking-[0.24em] text-bone/73">
           / box
         </span>
       </div>
 
-      <p className={`mt-2 ${unitSize} text-bone/55`}>
+      <p className={`mt-2 ${unitSize} text-bone/77`}>
         <span data-testid="price-per-sqft">{formattedPricePerSqft}</span> per sq.ft
         <span className="mx-2 text-bone/25">|</span>
         {product.boxAreaSqft} sq.ft per box

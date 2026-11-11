@@ -1,5 +1,5 @@
 /**
- * Route-level loader. A quiet wordmark on the tinted near-black, no spinner.
+ * Route-level loader. A quiet wordmark on the cream base, no spinner.
  * The brand's voice is Cormorant, so the loading state stays in that voice.
  *
  * Must be a default export — Next.js reads this file's default to build the
@@ -13,13 +13,13 @@ export default function Loading() {
       role="status"
       aria-live="polite"
       aria-label="Loading"
-      className="flex min-h-[60vh] items-center justify-center bg-ink"
+      className="flex min-h-[60vh] items-center justify-center bg-[#f5f0e6]"
     >
       <span
-        className="font-display animate-pulse text-2xl text-bone/40"
+        className="font-display animate-pulse text-2xl text-bone/72"
         style={{ animationDuration: "1800ms" }}
       >
-        Parbat Stone Works
+        Stone &amp; Tile House
       </span>
     </div>
   );

@@ -35,9 +35,9 @@ export default function HomePage() {
           <Eyebrow label="START HERE" className="mb-7 justify-center" />
           <h2 className="font-display text-5xl leading-[1.02] text-bone md:text-7xl">
             Tell us the room.
-            <span className="font-italic-em text-bone/55"> We do the rest. </span>
+            <span className="font-italic-em text-bone/77"> We do the rest. </span>
           </h2>
-          <p className="mx-auto mt-6 max-w-[58ch] text-bone/58">
+          <p className="mx-auto mt-6 max-w-[58ch] text-bone/78">
             Name the room, give us a length and a width, and we come back with a box count and a
             number you can act on.
           </p>

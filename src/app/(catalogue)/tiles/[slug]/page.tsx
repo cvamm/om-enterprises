@@ -115,9 +115,9 @@ export default async function ProductPage({
         }}
       />
 
-      <section className="bg-[#050505] py-16 md:py-24">
+      <section className="bg-ink py-16 md:py-24">
         <Container>
-          <nav aria-label="Breadcrumb" className="mb-12 text-[11px] uppercase tracking-[0.24em] text-bone/40">
+          <nav aria-label="Breadcrumb" className="mb-12 text-[11px] uppercase tracking-[0.24em] text-bone/72">
             <Link href="/tiles" className="hover:text-bone">
               Catalogue
             </Link>
@@ -151,11 +151,11 @@ export default async function ProductPage({
                 {product.nameEn}
               </h1>
 
-              <p className="mt-4 text-[11px] uppercase tracking-[0.24em] text-bone/45">
+              <p className="mt-4 text-[11px] uppercase tracking-[0.24em] text-bone/73">
                 {product.materialType.replace(/-/g, " ")} — {product.finish}
               </p>
 
-              <div className="mt-10 border-t border-white/10 pt-10">
+              <div className="mt-10 border-t border-bone/10 pt-10">
                 <PriceBlock product={product} size="lg" />
               </div>
 
@@ -173,11 +173,11 @@ export default async function ProductPage({
         </Container>
       </section>
 
-      <section className="border-t border-white/10 bg-[#0b0b0c] py-24 md:py-32">
+      <section className="border-t border-bone/10 bg-ink-2 py-24 md:py-32">
         <Container>
           <Eyebrow label="RELATED" />
           <h2 className="mt-8 font-display text-4xl leading-[1.02] text-bone md:text-5xl">
-            Similar <span className="font-light italic text-white/55">material</span>
+            Similar <span className="font-light italic text-bone/77">material</span>
           </h2>
           <div className="mt-12">
             <RelatedProducts product={product} />

@@ -59,12 +59,20 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
   },
+  // Web app manifest lets phones "add to home screen". The 1024px PNG covers
+  // both the manifest and the iOS home-screen slot; the on-page favicon is a
+  // tiny SVG so no heavy raster is pulled into the critical path on every hit.
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/icon.png", sizes: "1024x1024", type: "image/png" }],
+  },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#050505",
+  themeColor: "#f5f0e6",
   // Tile photography is heavy; allow pinch-zoom on a product page.
   maximumScale: 3,
 };
