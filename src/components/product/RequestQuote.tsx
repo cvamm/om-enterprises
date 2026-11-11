@@ -6,26 +6,28 @@ import type { Product } from "@/types";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { createEnquiry } from "@/server/actions/create-enquiry";
-import { buildWhatsAppQuoteLink } from "@/lib/utils/whatsapp";
+import {
+  buildWhatsAppQuoteLink,
+  buildWhatsAppLink,
+  formatQuoteMessage,
+} from "@/lib/utils/whatsapp";
 import { formatInr } from "@/lib/utils/pricing";
+import { siteConfig } from "@/lib/config/site";
 
 /**
- * Request a quote.
+ * Request a quote — static demo.
  *
  * Two paths, both first-class:
  *
- *   1. WhatsApp, pre-filled with this product. §7.5 makes wa.me the Phase 1
- *      fulfilment channel and the shop is already there, so this is the
- *      primary CTA and the one that works before any server is configured.
+ *   1. WhatsApp, pre-filled with this product at its MOQ. §7.5 makes wa.me the
+ *      Phase 1 fulfilment channel, so this is the primary CTA.
  *
- *   2. The form, which writes an enquiry and opens WhatsApp with the same
- *      text. For a customer who would rather not send a WhatsApp first, and
- *      for the shop to have a record either way.
+ *   2. The form, which validates the details and opens WhatsApp with the full
+ *      quote plus the customer's name, number and delivery preference. GitHub
+ *      Pages has no server to record an enquiry, so WhatsApp carries it.
  *
  * The form never pretends to be an order. §5: enquiry is not an order, there
- * is no cart, no payment. The submit button says "Send enquiry" because that
- * is what happens.
+ * is no cart, no payment.
  */
 
 /**
@@ -57,9 +59,14 @@ function schemaFor(moqBoxes: number) {
   });
 }
 
+const DELIVERY_LABELS: Record<string, string> = {
+  pickup: "I will collect from the shop",
+  "home-delivery": "Home delivery",
+  "site-delivery": "Site delivery",
+};
+
 export function RequestQuote({ product }: { product: Product }) {
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const schema = schemaFor(product.moqBoxes);
   type FormValues = z.infer<typeof schema>;
@@ -96,29 +103,29 @@ export function RequestQuote({ product }: { product: Product }) {
     ? parsedBoxes * product.pricePerBoxInr
     : 0;
 
-  async function onSubmit(values: FormValues) {
-    setError(null);
-    const result = await createEnquiry({
-      customerName: values.name,
-      phone: values.phone,
-      locality: values.locality,
-      productId: product.id,
-      qtyBoxes: values.quantity,
-      deliveryPreference: values.delivery,
-      notes: values.notes,
-      source: "product-page",
-    });
+  function onSubmit(values: FormValues) {
+    const message = [
+      formatQuoteMessage({
+        productName: product.nameEn,
+        boxPriceInr: product.pricePerBoxInr,
+        boxAreaSqft: product.boxAreaSqft,
+        boxes: values.quantity,
+      }),
+      "",
+      `Name: ${values.name}`,
+      `Phone: ${values.phone}`,
+      ...(values.locality !== undefined && values.locality !== ""
+        ? [`Area: ${values.locality}`]
+        : []),
+      `Delivery: ${DELIVERY_LABELS[values.delivery] ?? values.delivery}`,
+      ...(values.notes !== undefined && values.notes !== ""
+        ? ["", values.notes]
+        : []),
+    ].join("\n");
 
-    if (!result.ok) {
-      // §10: errors give direction. Say what to do next, not "something went
-      // wrong".
-      setError(
-        "That did not save. Your details are still in the form — try again, or " +
-          "message us on WhatsApp and we will pick it up from there.",
-      );
-      return;
-    }
-
+    const link =
+      buildWhatsAppLink(siteConfig.whatsappNumber, message) ?? whatsappLink;
+    window.open(link, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   }
 
@@ -129,11 +136,12 @@ export function RequestQuote({ product }: { product: Product }) {
         data-testid="quote-success"
       >
         <p className="text-[10px] uppercase tracking-[0.45em] text-gold">
-          Enquiry received
+          Over to WhatsApp
         </p>
         <p className="mt-5 text-[15px] leading-relaxed text-bone/70">
-          We have your request for {product.nameEn}. We reply to every enquiry
-          within one working day with stock confirmation and a final quote.
+          Your request for {product.nameEn} is open in WhatsApp — tap send there
+          and we will reply with stock confirmation and a final quote. If it did
+          not open, use the button below.
         </p>
         <a
           href={whatsappLink}
@@ -176,9 +184,9 @@ export function RequestQuote({ product }: { product: Product }) {
       </a>
 
       <div className="my-8 flex items-center gap-4">
-        <span className="h-px flex-1 bg-white/10" />
+        <span className="h-px flex-1 bg-bone/10" />
         <span className="text-[10px] uppercase tracking-[0.24em] text-bone/70">or</span>
-        <span className="h-px flex-1 bg-white/10" />
+        <span className="h-px flex-1 bg-bone/10" />
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
@@ -262,12 +270,6 @@ export function RequestQuote({ product }: { product: Product }) {
           </p>
         )}
 
-        {error !== null && (
-          <p className="text-[13px] text-gold" role="alert">
-            {error}
-          </p>
-        )}
-
         <button
           type="submit"
           disabled={isSubmitting}
@@ -276,7 +278,7 @@ export function RequestQuote({ product }: { product: Product }) {
                      duration-300 hover:bg-[#c9a96a] hover:text-black
                      disabled:opacity-50"
         >
-          {isSubmitting ? "Sending" : "Send enquiry"}
+          Send on WhatsApp
         </button>
 
         <p className="text-[11px] leading-relaxed text-bone/70">

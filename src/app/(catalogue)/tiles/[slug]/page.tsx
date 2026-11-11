@@ -22,8 +22,6 @@ import { siteConfig } from "@/lib/config/site";
  * client islands, so the price, spec table and related products all render
  * without JS — the thing that actually matters on a Moto G over 4G.
  */
-export const revalidate = 3600;
-
 export async function generateStaticParams() {
   const slugs = await getAllProductSlugs();
   return slugs.map((slug) => ({ slug }));

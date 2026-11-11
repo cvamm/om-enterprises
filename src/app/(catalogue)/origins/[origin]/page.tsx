@@ -8,8 +8,6 @@ import { getOriginByState, getSuppliersForState } from "@/lib/queries/origins";
 import { getProductsByOrigin } from "@/lib/queries/origins";
 import { SAMPLE_ORIGINS } from "@/data/seeds/origins.sample";
 
-export const revalidate = 3600;
-
 /**
  * Valid origin segments. The sample data and the `origin_state` enum share
  * the same set; this is the single source of truth for which values are

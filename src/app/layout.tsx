@@ -62,10 +62,13 @@ export const metadata: Metadata = {
   // Web app manifest lets phones "add to home screen". The 1024px PNG covers
   // both the manifest and the iOS home-screen slot; the on-page favicon is a
   // tiny SVG so no heavy raster is pulled into the critical path on every hit.
-  manifest: "/manifest.webmanifest",
+  // Unlike build assets, metadata icon/manifest URLs are not auto-prefixed
+  // with basePath, so the repo subpath is written explicitly to match
+  // next.config.ts on this static-demo branch.
+  manifest: "/om-enterprises/manifest.webmanifest",
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/icon.png", sizes: "1024x1024", type: "image/png" }],
+    icon: [{ url: "/om-enterprises/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/om-enterprises/icon.png", sizes: "1024x1024", type: "image/png" }],
   },
 };
 

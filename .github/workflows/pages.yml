@@ -1,0 +1,68 @@
+name: Deploy static demo to GitHub Pages
+
+# Builds the static export on the `pages-demo` branch and publishes it to
+# GitHub Pages. The full server-rendered app lives on `master`; this branch is
+# a visitor-facing demo of the same design, hosted as static files.
+
+on:
+  push:
+    branches: [pages-demo]
+  workflow_dispatch:
+
+# Permissions the deploy needs: read the repo, write Pages, and mint the
+# OIDC token that actions/deploy-pages authenticates with.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; let an in-progress run finish rather than cancelling
+# it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static export
+        # No Supabase env vars are set, so the query layer falls back to the
+        # bundled sample data and every route prerenders to out/.
+        env:
+          NEXT_PUBLIC_SITE_URL: https://cvamm.github.io/om-enterprises
+        run: pnpm build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

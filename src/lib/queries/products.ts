@@ -2,6 +2,7 @@ import { cache } from "react";
 import { getServerSupabase } from "@/lib/supabase/server";
 import type { Product, RoomUse } from "@/types";
 import { SAMPLE_PRODUCTS } from "@/data/seeds/products.sample";
+import { samplePage, sampleSort } from "@/lib/catalogue/sample";
 
 /**
  * Product reads for Server Components.
@@ -113,53 +114,6 @@ function toProduct(row: ProductRow): Product {
   };
 }
 
-/**
- * Filter the sample set in JS, mirroring what the SQL does server-side.
- * Kept deliberately close to the query builder below so the two can be
- * compared when a filter changes.
- */
-function sampleMatch(p: Product, f: ProductFilters): boolean {
-  const { room, origin, material, finish, q } = f;
-  if (room !== undefined && !p.roomUses.includes(room as RoomUse)) return false;
-  if (origin !== undefined && p.originId !== origin) return false;
-  if (material !== undefined && p.materialType !== material) return false;
-  if (finish !== undefined && p.finish !== finish) return false;
-  if (f.size !== undefined) {
-    // Buckets, not exact sizes: "under 300" means the longest side.
-    const longest = Math.max(...p.dimensionsMm);
-    const bucket: string = f.size;
-    if (bucket === "small" && longest > 300) return false;
-    if (bucket === "medium" && (longest <= 300 || longest > 600)) return false;
-    if (bucket === "large" && (longest <= 600 || longest > 800)) return false;
-    if (bucket === "xlarge" && longest <= 800) return false;
-  }
-  if (q !== undefined && q !== "") {
-    const needle = q.toLowerCase();
-    const hay = `${p.nameEn} ${p.descriptionEn ?? ""}`.toLowerCase();
-    if (!hay.includes(needle)) return false;
-  }
-  return true;
-}
-
-function sampleSort(list: Product[], sort: ProductSort): Product[] {
-  const out = [...list];
-  switch (sort) {
-    case "price-asc":
-      return out.sort((a, b) => a.pricePerBoxInr - b.pricePerBoxInr);
-    case "price-desc":
-      return out.sort((a, b) => b.pricePerBoxInr - a.pricePerBoxInr);
-    case "newest":
-      return out.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-    case "name":
-      return out.sort((a, b) => a.nameEn.localeCompare(b.nameEn));
-    case "featured":
-    default:
-      // featured_rank ascending, nulls last — mirrors the SQL's `order by
-      // featured_rank nulls last`.
-      return out.sort((a, b) => Number(b.featured) - Number(a.featured));
-  }
-}
-
 /** Build the ORDER BY fragment. Interpolated, but from a fixed union. */
 function orderBy(sort: ProductSort): string {
   switch (sort) {
@@ -260,20 +214,6 @@ export const getProducts = cache(
     };
   },
 );
-
-function samplePage(f: ProductFilters): ProductPage {
-  const perPage = f.perPage ?? PER_PAGE;
-  const page = Math.max(1, f.page ?? 1);
-  const matched = sampleSort(SAMPLE_PRODUCTS.filter((p) => sampleMatch(p, f)), f.sort ?? "featured");
-  const from = (page - 1) * perPage;
-  return {
-    products: matched.slice(from, from + perPage),
-    total: matched.length,
-    page,
-    perPage,
-    pageCount: Math.max(1, Math.ceil(matched.length / perPage)),
-  };
-}
 
 /** Products flagged for the home page, in manual order. */
 export const getFeaturedProducts = cache(async (limit = 6): Promise<Product[]> => {
