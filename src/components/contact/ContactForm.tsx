@@ -1,14 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { createEnquiry } from "@/server/actions/create-enquiry";
-import type { EnquiryInput, DeliveryPref } from "@/types";
+import type { DeliveryPref } from "@/types";
+import { buildWhatsAppUrl } from "@/lib/config/site";
 
-type ContactFormState =
-  | { status: "idle" }
-  | { status: "sending" }
-  | { status: "sent" }
-  | { status: "error"; message: string };
+type ContactFormState = { status: "idle" } | { status: "sent" };
 
 const DELIVERY_PREF_LABELS: Record<DeliveryPref, string> = {
   pickup: "Pick up",
@@ -19,16 +15,12 @@ const DELIVERY_PREF_LABELS: Record<DeliveryPref, string> = {
 const DELIVERY_PREFS: DeliveryPref[] = ["pickup", "home-delivery", "site-delivery"];
 
 /**
- * Contact form → enquiry record.
+ * Contact form → WhatsApp.
  *
- * Uses the same server action as the product page's quote form. Source
- * is "web" here; the shop can tell the difference between a customer
- * asking about one specific tile and one asking about the shop in
- * general by which page the enquiry came from.
- *
- * The success state says "sent", not "recorded" — the customer has not
- * been promised a database write. The shop receives the message; that
- * is the guarantee, and it is honest.
+ * Static demo: GitHub Pages has no server to record an enquiry, so the form
+ * composes the message and opens WhatsApp with it pre-filled — the shop's
+ * Phase 1 fulfilment channel. The customer taps send there; nothing is
+ * claimed to have been sent until they do.
  */
 export function ContactForm() {
   const [state, setState] = useState<ContactFormState>({ status: "idle" });
@@ -38,51 +30,39 @@ export function ContactForm() {
   const [locality, setLocality] = useState("");
   const [deliveryPref, setDeliveryPref] = useState<DeliveryPref>("pickup");
   const [notes, setNotes] = useState("");
-  const [whatsappOptin, setWhatsappOptin] = useState(true);
 
   const canSubmit =
     name.trim().length >= 2 &&
     phone.trim().length >= 10 &&
-    state.status !== "sending" &&
     state.status !== "sent";
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!canSubmit) return;
 
-    setState({ status: "sending" });
+    const lines = [
+      "Hello, I have an enquiry from your website.",
+      "",
+      `Name: ${name.trim()}`,
+      `Phone: ${phone.trim()}`,
+    ];
+    if (locality.trim() !== "") lines.push(`Area: ${locality.trim()}`);
+    lines.push(`Delivery: ${DELIVERY_PREF_LABELS[deliveryPref]}`);
+    if (notes.trim() !== "") lines.push("", notes.trim());
 
-    const input: EnquiryInput = {
-      customerName: name.trim(),
-      phone: phone.trim(),
-      locality: locality.trim() !== "" ? locality.trim() : undefined,
-      deliveryPreference: deliveryPref,
-      notes: notes.trim() !== "" ? notes.trim() : undefined,
-      whatsappOptin,
-      source: "web",
-    };
-
-    const result = await createEnquiry(input);
-
-    if (result.ok) {
-      setState({ status: "sent" });
-    } else {
-      setState({
-        status: "error",
-        message: result.message ?? "Something went wrong. Try again.",
-      });
-    }
+    window.open(buildWhatsAppUrl(lines.join("\n")), "_blank", "noopener,noreferrer");
+    setState({ status: "sent" });
   }
 
   if (state.status === "sent") {
     return (
       <div className="rounded-2xl border border-gold/40 bg-ink p-7">
         <p className="font-display text-2xl leading-tight text-bone">
-          Message sent.
+          Over to WhatsApp.
         </p>
         <p className="mt-3 text-[13px] leading-relaxed text-bone/77">
-          The shop will get back to you on {phone}. No payment, no
-          obligation — just a conversation.
+          Your message is open in WhatsApp — tap send there and the shop will
+          reply on {phone}. No payment, no obligation — just a conversation.
         </p>
       </div>
     );
@@ -153,24 +133,6 @@ export function ContactForm() {
         aria-label="Message"
       />
 
-      <label className="flex items-start gap-3">
-        <input
-          type="checkbox"
-          checked={whatsappOptin}
-          onChange={(e) => setWhatsappOptin(e.target.checked)}
-          className="mt-0.5 h-4 w-4 accent-[#c9a96a]"
-        />
-        <span className="text-[13px] leading-relaxed text-bone/75">
-          Send a WhatsApp confirmation when this message is received.
-        </span>
-      </label>
-
-      {state.status === "error" && (
-        <p className="text-[13px] text-[#e07b7b]" role="alert">
-          {state.message}
-        </p>
-      )}
-
       <button
         type="submit"
         disabled={!canSubmit}
@@ -178,7 +140,7 @@ export function ContactForm() {
                    text-[11px] uppercase tracking-[0.24em] text-black transition-colors
                    duration-300 hover:bg-ink disabled:pointer-events-none disabled:opacity-40"
       >
-        {state.status === "sending" ? "Sending" : "Send message"}
+        Send on WhatsApp
       </button>
     </form>
   );

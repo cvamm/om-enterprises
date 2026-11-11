@@ -23,7 +23,6 @@ const HELP_LINKS = [
 const COMPANY_LINKS = [
   { href: "/about", label: "About" },
   { href: "/craft", label: "The Craft" },
-  { href: "/login", label: "Sign in" },
 ] as const;
 
 const COLUMNS = [
