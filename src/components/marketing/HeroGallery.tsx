@@ -11,19 +11,16 @@ import {
 } from "framer-motion";
 import { Eyebrow } from "../ui/Eyebrow";
 import { HERO_TILES } from "@/lib/utils/hero-tiles";
+import showroomUrl from "@/assets/showroom.jpg";
 
 /**
- * Showroom reveal that fades in once the scroll animation ends.
- *
- * The shop's real showroom photo is not in the repo yet, so this is a dark
- * placeholder wash. When the image lands, swap the constant for an asset
- * import and nothing else in this component changes:
- *
- *   import showroomUrl from "@/assets/showroom.jpg";
- *   const SHOWROOM_IMAGE = showroomUrl;
+ * The slab-yard photo that reveals as the tile wall melts away at the end of
+ * the scroll. It is a genuine Indian marble &amp; granite yard (Pexels free
+ * licence, no attribution required). A light dark wash is layered over the
+ * photo so the reveal reads as a dimmed showroom, not a blown-out shot, and
+ * any text set over it stays legible.
  */
-const SHOWROOM_IMAGE =
-  "linear-gradient(180deg, #1a1815 0%, #26221d 60%, #14120f 100%)";
+const SHOWROOM_IMAGE = `linear-gradient(rgba(20,18,15,0.35) 0%, rgba(20,18,15,0.72) 100%), url(${showroomUrl})`;
 
 /**
  * The hero eyebrow. Short form of the brand, because a tracked-out ALL-CAPS
@@ -120,7 +117,7 @@ export function HeroGallery() {
         style={{ perspective: "1600px", perspectiveOrigin: "50% 42%" }}
       >
         {/* Showroom photo. Reveals as the tile wall melts away at the end of
-            the scroll. A gradient placeholder until the shop's real photo lands. */}
+            the scroll — a real Indian slab yard, dimmed with a wash. */}
         <motion.div
           style={{
             opacity: showroomOpacity,
