@@ -232,23 +232,23 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
     photos: [
       {
         src: houseUrl.src,
-        alt: "Finished modern two-storey house with stone-clad entrance and tiled driveway",
-        pexels: "https://images.pexels.com/photos/8134821/pexels-photo-8134821.jpeg",
+        alt: "Red-brick residential tower in Bengaluru with balconies",
+        pexels: "https://images.pexels.com/photos/38689079/pexels-photo-38689079.jpeg",
       },
       {
         src: houseAltUrl.src,
-        alt: "New residential home under construction with scaffolding and roof tiling underway",
-        pexels: "https://images.pexels.com/photos/39151691/pexels-photo-39151691.jpeg",
+        alt: "Residential apartment block with balconies, plants, and rooftop satellite dishes",
+        pexels: "https://images.pexels.com/photos/40233334/pexels-photo-40233334.jpeg",
       },
       {
         src: houseAlt2Url.src,
-        alt: "Trowel with fresh cement against a plastered wall",
-        pexels: "https://images.pexels.com/photos/38561968/pexels-photo-38561968.jpeg",
+        alt: "Individually-built two-storey house set in a planted stone-paved courtyard",
+        pexels: "https://images.pexels.com/photos/38245008/pexels-photo-38245008.jpeg",
       },
       {
         src: houseAlt3Url.src,
-        alt: "Construction worker spreading concrete on a reinforced slab",
-        pexels: "https://images.pexels.com/photos/34842259/pexels-photo-34842259.jpeg",
+        alt: "Yellow-painted two-storey house with a tiled open verandah and garden",
+        pexels: "https://images.pexels.com/photos/37875596/pexels-photo-37875596.jpeg",
       },
       {
         src: finishingUrl.src,

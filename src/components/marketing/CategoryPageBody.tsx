@@ -2,16 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { ProductCard } from "@/components/catalogue/ProductCard";
 import type { Category } from "@/lib/utils/category-photos";
+import { SECTION_TILES } from "@/lib/utils/section-tiles";
+import { SAMPLE_PRODUCTS } from "@/data/seeds/products.sample";
 
 /**
  * Shared body for a store line (marbles, granite, western toilets, …).
  *
  * Every line follows the same shape: an intro band that states what the
- * material or service actually is, then a grid of real product photos. The
- * photos are stand-in Pexels textures with truthful alt text — the shop's own
- * stock and prices are added later, so nothing here claims a specific product
- * the shop does not carry.
+ * material or service actually is, a grid of stand-in Pexels textures, and a
+ * strip of the shop's own catalogue tiles for that line (resolved from
+ * `SECTION_TILES`) so each page carries real stock, not only stock photos.
  */
 export function CategoryPageBody({
   category,
@@ -21,6 +23,11 @@ export function CategoryPageBody({
   /** Other lines shown in a "keep looking" strip at the bottom. */
   related: Category[];
 }) {
+  const tiles = (
+    SECTION_TILES[category.key] ?? []
+  )
+    .map((slug) => SAMPLE_PRODUCTS.find((p) => p.slug === slug))
+    .filter((p): p is NonNullable<typeof p> => p !== undefined);
   return (
     <>
       <section className="border-b border-bone/10 bg-ink py-24 md:py-32">
@@ -61,7 +68,28 @@ export function CategoryPageBody({
             ))}
           </div>
 
-          <div className="mt-14">
+          {tiles.length > 0 && (
+            <div className="mt-20">
+              <p className="text-[10px] uppercase tracking-[0.45em] text-gold">
+                In our catalogue
+              </p>
+              <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-bone/79">
+                A few of the designs we stock for this line — each links to
+                its own tile page with the full spec.
+              </p>
+              <div className="mt-8 grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
+                {tiles.map((product, index) => (
+                  <ProductCard
+                    key={product.slug}
+                    product={product}
+                    priority={index < 4}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="mt-20">
             <p className="text-[10px] uppercase tracking-[0.45em] text-gold">
               Keep looking
             </p>
