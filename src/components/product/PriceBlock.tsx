@@ -24,6 +24,33 @@ export function PriceBlock({
     size === "lg" ? "text-3xl md:text-4xl" : size === "sm" ? "text-xl" : "text-2xl";
   const unitSize = size === "lg" ? "text-[13px]" : "text-[11px]";
 
+  // pricePerBoxInr === 0 is the "price not set yet" state on the demo set;
+  // show the honest label instead of a ₹0 that reads like free.
+  const onRequest = product.pricePerBoxInr === 0;
+
+  if (onRequest) {
+    return (
+      <div className={className}>
+        <div className="flex items-baseline gap-2">
+          <span
+            className={`font-display ${boxSize} leading-none text-gold`}
+            data-testid="price-per-box"
+          >
+            On request
+          </span>
+          <span className="text-[10px] uppercase tracking-[0.24em] text-bone/73">
+            per box
+          </span>
+        </div>
+        <p className={`mt-2 ${unitSize} text-bone/77`}>
+          {product.boxAreaSqft} sq.ft per box
+          <span className="mx-2 text-bone/25">|</span>
+          WhatsApp for a quote
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className={className}>
       <div className="flex items-baseline gap-2">

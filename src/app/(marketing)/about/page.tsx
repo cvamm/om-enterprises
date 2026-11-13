@@ -106,13 +106,6 @@ export default function AboutPage() {
                 The craft
               </Link>
               <Link
-                href="/warranty"
-                className="rounded-full border border-gold/60 px-6 py-3.5 text-[11px] uppercase tracking-[0.24em] text-gold
-                           transition-colors duration-300 hover:bg-[#c9a96a] hover:text-black"
-              >
-                Warranty
-              </Link>
-              <Link
                 href="/contact"
                 className="rounded-full bg-[#c9a96a] px-6 py-3.5 text-[11px] uppercase tracking-[0.24em] text-black
                            transition-colors duration-300 hover:bg-ink"

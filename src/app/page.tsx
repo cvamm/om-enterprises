@@ -18,8 +18,6 @@ export const metadata: Metadata = {
  * Home. Hero -> marquee -> collections -> tool teasers -> trust.
  * Section numbering is a real sequence on this page:
  *   01 hero (inside HeroGallery), 02 collections, 03 tools, 05 trust.
- * 04 is the portfolio section, which lives on /portfolio, so it is not
- * numbered here.
  */
 export default function HomePage() {
   return (

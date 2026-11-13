@@ -332,9 +332,9 @@
   }
 
   /* ── Static tile wall, shown by the fallback hero on weak connections
-     and reduce-motion. Same inline-SVG data URIs as the scroll hero, but
-     rendered as a dimmed, masked backdrop so the tiles stay visible where
-     the full rig falls back. Costs nothing to download. ───────────────── */
+     and reduce-motion. Same colorful CSS-gradient tiles as the scroll hero,
+     but rendered as a dimmed, masked backdrop so the tiles stay visible
+     where the full rig falls back. Costs nothing to download. ───────────── */
   .tile-wall {
     position: absolute;
     inset: 0;
@@ -342,11 +342,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 3px;
     padding: 3px;
-    opacity: 0.45;
+    opacity: 0.7;
     pointer-events: none;
-    /* Fade the wall down so copy at the bottom of the hero stays legible. */
-    -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 88%);
-    mask-image: linear-gradient(to bottom, #000 30%, transparent 88%);
+    /* Fade the wall only at the very bottom so copy there stays legible,
+       but the wall keeps its full colour across the upper hero. */
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 96%);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 96%);
   }
 
   @media (min-width: 768px) {

@@ -29,8 +29,10 @@ export async function getServerSupabase(): Promise<SupabaseClient | null> {
     return null;
   }
 
-  // `cookies()` throws outside request scope (e.g. during `next build`'s
-  // prerender pass), so guard it: the client still works with anonymous reads.
+  // `cookies()` is only valid in request scope. During `next build` the
+  // static-param and metadata passes run outside a request, so an unconfigured
+  // or build-time call must not throw — read the jar when we can and build the
+  // client anonymously when we can't (reads still work on the anon key).
   let cookieStore;
   try {
     cookieStore = await cookies();

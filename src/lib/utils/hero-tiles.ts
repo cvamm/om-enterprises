@@ -1,86 +1,71 @@
-/**
- * Deterministic tile-surface data URIs for the hero matrix.
- *
- * The shop does not have product photography yet (sample products carry empty
- * photoUrls), so the hero cannot rely on real images. Instead, each tile is a
- * small inline SVG — one of several stone/ceramic textures at a few sizes and
- * finishes — generated locally. Inline SVG costs nothing to download and is
- * safe on a Moto G over 4G. The set is deterministic so the matrix is the
- * same on every load (no CLS from image swap-in).
- *
- * Once real product photos land in Supabase Storage, swap `heroTileImages()`
- * for the catalogue's first N `photoUrls`; the hero code below only asks for
- * a list of image sources.
- */
+// GENERATED FILE — hero tile photos (diverse 32-tile mix: colored marbles, onyx,
+// wood, beige — so no two blocks in the opening animation look alike).
+// Curated picks from the catalogue set; see src/assets/tiles/hero/names.json.
 
-// Distinct base hues drawn from the design palette's earth range, kept
-// muted so the tiles read as stone, not toy blocks.
-type TileSurface = {
-  base: string;
-  grain: string;
-  lines: string;
-};
+import h0 from "@/assets/tiles/hero/hero-00.jpg"; // BIJOX BLUE
+import h1 from "@/assets/tiles/hero/hero-01.jpg"; // PANOZZO GREEN
+import h2 from "@/assets/tiles/hero/hero-02.jpg"; // BRAVIO BLACK
+import h3 from "@/assets/tiles/hero/hero-03.jpg"; // SYDNEY YELLOW
+import h4 from "@/assets/tiles/hero/hero-04.jpg"; // AMAZING BROWN
+import h5 from "@/assets/tiles/hero/hero-05.jpg"; // OIKOS AQUA
+import h6 from "@/assets/tiles/hero/hero-06.jpg"; // ONYX FLORIM BLUE
+import h7 from "@/assets/tiles/hero/hero-07.jpg"; // BRERA BLUE
+import h8 from "@/assets/tiles/hero/hero-08.jpg"; // LEMON ONYX
+import h9 from "@/assets/tiles/hero/hero-09.jpg"; // ONYX FLORIM SEPIA
+import h10 from "@/assets/tiles/hero/hero-10.jpg"; // LEAVES BROWN
+import h11 from "@/assets/tiles/hero/hero-11.jpg"; // MOTRICO ONYX SKY
+import h12 from "@/assets/tiles/hero/hero-12.jpg"; // MERCURY THUNDER
+import h13 from "@/assets/tiles/hero/hero-13.jpg"; // LEAVES BLUE
+import h14 from "@/assets/tiles/hero/hero-14.jpg"; // JAXON CREMA
+import h15 from "@/assets/tiles/hero/hero-15.jpg"; // CELESTIAL GREY
+import h16 from "@/assets/tiles/hero/hero-16.jpg"; // ALMERIA BEIGE
+import h17 from "@/assets/tiles/hero/hero-17.jpg"; // MERCURY FOSSIL
+import h18 from "@/assets/tiles/hero/hero-18.jpg"; // ADRY STATUARIO
+import h19 from "@/assets/tiles/hero/hero-19.jpg"; // RIVANA NATURAL
+import h20 from "@/assets/tiles/hero/hero-20.jpg"; // NATURAL BOTTOCHINO
+import h21 from "@/assets/tiles/hero/hero-21.jpg"; // ONYX DELICATO
+import h22 from "@/assets/tiles/hero/hero-22.jpg"; // CARRA GREY
+import h23 from "@/assets/tiles/hero/hero-23.jpg"; // HONESTA IVORY
+import h24 from "@/assets/tiles/hero/hero-24.jpg"; // WOOD ALPINE
+import h25 from "@/assets/tiles/hero/hero-25.jpg"; // WOOD MAPLE
+import h26 from "@/assets/tiles/hero/hero-26.jpg"; // WOOD WENGE
+import h27 from "@/assets/tiles/hero/hero-27.jpg"; // ONYX FOG GREY
+import h28 from "@/assets/tiles/hero/hero-28.jpg"; // COMPRESS GOLD
+import h29 from "@/assets/tiles/hero/hero-29.jpg"; // STATUARIO
+import h30 from "@/assets/tiles/hero/hero-30.jpg"; // LIGHT DARK GREY
+import h31 from "@/assets/tiles/hero/hero-31.jpg"; // ZEBRANO CREMA
 
-const SURFACES: TileSurface[] = [
-  { base: "#d8cfc0", grain: "#c3b59a", lines: "#b89b6a" }, // bone
-  { base: "#b9b0a0", grain: "#9a8f7d", lines: "#7d705c" }, // sand
-  { base: "#8f8b83", grain: "#6f6a60", lines: "#524d44" }, // warm grey
-  { base: "#c9a96a", grain: "#b08c48", lines: "#8a6f33" }, // gold
-  { base: "#a39a8a", grain: "#877d6b", lines: "#6b6151" }, // taupe
-  { base: "#6f6a62", grain: "#55504a", lines: "#3d3a34" }, // umber
-  { base: "#e0d8c8", grain: "#cdc3ab", lines: "#b3a78c" }, // cream
-  { base: "#9aa0a0", grain: "#7d8282", lines: "#5f6464" }, // cool marble
+export const HERO_TILES: string[] = [
+  h0.src,
+  h1.src,
+  h2.src,
+  h3.src,
+  h4.src,
+  h5.src,
+  h6.src,
+  h7.src,
+  h8.src,
+  h9.src,
+  h10.src,
+  h11.src,
+  h12.src,
+  h13.src,
+  h14.src,
+  h15.src,
+  h16.src,
+  h17.src,
+  h18.src,
+  h19.src,
+  h20.src,
+  h21.src,
+  h22.src,
+  h23.src,
+  h24.src,
+  h25.src,
+  h26.src,
+  h27.src,
+  h28.src,
+  h29.src,
+  h30.src,
+  h31.src
 ];
-
-/**
- * A single tile as a tiny SVG data URI. `finish` 0–3 varies the glaze:
- * matte, textured, honed, gloss. The pattern (veins) is seeded by index so
- * adjacent tiles differ, mimicking a real quarried batch.
- */
-function tileDataUri(index: number, finish: number): string {
-  // `index % SURFACES.length` is always a valid index, so the lookup can never
-  // be undefined despite `noUncheckedIndexedAccess` widening the type.
-  const s = SURFACES[index % SURFACES.length]!;
-  const vein =
-    index % 2 === 0
-      ? `M0 ${20 + (index * 3) % 40} C 60 ${5 + (index % 5) * 10}, 120 ${
-          55 - (index % 4) * 8
-        }, 200 ${15 + (index % 6) * 6}`
-      : `M${10 + (index % 5) * 30} 0 C ${40 + (index % 4) * 20} 80, ${
-          120 - (index % 3) * 20
-        } 120, ${60 + (index % 7) * 12} 200`;
-
-  const glaze =
-    finish === 3
-      ? '<rect width="200" height="200" fill="url(#g)" opacity="0.35"/>'
-      : finish === 2
-        ? '<rect width="200" height="200" fill="#fff" opacity="0.08"/>'
-        : finish === 1
-          ? '<rect width="200" height="200" fill="#000" opacity="0.06"/>'
-          : "";
-
-  const svg =
-    `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">` +
-    `<defs><radialGradient id="g" cx="0.3" cy="0.3" r="0.9">` +
-    `<stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>` +
-    `</radialGradient></defs>` +
-    `<rect width="200" height="200" fill="${s.base}"/>` +
-    `<path d="${vein}" stroke="${s.grain}" stroke-width="2" fill="none" opacity="0.5"/>` +
-    `<path d="${vein}" stroke="${s.lines}" stroke-width="0.6" fill="none" opacity="0.4" transform="translate(4,6)"/>` +
-    glaze +
-    `</svg>`;
-
-  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-}
-
-/**
- * A varied, deterministic list of tile image sources for the hero.
- * 48 tiles across 8 surfaces and 4 finishes, seeded so it never changes.
- */
-export function heroTileImages(count = 48): string[] {
-  const out: string[] = [];
-  for (let i = 0; i < count; i++) {
-    out.push(tileDataUri(i, i % 4));
-  }
-  return out;
-}

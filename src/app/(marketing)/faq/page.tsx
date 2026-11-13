@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: "What is the difference between glossy and matte finishes?",
-    a: "Glossy reflects light and makes a room feel brighter, but it shows grout lines and dust more. Matte hides both and is more comfortable underfoot. For a bathroom with a lot of artificial light, matte on the walls reads as calmer. For a kitchen with little natural light, a slight gloss on the floor lifts the whole room. The Tile Lab lets you compare the two side by side on the same layout.",
+    a: "Glossy reflects light and makes a room feel brighter, but it shows grout lines and dust more. Matte hides both and is more comfortable underfoot. For a bathroom with a lot of artificial light, matte on the walls reads as calmer. For a kitchen with little natural light, a slight gloss on the floor lifts the whole room. Bring both samples to the shop and we will lay them on the same floor so you can compare side by side.",
   },
   {
     q: "Do you do delivery to site?",
@@ -98,18 +98,12 @@ export default function FaqPage() {
           <div className="max-w-2xl">
             <Eyebrow label="STILL NOT SURE?" />
             <p className="mt-6 text-[15px] leading-relaxed text-bone/79">
-              The Tile Lab is where most of the &ldquo;which finish&rdquo; questions
-              get settled. Pick the room, pick the layout, and compare the
-              surfaces side by side before you commit to a box count.
+              Most &ldquo;which finish&rdquo; questions get settled in person. Bring the
+              room dimensions and the products you are weighing, and we will lay
+              the samples on the shop floor so you can compare them side by
+              side before you commit to a box count.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/tile-lab"
-                className="rounded-full bg-[#c9a96a] px-6 py-4 text-[11px] uppercase tracking-[0.24em] text-black
-                           transition-colors duration-300 hover:bg-ink"
-              >
-                Open the Tile Lab
-              </Link>
               <Link
                 href="/contact"
                 className="rounded-full border border-gold/60 px-6 py-4 text-[11px] uppercase tracking-[0.24em] text-gold
