@@ -1,0 +1,56 @@
+ONE-TIME SETUP — about 1 minute, no knowledge of Supabase needed
+================================================================
+
+The file `supabase-setup.sql` (next to this file) contains everything:
+it creates all the tables, the security rules, and loads all 136 tiles.
+The tile photos are already uploaded to your Supabase project (done for
+you, 136 of 136, verified public).
+
+To run it:
+
+  1. Open your Supabase project: https://supabase.com/dashboard
+     (the one with URL  fpefdhzeqagducnoipsz.supabase.co)
+  2. Left menu → "SQL Editor" (looks like a database/</> icon)
+  3. Click "New query"
+  4. Delete the template text, paste the ENTIRE contents of
+     supabase-setup.sql
+  5. Press the "Run" button (top right of the editor)
+  6. You should see:  "Success. Now displaying X row(s)" — and at the end
+     a count of 136 products.
+
+If any step shows a red error message, copy that message to me and I'll
+fix it — do not try to fix it yourself.
+
+
+Afterwards: adding or changing data = just typing
+===================================================
+
+Supabase has a built-in spreadsheet-like editor for the tables:
+
+  - Left menu → "Table Editor"  →  "products"
+    Each row is one tile. Double-click any cell to change it.
+    - To set a real price: change  "price_per_box_inr"  (currently 1 =
+      "on request"). It is the price for ONE box, in rupees.
+    - To delist a tile: tick "active" off.
+  - To add a NEW tile:  "Add row" at the top. Fill the required cells:
+      slug          (lowercase, no spaces, e.g. "marble-nero-5")
+      name_en       ("Marble Nero 5")
+      material_type (pick from the dropdown)
+      finish        (dropdown: glossy, matte, ...)
+      shape         (dropdown)
+      dimensions    (type 600,1200,9  — without spaces, comma-separated)
+      box_area_sqft (31)
+      tiles_per_box (4)
+      price_per_box (your price in rupees, or 1 for "on request")
+    For the photo: upload the image in left menu → "Storage" → "tiles"
+    bucket, then put the name in photo_urls like:
+      tiles/your-slug.jpg          (just the file name, in quotes)
+    When in doubt on any cell, send me the tile name + photo and I'll add
+    it here and update the site.
+
+Two one-off helper scripts live in the project root:
+  - upload-tiles.cjs          → re-uploads tile images (after you drop new
+                                JPGs into src/assets/tiles/)
+  - generate-supabase-setup.cjs → regenerates supabase-setup.sql when the
+                                tile list changes (re-running the whole file
+                                is safe — it keeps existing rows)
