@@ -29,12 +29,19 @@ export async function getServerSupabase(): Promise<SupabaseClient | null> {
     return null;
   }
 
-  const cookieStore = await cookies();
+  // `cookies()` throws outside request scope (e.g. during `next build`'s
+  // prerender pass), so guard it: the client still works with anonymous reads.
+  let cookieStore;
+  try {
+    cookieStore = await cookies();
+  } catch {
+    cookieStore = null;
+  }
 
   return createServerClient(url, key, {
     cookies: {
       getAll() {
-        return cookieStore.getAll();
+        return cookieStore?.getAll() ?? [];
       },
       setAll(
         cookiesToSet: Array<{
@@ -43,6 +50,7 @@ export async function getServerSupabase(): Promise<SupabaseClient | null> {
           options: Record<string, unknown>;
         }>,
       ) {
+        if (cookieStore === null) return;
         try {
           cookiesToSet.forEach(({ name, value, options }) =>
             cookieStore.set(name, value, options),
