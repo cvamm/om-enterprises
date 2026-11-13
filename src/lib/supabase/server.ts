@@ -29,12 +29,21 @@ export async function getServerSupabase(): Promise<SupabaseClient | null> {
     return null;
   }
 
-  const cookieStore = await cookies();
+  // `cookies()` is only valid in request scope. During `next build` the
+  // static-param and metadata passes run outside a request, so an unconfigured
+  // or build-time call must not throw — read the jar when we can and build the
+  // client anonymously when we can't (reads still work on the anon key).
+  let cookieStore;
+  try {
+    cookieStore = await cookies();
+  } catch {
+    cookieStore = null;
+  }
 
   return createServerClient(url, key, {
     cookies: {
       getAll() {
-        return cookieStore.getAll();
+        return cookieStore?.getAll() ?? [];
       },
       setAll(
         cookiesToSet: Array<{
@@ -43,6 +52,7 @@ export async function getServerSupabase(): Promise<SupabaseClient | null> {
           options: Record<string, unknown>;
         }>,
       ) {
+        if (cookieStore === null) return;
         try {
           cookiesToSet.forEach(({ name, value, options }) =>
             cookieStore.set(name, value, options),

@@ -253,7 +253,9 @@ export const getProductBySlug = cache(async (slug: string): Promise<Product | nu
 
   if (error) {
     console.error("[queries/products] getProductBySlug failed:", error.message);
-    return null;
+    // Consistent with the other reads: a configured-but-empty project still
+    // prerenders the demo product instead of a broken detail page.
+    return SAMPLE_PRODUCTS.find((p) => p.slug === slug) ?? null;
   }
   return data ? toProduct(data as ProductRow) : null;
 });
@@ -273,7 +275,9 @@ export const getAllProductSlugs = cache(async (): Promise<string[]> => {
 
   if (error) {
     console.error("[queries/products] getAllProductSlugs failed:", error.message);
-    return [];
+    // Fall back to the sample set like the other reads, so a configured-but
+    // empty (or schema-less) project still prerenders the demo catalogue.
+    return SAMPLE_PRODUCTS.map((p) => p.slug);
   }
   return (data ?? []).map((r) => (r as { slug: string }).slug);
 });

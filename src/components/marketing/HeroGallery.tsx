@@ -10,7 +10,20 @@ import {
   useTransform,
 } from "framer-motion";
 import { Eyebrow } from "../ui/Eyebrow";
-import { heroTileImages } from "@/lib/utils/hero-tiles";
+import { HERO_TILES } from "@/lib/utils/hero-tiles";
+
+/**
+ * Showroom reveal that fades in once the scroll animation ends.
+ *
+ * The shop's real showroom photo is not in the repo yet, so this is a dark
+ * placeholder wash. When the image lands, swap the constant for an asset
+ * import and nothing else in this component changes:
+ *
+ *   import showroomUrl from "@/assets/showroom.jpg";
+ *   const SHOWROOM_IMAGE = showroomUrl;
+ */
+const SHOWROOM_IMAGE =
+  "linear-gradient(180deg, #1a1815 0%, #26221d 60%, #14120f 100%)";
 
 /**
  * The hero eyebrow. Short form of the brand, because a tracked-out ALL-CAPS
@@ -41,11 +54,12 @@ export function HeroGallery() {
   const reduceMotion = useReducedMotion() ?? false;
   const [weak, setWeak] = useState(false);
 
-  // Weak connection falls back to the static hero. `saveData` is the hard case;
-  // 2G/3G is the soft one.
+  // Weak connection falls back to the static hero. The scroll animation
+  // downloads nothing (gradient tiles + transforms), so 3G is fine; only
+  // Save-Data and 2G get the static fallback. `saveData` is the hard case.
   useLayoutEffect(() => {
     const conn = navigator.connection;
-    if (conn && (conn.saveData || conn.effectiveType === "2g" || conn.effectiveType === "3g")) {
+    if (conn && (conn.saveData || conn.effectiveType === "2g")) {
       setWeak(true);
     }
   }, []);
@@ -87,14 +101,37 @@ export function HeroGallery() {
   const handoffOpacity = useTransform(spring, [0.84, 1], [0, 1]);
   const handoffY = useTransform(spring, [0.84, 1], [30, 0]);
 
+  // End of the scroll: the tile wall melts away and the showroom photo behind
+  // it takes over, so the visitor lands on "the shop" instead of a dead stop.
+  const matrixOpacity = useTransform(spring, [0.8, 1], [1, 0]);
+  const showroomOpacity = useTransform(spring, [0.72, 1], [0, 1]);
+  const showroomScale = useTransform(spring, [0.72, 1], [1.12, 1]);
+
   if (reduceMotion || weak) return <HeroStatic />;
+
+  // The wall shows the shop's own catalogue tiles (Endless marble + Livenza
+  // wood), not painted swatches — the material moment should be their stock.
+  const heroTiles = HERO_TILES;
 
   return (
     <section ref={sectionRef} className="relative h-[560vh] bg-ink">
       <div
-        className="sticky top-0 h-[100vh] overflow-hidden"
+        className="sticky top-0 h-[100svh] overflow-hidden"
         style={{ perspective: "1600px", perspectiveOrigin: "50% 42%" }}
       >
+        {/* Showroom photo. Reveals as the tile wall melts away at the end of
+            the scroll. A gradient placeholder until the shop's real photo lands. */}
+        <motion.div
+          style={{
+            opacity: showroomOpacity,
+            scale: showroomScale,
+            backgroundImage: SHOWROOM_IMAGE,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="absolute inset-0 z-[2] will-change-[opacity,transform]"
+          aria-hidden="true"
+        />
         {/* Unfurling rounded banner, centred then sized by the springs */}
         <div className="absolute inset-0 z-[1] flex items-center justify-center">
           <motion.div
@@ -112,31 +149,41 @@ export function HeroGallery() {
           />
         </div>
 
-        {/* Dense tile matrix — 48 varied stone/ceramic tiles, grouped into
-            4 parallax columns so the shelf feels layered, not flat. Each
-            column drifts on Y at a different rate over the scroll spring. */}
+        {/* Dense tile matrix — 40 colorful tiles, grouped into 4 parallax
+            columns so the shelf feels layered, not flat. Each column drifts
+            on Y at a different rate over the scroll spring, and the whole wall
+            melts away at the end of the scroll to reveal the showroom. */}
         <div
-          className="absolute inset-0 z-[2] overflow-hidden"
+          className="absolute inset-0 z-[3] overflow-hidden"
           style={{ transformStyle: "preserve-3d" }}
         >
           <motion.div
-            style={{ rotateY, rotateX, rotateZ, width: "100%", height: "100%" }}
+            style={{
+              opacity: matrixOpacity,
+              rotateY,
+              rotateX,
+              rotateZ,
+              width: "100%",
+              height: "100%",
+            }}
             className="preserve-3d grid h-full w-full grid-cols-4 gap-[3px] bg-bone/[0.06] p-[3px] md:gap-1 md:p-1"
           >
             {colY.map((y, col) => (
               <motion.div
                 key={col}
                 style={{ y }}
-                className="grid h-full w-full grid-cols-2 grid-rows-6 gap-[3px] md:gap-1"
+                className="grid h-full w-full grid-cols-2 grid-rows-4 gap-[3px] md:gap-1"
               >
-                {Array.from({ length: 12 }, (_, row) => {
-                  const tileIndex = col * 12 + row;
+                {Array.from({ length: 8 }, (_, row) => {
+                  const tileIndex = col * 8 + row;
+                  const tile = heroTiles[tileIndex];
+                  if (tile === undefined) return null;
                   return (
                     <div
                       key={row}
-                      className="h-full w-full overflow-hidden rounded-[2px] bg-ink/[0.08]"
+                      className="h-full w-full overflow-hidden rounded-[3px]"
                       style={{
-                        backgroundImage: `url("${heroTileImages(48)[tileIndex]}")`,
+                        backgroundImage: `url(${tile})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                       }}
@@ -213,19 +260,24 @@ export function HeroGallery() {
  * It still carries the signature tile wall, dimmed and masked, so the brand's
  * material moment survives in every phone case — including Save-Data/weak
  * links and reduce-motion, which used to fall back to bare text. The wall uses
- * the same inline-SVG data URIs as the scroll hero, so it adds no network
- * cost, and the global reduce-motion block neutralises any of its motion.
+ * the same colorful CSS-gradient tiles as the scroll hero, so it adds no
+ * network cost, and the global reduce-motion block neutralises any of its motion.
  */
 function HeroStatic() {
-  const tiles = heroTileImages(24);
+  // Same real catalogue tiles as the scroll hero, cycled to fill the wall.
+  const tileCount = HERO_TILES.length;
+  const tiles = Array.from({ length: 24 }, (_, i) =>
+    tileCount === 0 ? "" : HERO_TILES[i % tileCount] ?? "",
+  );
   return (
     <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-ink">
       <div className="tile-wall" aria-hidden="true">
-        {tiles.map((src, i) => (
+        {tiles.map((src, i) =>
+          src === "" ? null : (
           <div
             key={i}
             className="tile-wall__cell"
-            style={{ backgroundImage: `url("${src}")` }}
+            style={{ backgroundImage: `url(${src})` }}
           />
         ))}
       </div>

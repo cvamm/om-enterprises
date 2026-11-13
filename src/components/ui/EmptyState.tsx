@@ -5,8 +5,7 @@ import Link from "next/link";
  *
  * §10 requires failure and emptiness read as direction, not mood. So: no
  * apology, no illustration, a sentence that names the situation, and at least
- * one concrete thing to do. Used by the catalogue grid, the portfolio, and
- * the admin tables.
+ * one concrete thing to do. Used by the catalogue grid and the admin tables.
  */
 export function EmptyState({
   title,

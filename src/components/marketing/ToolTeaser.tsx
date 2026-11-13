@@ -9,13 +9,6 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const TOOLS = [
   {
-    href: "/tile-lab",
-    title: "Tile Lab",
-    tag: "Pattern configurator",
-    body: "Set the bond, the grout shade and the gloss, and watch the wall rebuild itself as you drag. Send the mock-up to the shop with one tap.",
-    detail: "Stacked, brick bond and diagonal",
-  },
-  {
     href: "/calculator",
     title: "Area Calculator",
     tag: "Box count and cost",
@@ -25,22 +18,22 @@ const TOOLS = [
 ] as const;
 
 /**
- * Section 03. The two signature tools, each with a real description of what
- * happens inside them rather than a slogan.
+ * Section 03. A single signature tool, with a real description of what
+ * happens inside it rather than a slogan.
  */
 export function ToolTeaser() {
   return (
     <section className="border-t border-bone/10 bg-ink py-24 md:py-32">
       <Container>
         <div className="mb-14 max-w-2xl">
-          <Eyebrow index="03" label="TILE LAB" className="mb-6" />
+          <Eyebrow index="03" label="CALCULATOR" className="mb-6" />
           <h2 className="font-display text-4xl leading-[1.05] text-bone md:text-6xl">
-            Two tools that
-            <span className="font-italic-em text-bone/77"> do the maths. </span>
+            The tool that
+            <span className="font-italic-em text-bone/77"> does the maths. </span>
           </h2>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-5 lg:grid-cols-1">
           {TOOLS.map((tool, index) => (
             <motion.article
               key={tool.href}
