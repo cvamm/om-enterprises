@@ -42,7 +42,8 @@ const rows = parseRealTiles();
         },
         body: buf,
       });
-      if (res.ok) {
+      // 200 = uploaded; 400 = already exists (idempotent re-run) — both fine.
+      if (res.status === 200 || res.status === 400) {
         ok++;
         break;
       }
