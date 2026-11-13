@@ -27,7 +27,6 @@ const q = (s) => "'" + String(s).replace(/'/g, "''") + "'";
 
 const inserts = rows
   .map((r) => {
-    const id =
       "2f" +
       r.prefix +
       "-" +
@@ -40,7 +39,6 @@ const inserts = rows
       .filter(Boolean)
       .map((v) => q(v));
     const vals = [
-      q(id),
       q(r.slug),
       q(r.name),
       "NULL", // name_hi
@@ -69,7 +67,7 @@ const inserts = rows
   })
   .join(",\n");
 
-const columns = `  id, slug, name_en, name_hi, origin_id, supplier_id,
+const columns = `  slug, name_en, name_hi, origin_id, supplier_id,
   material_type, finish, room_uses, shape,
   nominal_dimensions_mm, box_area_sqft, tiles_per_box,
   price_per_box_inr, moq_boxes, grade, stock_status,
@@ -125,7 +123,7 @@ ${columns}
 )
 values
 ${inserts}
-on conflict (id) do update set
+on conflict (slug) do update set
   name_en = excluded.name_en,
   material_type = excluded.material_type,
   finish = excluded.finish,
