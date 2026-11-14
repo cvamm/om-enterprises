@@ -3,53 +3,29 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
 import { cn } from "@/lib/utils/cn";
 import { siteConfig } from "@/lib/config/site";
-import { CATEGORIES_LIST } from "@/lib/utils/category-photos";
 
 const NAV = [
   { href: "/collections", label: "Collections" },
   { href: "/tiles", label: "Tiles" },
+  { href: "/granite", label: "Granite" },
+  { href: "/marbles", label: "Marble" },
   { href: "/calculator", label: "Calculator" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
-// The store's non-tile lines, grouped under one header disclosure so seven
-// links never push the bar into overflow on its own.
-const PRODUCT_LINKS = CATEGORIES_LIST.map((c) => ({
-  href: `/${c.slug}`,
-  label: c.name,
-}));
-
 const LINK_CLASS =
   "text-[12px] uppercase tracking-[0.16em] text-bone/79 transition-colors duration-300 hover:text-bone";
 
-/**
- * Fixed header over a translucent near-black backdrop.
- *
- * Labels are static English. `en` is the site's default language and the
- * chrome is server-rendered, so hard-coding the default avoids a key-name
- * flash between the SSR HTML and the first client render. Hindi chrome
- * applies per page once a locale switch is wired up — see the ADR on i18n
- * scope.
- */
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
-
   const close = () => setOpen(false);
 
-  const productActive = PRODUCT_LINKS.some((l) =>
-    pathname.startsWith(`${l.href}/`),
-  );
-
-  // The header is the only persistent chrome on the page. Hide it while the
-  // visitor scrolls down so no branded bar sits over the content mid-scroll;
-  // it returns on scroll-up, near the top, or whenever the menu is open.
   const [hidden, setHidden] = useState(false);
   useEffect(() => {
     let lastY = window.scrollY;
@@ -87,57 +63,6 @@ export function Navbar() {
               </Link>
             );
           })}
-
-          <div
-            className="relative"
-            onMouseEnter={() => setProductsOpen(true)}
-            onMouseLeave={() => setProductsOpen(false)}
-          >
-            <button
-              type="button"
-              className={cn(
-                LINK_CLASS,
-                "flex items-center gap-1.5",
-                productActive && "text-gold",
-              )}
-              aria-expanded={productsOpen}
-              aria-controls="products-menu"
-              onClick={() => setProductsOpen((value) => !value)}
-            >
-              Products
-              <span className="text-bone/45 text-[9px]" aria-hidden="true">
-                {productsOpen ? "▴" : "▾"}
-              </span>
-            </button>
-
-            <AnimatePresence>
-              {productsOpen ? (
-                <motion.div
-                  id="products-menu"
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 6 }}
-                  transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                  className="border-bone/10 bg-ink-2/96 absolute left-0 top-full z-50 mt-3 min-w-[220px] overflow-hidden rounded-2xl border backdrop-blur-xl"
-                >
-                  <div className="flex flex-col p-2">
-                    {PRODUCT_LINKS.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={cn(
-                          "text-bone/79 px-4 py-2.5 text-[12px] uppercase tracking-[0.14em] transition-colors duration-300 hover:text-bone",
-                          productActive && "text-gold",
-                        )}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
-              ) : null}
-            </AnimatePresence>
-          </div>
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -160,52 +85,36 @@ export function Navbar() {
         </button>
       </Container>
 
-      <AnimatePresence>
-        {open ? (
-          <motion.nav
-            id="mobile-nav"
-            aria-label="Primary"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="border-bone/10 bg-ink overflow-hidden border-t lg:hidden"
-          >
-            <Container className="flex flex-col gap-1 py-4">
-              {NAV.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={close}
-                  className="font-display text-bone/85 py-2.5 text-2xl"
-                >
-                  {item.label}
-                </a>
-              ))}
+      {open ? (
+        <motion.nav
+          id="mobile-nav"
+          aria-label="Primary"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          className="border-bone/10 bg-ink overflow-hidden border-t lg:hidden"
+        >
+          <Container className="flex flex-col gap-1 py-4">
+            {NAV.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={close}
+                className="font-display text-bone/85 py-2.5 text-2xl"
+              >
+                {item.label}
+              </a>
+            ))}
 
-              <p className="text-gold pt-4 pb-1 text-[10px] uppercase tracking-[0.4em]">
-                Products
-              </p>
-              {PRODUCT_LINKS.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={close}
-                  className="font-display text-bone/70 py-2 text-lg"
-                >
-                  {item.label}
-                </a>
-              ))}
-
-              <div className="pt-3">
-                <Button href="/contact" variant="primary" size="md" onClick={close}>
-                  Contact Us
-                </Button>
-              </div>
-            </Container>
-          </motion.nav>
-        ) : null}
-      </AnimatePresence>
+            <div className="pt-3">
+              <Button href="/contact" variant="primary" size="md" onClick={close}>
+                Contact Us
+              </Button>
+            </div>
+          </Container>
+        </motion.nav>
+      ) : null}
     </motion.header>
   );
 }

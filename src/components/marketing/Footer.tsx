@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { Container } from "../ui/Container";
 import { buildWhatsAppUrl, formatAddress, siteConfig } from "@/lib/config/site";
-import { CATEGORIES_LIST } from "@/lib/utils/category-photos";
 
 const SHOP_LINKS = [
   { href: "/collections", label: "Collections" },
   { href: "/tiles", label: "Tiles" },
+  { href: "/granite", label: "Granite" },
+  { href: "/marbles", label: "Marble" },
   { href: "/calculator", label: "Calculator" },
-  ...CATEGORIES_LIST.map((c) => ({ href: `/${c.slug}`, label: c.name })),
 ] as const;
 
 const HELP_LINKS = [
