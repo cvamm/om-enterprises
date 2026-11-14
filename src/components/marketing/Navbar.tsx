@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
 import { cn } from "@/lib/utils/cn";
@@ -14,8 +14,16 @@ const NAV = [
   { href: "/tiles", label: "Tiles" },
   { href: "/granite", label: "Granite" },
   { href: "/marbles", label: "Marble" },
+  { href: "/house-finishing", label: "House Finishing" },
   { href: "/calculator", label: "Calculator" },
   { href: "/contact", label: "Contact" },
+] as const;
+
+const OTHER_LINKS = [
+  { href: "/mirrors", label: "Mirrors" },
+  { href: "/washing-basins", label: "Washing Basins" },
+  { href: "/tiles-adhesive", label: "Tiles Adhesive" },
+  { href: "/western-toilets", label: "Western Toilets" },
 ] as const;
 
 const LINK_CLASS =
@@ -24,7 +32,10 @@ const LINK_CLASS =
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [othersOpen, setOthersOpen] = useState(false);
   const close = () => setOpen(false);
+
+  const otherActive = OTHER_LINKS.some((l) => pathname.startsWith(`${l.href}/`));
 
   const [hidden, setHidden] = useState(false);
   useEffect(() => {
@@ -63,6 +74,57 @@ export function Navbar() {
               </Link>
             );
           })}
+
+          <div
+            className="relative"
+            onMouseEnter={() => setOthersOpen(true)}
+            onMouseLeave={() => setOthersOpen(false)}
+          >
+            <button
+              type="button"
+              className={cn(
+                LINK_CLASS,
+                "flex items-center gap-1.5",
+                otherActive && "text-gold",
+              )}
+              aria-expanded={othersOpen}
+              aria-controls="others-menu"
+              onClick={() => setOthersOpen((v) => !v)}
+            >
+              Others
+              <span className="text-bone/45 text-[9px]" aria-hidden="true">
+                {othersOpen ? "▴" : "▾"}
+              </span>
+            </button>
+
+            <AnimatePresence>
+              {othersOpen ? (
+                <motion.div
+                  id="others-menu"
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 6 }}
+                  transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                  className="border-bone/10 bg-ink-2/96 absolute left-0 top-full z-50 mt-3 min-w-[220px] overflow-hidden rounded-2xl border backdrop-blur-xl"
+                >
+                  <div className="flex flex-col p-2">
+                    {OTHER_LINKS.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={cn(
+                          "text-bone/79 px-4 py-2.5 text-[12px] uppercase tracking-[0.14em] transition-colors duration-300 hover:text-bone",
+                          otherActive && "text-gold",
+                        )}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              ) : null}
+            </AnimatePresence>
+          </div>
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -85,36 +147,52 @@ export function Navbar() {
         </button>
       </Container>
 
-      {open ? (
-        <motion.nav
-          id="mobile-nav"
-          aria-label="Primary"
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="border-bone/10 bg-ink overflow-hidden border-t lg:hidden"
-        >
-          <Container className="flex flex-col gap-1 py-4">
-            {NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={close}
-                className="font-display text-bone/85 py-2.5 text-2xl"
-              >
-                {item.label}
-              </a>
-            ))}
+      <AnimatePresence>
+        {open ? (
+          <motion.nav
+            id="mobile-nav"
+            aria-label="Primary"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="border-bone/10 bg-ink overflow-hidden border-t lg:hidden"
+          >
+            <Container className="flex flex-col gap-1 py-4">
+              {NAV.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={close}
+                  className="font-display text-bone/85 py-2.5 text-2xl"
+                >
+                  {item.label}
+                </a>
+              ))}
 
-            <div className="pt-3">
-              <Button href="/contact" variant="primary" size="md" onClick={close}>
-                Contact Us
-              </Button>
-            </div>
-          </Container>
-        </motion.nav>
-      ) : null}
+              <p className="text-gold pt-4 pb-1 text-[10px] uppercase tracking-[0.4em]">
+                Others
+              </p>
+              {OTHER_LINKS.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={close}
+                  className="font-display text-bone/70 py-2 text-lg"
+                >
+                  {item.label}
+                </a>
+              ))}
+
+              <div className="pt-3">
+                <Button href="/contact" variant="primary" size="md" onClick={close}>
+                  Contact Us
+                </Button>
+              </div>
+            </Container>
+          </motion.nav>
+        ) : null}
+      </AnimatePresence>
     </motion.header>
   );
 }

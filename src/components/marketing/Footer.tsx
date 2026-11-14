@@ -10,7 +10,15 @@ const SHOP_LINKS = [
   { href: "/tiles", label: "Tiles" },
   { href: "/granite", label: "Granite" },
   { href: "/marbles", label: "Marble" },
+  { href: "/house-finishing", label: "House Finishing" },
   { href: "/calculator", label: "Calculator" },
+] as const;
+
+const OTHER_LINKS = [
+  { href: "/mirrors", label: "Mirrors" },
+  { href: "/washing-basins", label: "Washing Basins" },
+  { href: "/tiles-adhesive", label: "Tiles Adhesive" },
+  { href: "/western-toilets", label: "Western Toilets" },
 ] as const;
 
 const HELP_LINKS = [
@@ -24,6 +32,7 @@ const COMPANY_LINKS = [
 
 const COLUMNS = [
   { heading: "footer.shop", links: SHOP_LINKS },
+  { heading: "footer.other", links: OTHER_LINKS },
   { heading: "footer.help", links: HELP_LINKS },
   { heading: "footer.company", links: COMPANY_LINKS },
 ] as const;
@@ -40,7 +49,7 @@ export function Footer() {
           </p>
           <p className="font-italic-em text-gold mt-3 text-lg md:text-xl">Marble &amp; Granites</p>
         </div>
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <p className="font-display text-bone text-3xl leading-[1.1]">
               Tiles and natural stone,
