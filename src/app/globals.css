@@ -366,6 +366,7 @@
     background-size: cover;
     background-position: center;
     aspect-ratio: 1;
+    clip-path: inset(6%);
   }
 
   /* ── Dev-only placeholder, never shipped as content ─────────────────────── */

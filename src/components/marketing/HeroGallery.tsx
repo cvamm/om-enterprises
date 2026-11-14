@@ -149,7 +149,7 @@ export function HeroGallery() {
               width: "100%",
               height: "100%",
             }}
-            className="preserve-3d grid h-full w-full grid-cols-4 gap-0 p-0"
+            className="preserve-3d grid h-full w-full grid-cols-4 gap-0 p-0 bg-ink"
           >
             {colY.map((y, col) => (
               <motion.div
@@ -169,6 +169,9 @@ export function HeroGallery() {
                         backgroundImage: `url(${tile})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
+                        // The source tile photos have a thin black frame
+                        // baked in; insetting 6% crops it out of view.
+                        clipPath: "inset(6%)",
                       }}
                       aria-hidden="true"
                     />
@@ -180,16 +183,6 @@ export function HeroGallery() {
         </div>
 
         {/* Ambient shadow masks */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 z-[3] h-1/2"
-          style={{ boxShadow: "inset 0 100px 150px -50px var(--color-ink)" }}
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-1/2"
-          style={{ boxShadow: "inset 0 -100px 150px -50px var(--color-ink)" }}
-          aria-hidden="true"
-        />
 
         {/* Brand lockup */}
         <motion.div
