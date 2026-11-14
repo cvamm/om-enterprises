@@ -342,8 +342,8 @@
     inset: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
-    padding: 3px;
+    gap: 0;
+    padding: 0;
     opacity: 0.7;
     pointer-events: none;
     /* Fade the wall only at the very bottom so copy there stays legible,
@@ -355,14 +355,13 @@
   @media (min-width: 768px) {
     .tile-wall {
       grid-template-columns: repeat(6, 1fr);
-      gap: 4px;
-      padding: 4px;
+      gap: 0;
+      padding: 0;
     }
   }
 
   .tile-wall__cell {
     overflow: hidden;
-    border-radius: 2px;
     background-color: var(--color-ink-2);
     background-size: cover;
     background-position: center;

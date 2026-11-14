@@ -60,7 +60,6 @@ export function HeroGallery() {
   const bannerWidth = useTransform(spring, (v) => `${90 + v * 10}vw`);
   const bannerHeight = useTransform(spring, (v) => `${80 + v * 20}vh`);
   const borderRadius = useTransform(spring, (v) => `${48 - v * 48}px`);
-  const borderWidth = useTransform(spring, (v) => `${4 - v * 4}px`);
 
   // The 3D matrix settles between 15% and 60%.
   const rotateY = useTransform(spring, [0.15, 0.6], [-45, -8]);
@@ -125,7 +124,6 @@ export function HeroGallery() {
                 width: bannerWidth,
                 height: bannerHeight,
                 borderRadius,
-                borderWidth,
                 borderStyle: "solid",
                 borderColor: "rgba(201,169,106,0.45)",
                 backgroundColor: "var(--color-ink-2)",
@@ -151,13 +149,13 @@ export function HeroGallery() {
               width: "100%",
               height: "100%",
             }}
-            className="preserve-3d grid h-full w-full grid-cols-4 gap-[3px] bg-bone/[0.06] p-[3px] md:gap-1 md:p-1"
+            className="preserve-3d grid h-full w-full grid-cols-4 gap-0 p-0"
           >
             {colY.map((y, col) => (
               <motion.div
                 key={col}
                 style={{ y }}
-                className="grid h-full w-full grid-cols-2 grid-rows-4 gap-[3px] md:gap-1"
+                className="grid h-full w-full grid-cols-2 grid-rows-4 gap-0"
               >
                 {Array.from({ length: 8 }, (_, row) => {
                   const tileIndex = col * 8 + row;
@@ -166,7 +164,7 @@ export function HeroGallery() {
                   return (
                     <div
                       key={row}
-                      className="h-full w-full overflow-hidden rounded-[3px]"
+                      className="h-full w-full overflow-hidden"
                       style={{
                         backgroundImage: `url(${tile})`,
                         backgroundSize: "cover",
