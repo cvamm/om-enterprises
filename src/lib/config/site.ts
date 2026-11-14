@@ -2,23 +2,19 @@
  * Single source of truth for brand, contact and coverage.
  *
  * ────────────────────────────────────────────────────────────────────────────
- * NOTHING IN THIS FILE IS REAL.
+ * Brand, GSTIN, both phone lines, the shop address and the opening hours are
+ * real — taken from the shop's own Google Maps listing and the signboard
+ * photograph supplied on 2026-11-14. The New Azad Nagar office printed on the
+ * board is deliberately not published; the owner asked for Bamba Road only.
  *
- * The values are development stand-ins. Two categories:
+ * What is still a stand-in carries the literal marker string
+ * `[SAMPLE — replace before deploy]`: email, Instagram handle, the
+ * trust-bar claims and the delivery zones. The CI job `verify:no-sample`
+ * greps the source for that marker and fails the launch gate while any of
+ * them remain.
  *
- *   1. Verifiable facts (name, address, phone, email, hours, warranty,
- *      delivery zones). These carry the literal marker string
- *      `[SAMPLE — replace before deploy]`. The CI job `verify:no-sample`
- *      greps the source for that marker and fails the launch gate while any
- *      of them remain.
- *
- *   2. Fictional-but-plausible brand strings. The shop's real name does not
- *      exist yet, so the dev site needs a coherent stand-in that does not
- *      collide with any live brand. The marker is attached so the boundary is
- *      never mistaken for a decision that was made.
- *
- * Replace this file with real details before the Phase 1 launch. Nothing
- * else in the codebase holds contact data.
+ * Replace the remaining fields before the Phase 1 launch. Nothing else in
+ * the codebase holds contact data.
  * ────────────────────────────────────────────────────────────────────────────
  */
 
@@ -39,6 +35,19 @@ export type DeliveryZone = {
   description: string;
 };
 
+/** One shop location. `locality` is the district label the footer chip shows. */
+export type ShopAddress = {
+  line1: string;
+  line2: string;
+  locality?: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+  /** Pinned Google Maps link for this shop's own place listing. */
+  mapsUrl: string;
+};
+
 export const siteConfig = {
   /** Brand name shown in the mark, title tag and footer. */
   name: BRAND,
@@ -53,6 +62,12 @@ export const siteConfig = {
 
   /** Registered trade name, for the footer copyright line. */
   legalName: BRAND,
+
+  /** Descriptor line under the wordmark, as painted on the signboard. */
+  descriptor: "Marble, Granites & Tiles",
+
+  /** GSTIN, as painted on the signboard and confirmed by the owner. */
+  gstin: "09B0HPS2497E1Z4",
 
   /**
    * Tagline used where one line is needed. Editorial positioning, not a
@@ -69,26 +84,33 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.invalid",
 
   /** Digits only, country code first, no `+`. */
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "910000000000",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "918009930761",
 
   /** Public phone line, formatted for display. */
-  phoneDisplay: `+91 00000 00000${SAMPLE}`,
+  phoneDisplay: "+91 80099 30761",
 
-  /** Store front address. Every part is a placeholder. */
+  /** Second line, listed on Google Maps. Contact page only. */
+  phoneAlt: "+91 91194 43019",
+
+  /**
+   * The shop. Address and pinned map link from the shop's own Google Maps
+   * listing, which the owner confirmed is where customers walk in.
+   */
   address: {
-    line1: `Main Market Road${SAMPLE}`,
-    line2: `Lane [NUMBER]${SAMPLE}`,
-    locality: `Kanpur Nagar${SAMPLE}`,
+    line1: "Nayi Basti, near Skyomyo School",
+    line2: "Bamba Road",
+    locality: "Naubasta",
     city: "Kanpur",
     state: "Uttar Pradesh",
-    zip: `208[000]${SAMPLE}`,
+    zip: "208021",
     country: "India",
-  },
+    mapsUrl: "https://maps.google.com/?cid=16215146413831390768",
+  } satisfies ShopAddress,
 
-  /** Opening hours, local time. */
+  /** Opening hours, local time — as published on the shop's Google listing. */
   hours: [
-    { days: `Monday – Saturday${SAMPLE}`, time: `11:00 – 21:00${SAMPLE}` },
-    { days: `Sunday${SAMPLE}`, time: `11:00 – 20:00${SAMPLE}` },
+    { days: "Monday – Saturday", time: "8:30 am – 9:00 pm" },
+    { days: "Sunday", time: "8:30 am – 9:00 pm" },
   ],
 
   /** Email for the contact form fallback. */
@@ -98,21 +120,87 @@ export const siteConfig = {
   instagram: `@[handle]${SAMPLE}`,
 
   /**
-   * Kanpur delivery coverage. Open question #7 was left unanswered, so this
-   * is an explicit placeholder set — confirm Nagar vs Dehat before launch.
+   * Delivery coverage, by road from the Bamba Road shop. Every entry was
+   * measured on Google Maps on 2026-11-14 and sits inside the ~150 km radius
+   * the owner set; the towns under each label are the ones a driver would
+   * actually be sent to.
    */
   deliveryZones: [
     {
       id: "kanpur-nagar",
-      label: `Kanpur Nagar${SAMPLE}`,
-      description: `Primary delivery zone${SAMPLE}`,
+      label: "Kanpur city and suburbs",
+      description: "Every mohalla, the cantonment, Naubasta, Bithnor Road and the industrial belts.",
     },
     {
       id: "kanpur-dehat",
-      label: `Kanpur Dehat${SAMPLE}`,
-      description: `Extended zone, quote on request${SAMPLE}`,
+      label: "Kanpur Dehat",
+      description: "Akbarpur, Chibramau, Derapur, Bhoganipur, Raseru, Gram and Maitha.",
+    },
+    {
+      id: "unnao",
+      label: "Unnao",
+      description: "Unnao city and the tehsils on both banks of the Ganga.",
+    },
+    {
+      id: "kannauj",
+      label: "Kannauj",
+      description: "Kannauj city and the towns on the Kanpur–Kannauj road.",
+    },
+    {
+      id: "lucknow",
+      label: "Lucknow",
+      description: "Lucknow city, Mohanlalganj and the outer suburbs.",
+    },
+    {
+      id: "raebareli",
+      label: "Rae Bareli",
+      description: "Rae Bareli city and the towns toward Kanpur.",
+    },
+    {
+      id: "fatehpur",
+      label: "Fatehpur",
+      description: "Fatehpur city and the towns along the Kanpur–Lucknow–Fatehpur road.",
+    },
+    {
+      id: "barabanki",
+      label: "Barabanki",
+      description: "Barabanki city and the towns on the Kanpur–Barabanki road.",
+    },
+    {
+      id: "banda",
+      label: "Banda",
+      description: "Banda city and the towns toward it.",
     },
   ] satisfies DeliveryZone[],
+
+  /**
+   * Named so a customer with a site here is not promised a drop that will
+   * not happen. Every entry was measured by road from the Bamba Road shop
+   * on 2026-11-14 and sits beyond the ~150 km line.
+   */
+  deliveryExcluded: [
+    "Sultanpur",
+    "Etawah",
+    "Farrukhabad",
+    "Hardoi",
+    "Sitapur",
+    "Jhansi",
+    "Prayagraj",
+    "Varanasi",
+    "Agra",
+    "Gwalior",
+    "Ayodhya",
+    "Gonda",
+    "Pratapgarh",
+    "Amethi",
+    "Hamirpur",
+    "Mahoba",
+    "Mau",
+    "Bahraich",
+    "Shrawasti",
+    "Kaushambi",
+  ],
+
 
   /** Default wastage allowance, as a percentage. */
   defaultWastagePct: 10,
@@ -158,9 +246,10 @@ export function buildWhatsAppUrl(message: string): string {
 }
 
 /** Full address as one line, for schema.org and the footer. */
-export function formatAddress(): string {
-  const { address } = siteConfig;
-  return [address.line1, address.line2, address.locality, address.city, address.state, address.zip]
+export function formatAddress(address: ShopAddress = siteConfig.address): string {
+  // `locality` is the district label the footer chip shows; joining it in
+  // here reads "Kanpur Nagar, Kanpur".
+  return [address.line1, address.line2, address.city, address.state, address.zip]
     .filter((part) => Boolean(part))
     .join(", ");
 }

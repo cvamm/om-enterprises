@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "Do you do delivery to site?",
-    a: "Yes. Pickup, home delivery within the Kanpur city limits, and site delivery for active construction sites are all options. Site delivery is the right choice when the tiles need to be brought in through a construction lift or through a narrow gap between floors. The delivery preference you select on the quote form is the one the driver is told, not the one on the shipping label — make sure it matches where the tiles will actually arrive.",
+    a: "Yes. Pick up at the shop, home delivery, or site delivery for active construction sites. The regular routes cover Kanpur city and suburbs, Kanpur Dehat, Unnao, Kannauj, Lucknow, Rae Bareli, Fatehpur, Barabanki and Banda — the full list is on the contact page. Beyond about 150 km there is no standing route, so send the site address first. Site delivery is the right choice when the tiles need to be brought in through a construction lift or through a narrow gap between floors. The delivery preference you select on the quote form is the one the driver is told, not the one on the shipping label — make sure it matches where the tiles will actually arrive.",
   },
   {
     q: "Can I match a batch of tiles I bought a year ago?",
@@ -48,7 +48,8 @@ const FAQS = [
  * Answers are specific to this shop's stock and practices, not generic
  * tile advice from the internet.
  *
- * [SAMPLE — replace before delivery terms before launch.]
+ * Delivery coverage lives in `siteConfig.deliveryZones` and on the contact
+ * page — keep the delivery answer in step with it.
  */
 export default function FaqPage() {
   return (
