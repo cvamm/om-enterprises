@@ -13,9 +13,7 @@ import { CATEGORIES_LIST } from "@/lib/utils/category-photos";
 const NAV = [
   { href: "/collections", label: "Collections" },
   { href: "/tiles", label: "Tiles" },
-  { href: "/origins", label: "Origins" },
   { href: "/calculator", label: "Calculator" },
-  { href: "/craft", label: "The Craft" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
@@ -144,7 +142,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button href="/contact" variant="secondary" size="sm">
-            Request a Quote
+            Contact Us
           </Button>
         </div>
 
@@ -201,7 +199,7 @@ export function Navbar() {
 
               <div className="pt-3">
                 <Button href="/contact" variant="primary" size="md" onClick={close}>
-                  Request a Quote
+                  Contact Us
                 </Button>
               </div>
             </Container>
