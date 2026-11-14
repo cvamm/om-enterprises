@@ -17,6 +17,12 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.53.0
         version: 2.118.0
+      fontsource-cormorant-garamond:
+        specifier: ^4.0.0
+        version: 4.0.0
+      fontsource-inter:
+        specifier: ^4.0.0
+        version: 4.0.0
       framer-motion:
         specifier: ^11.18.2
         version: 11.18.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -2165,6 +2171,14 @@ packages:
   flatted@3.4.4:
     resolution: {integrity: sha512-5+ybhBZANEJxaH3X5evAFatUxLfEHSr7n6kYJ+1Qd0mUqr4eu9gIf6GDbWHf8RJijHrjjO8G+la14SlL2SeS1Q==}
 
+  fontsource-cormorant-garamond@4.0.0:
+    resolution: {integrity: sha512-350HjaM+BngXfNC93bNZawy6appw0Alw3xrD3G6qEJ4vG7HaXpN223BGeEvLIdaHuRHiFpVTgJnTuJ0/heoK7g==}
+    deprecated: Package relocated. Please install and migrate to @fontsource/cormorant-garamond.
+
+  fontsource-inter@4.0.0:
+    resolution: {integrity: sha512-TicQe9zq5GS12vE/ZOE+iXkJ0GN+Tem4TrIbPyOsGn3OaTrs/bmc/a4BjDzJsxS8+Qr3t121Bw5acyeqb4fiAQ==}
+    deprecated: Package relocated. Please install and migrate to @fontsource/inter.
+
   for-each@0.3.5:
     resolution: {integrity: sha512-dKx12eRCVIzqCxFGplyFKJMPvLEWgmNtUrpTiJIR5u97zEhRG8ySrtboPHZXx7daLxQVrl643cTzbab2tkQjxg==}
     engines: {node: '>= 0.4'}
@@ -2652,8 +2666,8 @@ packages:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
 
-  legacy-javascript@0.0.3:
-    resolution: {integrity: sha512-1r6MT4dVaJyXt4G07Cm2cQ0AUaLJdefiEp4SmIAylA++gnEQ82YvmzE58RkM5EP0fk5hROLCslUPGnwIYdZQVA==}
+  legacy-javascript@0.0.4:
+    resolution: {integrity: sha512-UTmeKBVxnfJcpmpOvzzNnLsQT99BXHpPlc/ZKddIRmWmrR0fw6335I3lq4+sJoP60UTbBNaYsGYVPc65YB1x3A==}
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -4625,7 +4639,7 @@ snapshots:
 
   '@paulirish/trace_engine@0.0.53':
     dependencies:
-      legacy-javascript: 0.0.3
+      legacy-javascript: 0.0.4
       third-party-web: 0.30.0
 
   '@pkgjs/parseargs@0.11.0':
@@ -6221,6 +6235,10 @@ snapshots:
 
   flatted@3.4.4: {}
 
+  fontsource-cormorant-garamond@4.0.0: {}
+
+  fontsource-inter@4.0.0: {}
+
   for-each@0.3.5:
     dependencies:
       is-callable: 1.2.7
@@ -6740,7 +6758,7 @@ snapshots:
     dependencies:
       language-subtag-registry: 0.3.23
 
-  legacy-javascript@0.0.3: {}
+  legacy-javascript@0.0.4: {}
 
   levn@0.4.1:
     dependencies:

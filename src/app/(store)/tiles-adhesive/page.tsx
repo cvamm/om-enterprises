@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CATEGORIES } from "@/lib/utils/category-photos";
 import { CategoryPageBody } from "@/components/marketing/CategoryPageBody";
 
-const category = CATEGORIES.chemicals;
+const category = CATEGORIES["tiles-adhesive"];
 
 export const metadata: Metadata = {
   title: `${category.name}`,
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `/${category.slug}` },
 };
 
-export default function ChemicalsPage() {
+export default function TilesAdhesivePage() {
   return (
     <CategoryPageBody
       category={category}

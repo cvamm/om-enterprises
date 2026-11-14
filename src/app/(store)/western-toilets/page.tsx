@@ -17,7 +17,7 @@ export default function WesternToiletsPage() {
       related={[
         CATEGORIES["washing-basins"],
         CATEGORIES.mirrors,
-        CATEGORIES.chemicals,
+        CATEGORIES["tiles-adhesive"],
       ]}
     />
   );

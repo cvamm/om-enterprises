@@ -11,17 +11,18 @@ import mirrorAlt2Url from "@/assets/categories/mirror-3.jpg";
 import basinUrl from "@/assets/categories/basin-1.jpg";
 import basinAltUrl from "@/assets/categories/basin-2.jpg";
 import basinAlt2Url from "@/assets/categories/basin-3.jpg";
-import chemicalUrl from "@/assets/categories/chemical-1.jpg";
-import chemicalAltUrl from "@/assets/categories/chemical-2.jpg";
-import chemicalAlt2Url from "@/assets/categories/chemical-3.jpg";
-import finishingUrl from "@/assets/categories/finishing-1.jpg";
-import finishingAltUrl from "@/assets/categories/finishing-2.jpg";
-import finishingAlt2Url from "@/assets/categories/finishing-3.jpg";
-import finishingAlt3Url from "@/assets/categories/finishing-4.jpg";
+import adhesiveUrl from "@/assets/categories/adhesive-1.jpg";
+import adhesiveAltUrl from "@/assets/categories/adhesive-2.jpg";
+import tapUrl from "@/assets/categories/tap-1.jpg";
+import tapAltUrl from "@/assets/categories/tap-2.jpg";
 import houseUrl from "@/assets/categories/house-1.jpg";
 import houseAltUrl from "@/assets/categories/house-2.jpg";
 import houseAlt2Url from "@/assets/categories/house-3.jpg";
 import houseAlt3Url from "@/assets/categories/house-4.jpg";
+import finishingUrl from "@/assets/categories/finishing-1.jpg";
+import finishingAltUrl from "@/assets/categories/finishing-2.jpg";
+import finishingAlt2Url from "@/assets/categories/finishing-3.jpg";
+import finishingAlt3Url from "@/assets/categories/finishing-4.jpg";
 
 /**
  * Real product photography for the store's non-tile lines, licensed under the
@@ -47,9 +48,10 @@ export type CategoryKey =
   | "marbles"
   | "granite"
   | "western-toilets"
-  | "chemicals"
+  | "tiles-adhesive"
   | "mirrors"
   | "washing-basins"
+  | "taps"
   | "house-finishing";
 
 export type Category = {
@@ -139,30 +141,25 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
       },
     ],
   },
-  chemicals: {
-    key: "chemicals",
-    slug: "chemicals",
-    name: "Chemicals",
-    eyebrow: "SURFACES",
+  "tiles-adhesive": {
+    key: "tiles-adhesive",
+    slug: "tiles-adhesive",
+    name: "Tiles Adhesive",
+    eyebrow: "FIXING",
     intro:
-      "The sealer, cleaner, and adhesive that keeps stone and tile doing its job.",
+      "Tile adhesives and grouts for floor and wall tile installation.",
     body:
-      "Stone you do not seal is stone you are going to lose. We stock the sealers and impregnators for marble and granite, the epoxies and resins for repair, and the cleaning lines that will not dull the grout or strip the finish. The right chemical on the right surface is the difference between a floor that lasts ten years and one that goes dull in six months, so this shelf is stocked by material, not by habit.",
+      "Getting tiles to stay flat and stay put starts with the right adhesive. We stock polymer-modified tile adhesives for ceramic, porcelain, and vitrified tiles on floors and walls, plus matching grouts in sanded and unsanded variants. The adhesive you choose changes with the tile size and the surface — large-format porcelain needs a different bed than a small wall mosaic — and we carry the full range so the fix is matched to the material, not the other way around.",
     photos: [
       {
-        src: chemicalUrl.src,
-        alt: "Bottles of white cleaning product on a shelf",
-        pexels: "https://images.pexels.com/photos/10557894/pexels-photo-10557894.jpeg",
+        src: adhesiveUrl.src,
+        alt: "Tiles adhesive bucket on a construction site",
+        pexels: "https://images.pexels.com/photos/12165890/pexels-photo-12165890.jpeg",
       },
       {
-        src: chemicalAltUrl.src,
-        alt: "Assorted household cleaning products on a counter",
-        pexels: "https://images.pexels.com/photos/37187619/pexels-photo-37187619.jpeg",
-      },
-      {
-        src: chemicalAlt2Url.src,
-        alt: "Larger bottles of cleaning product with green labels",
-        pexels: "https://images.pexels.com/photos/10568267/pexels-photo-10568267.jpeg",
+        src: adhesiveAltUrl.src,
+        alt: "Tile adhesive being applied with a notched trowel",
+        pexels: "https://images.pexels.com/photos/5854193/pexels-photo-5854193.jpeg",
       },
     ],
   },
@@ -217,6 +214,28 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
         src: basinAlt2Url.src,
         alt: "White wall-mounted basin in a compact bathroom",
         pexels: "https://images.pexels.com/photos/7587378/pexels-photo-7587378.jpeg",
+      },
+    ],
+  },
+  taps: {
+    key: "taps",
+    slug: "taps",
+    name: "Taps",
+    eyebrow: "BATH",
+    intro:
+      "Chrome, brass, and gunmetal taps and faucets for bathrooms and kitchens.",
+    body:
+      "A tap is used more than any other fixture in the house, so the weight of the handle and the smoothness of the cartridge are what separate a tap you tolerate from one you notice for the right reasons. We carry chrome and brass bathroom taps — pillar, pillar-mounted, and wall-mounted mixer options — alongside kitchen sink taps in the gunmetal and chrome finishes that match the rest of the room. A bathroom tap in chrome reads the same as a basin; a kitchen tap in gunmetal reads the same as the range hood. We keep both in stock.",
+    photos: [
+      {
+        src: tapUrl.src,
+        alt: "Chrome bathroom mixer tap with a single lever handle",
+        pexels: "https://images.pexels.com/photos/6874744/pexels-photo-6874744.jpeg",
+      },
+      {
+        src: tapAltUrl.src,
+        alt: "Gunmetal kitchen tap with a pull-out spray head",
+        pexels: "https://images.pexels.com/photos/6415697/pexels-photo-6415697.jpeg",
       },
     ],
   },
@@ -279,8 +298,9 @@ export const CATEGORIES_LIST: Category[] = [
   CATEGORIES.marbles,
   CATEGORIES.granite,
   CATEGORIES["western-toilets"],
-  CATEGORIES.chemicals,
+  CATEGORIES["tiles-adhesive"],
   CATEGORIES.mirrors,
   CATEGORIES["washing-basins"],
+  CATEGORIES.taps,
   CATEGORIES["house-finishing"],
 ];

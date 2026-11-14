@@ -17,7 +17,7 @@ export default function WashingBasinsPage() {
       related={[
         CATEGORIES["western-toilets"],
         CATEGORIES.mirrors,
-        CATEGORIES["house-finishing"],
+        CATEGORIES.taps,
       ]}
     />
   );

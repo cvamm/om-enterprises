@@ -16,8 +16,8 @@ export default function GranitePage() {
       category={category}
       related={[
         CATEGORIES.marbles,
-        CATEGORIES.chemicals,
-        CATEGORIES["house-finishing"],
+        CATEGORIES["tiles-adhesive"],
+        CATEGORIES.taps,
       ]}
     />
   );
