@@ -18,7 +18,6 @@ import type { NextConfig } from "next";
  */
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/om-enterprises",
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,

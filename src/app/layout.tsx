@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
   },
-  manifest: "/om-enterprises/manifest.webmanifest",
+  manifest: "/manifest.webmanifest",
   icons: {
-    icon: [{ url: "/om-enterprises/icon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/om-enterprises/icon.png", sizes: "1024x1024", type: "image/png" }],
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/icon.png", sizes: "1024x1024", type: "image/png" }],
   },
 };
 
