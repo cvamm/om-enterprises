@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "fontsource-cormorant-garamond/latin.css";
+@import "fontsource-inter/latin.css";
 
 /* ────────────────────────────────────────────────────────────────────────────
    Kanpur Tiles — design tokens

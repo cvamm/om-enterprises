@@ -17,7 +17,7 @@ export default function MarblesPage() {
       related={[
         CATEGORIES.granite,
         CATEGORIES["washing-basins"],
-        CATEGORIES["house-finishing"],
+        CATEGORIES.taps,
       ]}
     />
   );

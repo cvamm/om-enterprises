@@ -39,7 +39,7 @@ export const SECTION_TILES: Record<CategoryKey, string[]> = {
     "glossy-endless-mg-jaxon-crema",
     "livenza-anvi-white",
   ],
-  chemicals: [
+  "tiles-adhesive": [
     "glossy-endless-mg-jaxon-crema",
     "glossy-endless-mg-pigues-white",
     "livenza-survey-cream",
@@ -64,5 +64,11 @@ export const SECTION_TILES: Record<CategoryKey, string[]> = {
     "livenza-light-dark-brown",
     "livenza-statuario",
     "livenza-endless-marble",
+  ],
+  taps: [
+    "glossy-endless-mg-modern-bianco",
+    "livenza-anvi-white",
+    "livenza-classic",
+    "livenza-vintage-white",
   ],
 };

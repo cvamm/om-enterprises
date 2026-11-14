@@ -7,13 +7,23 @@ import { ProductGrid } from "@/components/catalogue/ProductGrid";
 import { Pagination } from "@/components/catalogue/Pagination";
 import { SortDropdown } from "@/components/catalogue/SortDropdown";
 import { getProducts } from "@/lib/queries/products";
-import { toFilters, buildQuery, readSearchParams } from "@/lib/utils/filters";
-import { roomLabels, roomLabel } from "@/lib/utils/room-labels";
+import { roomLabel } from "@/lib/utils/room-labels";
 
 export const revalidate = 3600;
 
 export function generateStaticParams() {
-  return roomLabels.map(({ value }) => ({ room: value }));
+  return [
+    { room: "bathroom" },
+    { room: "kitchen" },
+    { room: "living-room" },
+    { room: "bedroom" },
+    { room: "flooring" },
+    { room: "wall-cladding" },
+    { room: "exterior" },
+    { room: "commercial" },
+    { room: "pool" },
+    { room: "balcony" },
+  ];
 }
 
 export async function generateMetadata({
@@ -30,27 +40,22 @@ export async function generateMetadata({
   };
 }
 
-/**
- * Room-use category.
- *
- * Server-rendered grid, client-side filters via the URL. The room is fixed by
- * the segment; the remaining facets (material, finish, size, origin) read from
- * the query string, so a filtered room view is shareable.
- */
+const ROOMS = new Set([
+  "bathroom", "kitchen", "living-room", "bedroom", "flooring",
+  "wall-cladding", "exterior", "commercial", "pool", "balcony",
+]);
+
 export default async function RoomPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ room: string }>;
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { room } = await params;
-  if (!roomLabels.some((r) => r.value === room)) {
+  if (!ROOMS.has(room)) {
     notFound();
   }
 
-  const raw = await readSearchParams(searchParams);
-  const filters = { ...toFilters(raw), room };
+  const filters = { room };
   const page = await getProducts(filters);
 
   return (
@@ -92,7 +97,7 @@ export default async function RoomPage({
           <ProductGrid
             products={page.products}
             emptyAction={{
-              href: buildQuery({}, { room }),
+              href: `/collections/${room}`,
               label: "Browse all products",
             }}
           />

@@ -17,7 +17,7 @@ export default function HouseFinishingPage() {
       related={[
         CATEGORIES.marbles,
         CATEGORIES.granite,
-        CATEGORIES.chemicals,
+        CATEGORIES["tiles-adhesive"],
       ]}
     />
   );

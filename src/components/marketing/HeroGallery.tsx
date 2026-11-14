@@ -13,20 +13,8 @@ import { Eyebrow } from "../ui/Eyebrow";
 import { HERO_TILES } from "@/lib/utils/hero-tiles";
 import showroomUrl from "@/assets/showroom.jpg";
 
-/**
- * The slab-yard photo that reveals as the tile wall melts away at the end of
- * the scroll. It is a genuine Indian marble &amp; granite yard (Pexels free
- * licence, no attribution required). A light dark wash is layered over the
- * photo so the reveal reads as a dimmed showroom, not a blown-out shot, and
- * any text set over it stays legible.
- */
 const SHOWROOM_IMAGE = `linear-gradient(rgba(20,18,15,0.35) 0%, rgba(20,18,15,0.72) 100%), url(${showroomUrl.src})`;
 
-/**
- * The hero eyebrow. Short form of the brand, because a tracked-out ALL-CAPS
- * line is set wide and a long legal name would wrap on a Moto G. The shop's
- * real name is not confirmed yet; this replaces it at launch.
- */
 const SITE_EYEBROW = "KANPUR STONE HOUSE";
 
 /**
