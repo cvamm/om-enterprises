@@ -4,13 +4,16 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { MapEmbed } from "@/components/contact/MapEmbed";
 import { WhatsAppCta } from "@/components/contact/WhatsAppCta";
+import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
   title: "Visit or contact us",
   description:
-    "Parbat Stone Works — tiles and natural stone in Kanpur. Walk in, call, or send a WhatsApp message with what you are fitting.",
+    "OM Enterprises — marble, granites and tiles in Kanpur. Walk in, call, or send a WhatsApp message with what you are fitting.",
   alternates: { canonical: "/contact" },
 };
+
+const telDigits = (display: string) => display.replace(/\D/g, "");
 
 /**
  * Contact page.
@@ -20,8 +23,8 @@ export const metadata: Metadata = {
  * the map tells a customer where on the road we are, and the hours
  * stop a 9 pm phone call that will not get a reply.
  *
- * Every detail below that is a sample value carries the marker. Replace
- * them from the admin panel before launch — §4 data hygiene.
+ * The shop address, both phone lines and the hours render from
+ * `siteConfig`.
  */
 export default function ContactPage() {
   return (
@@ -54,14 +57,14 @@ export default function ContactPage() {
                 <h2 className="text-[10px] uppercase tracking-[0.45em] text-gold">
                   THE SHOP
                 </h2>
-                <div className="mt-6 space-y-3 text-[15px] leading-relaxed text-bone/70">
+                <div className="mt-6 text-[15px] leading-relaxed text-bone/70">
                   <p>
-                    Parbat Stone Works
+                    <span className="text-bone">{siteConfig.name}</span>
                     <br />
-                    [SAMPLE — replace before deploy]
-                    Amdadi Road, near the old clock tower,
+                    {siteConfig.address.line1}
                     <br />
-                    Kanpur, Uttar Pradesh 226 001
+                    {siteConfig.address.line2}, {siteConfig.address.city}{" "}
+                    {siteConfig.address.zip}
                   </p>
                 </div>
               </div>
@@ -70,11 +73,12 @@ export default function ContactPage() {
                 <h2 className="text-[10px] uppercase tracking-[0.45em] text-gold">
                   HOURS
                 </h2>
-                <div className="mt-6 text-[15px] leading-relaxed text-bone/79">
-                  <p>Monday – Saturday · 10 am to 7 pm</p>
-                  <p className="mt-1 text-bone/72">
-                    Sunday · closed — samples available by prior arrangement
-                  </p>
+                <div className="mt-6 space-y-1 text-[15px] leading-relaxed text-bone/79">
+                  {siteConfig.hours.map((slot) => (
+                    <p key={slot.days}>
+                      {slot.days} · {slot.time}
+                    </p>
+                  ))}
                 </div>
               </div>
 
@@ -83,10 +87,34 @@ export default function ContactPage() {
                   PHONE
                 </h2>
                 <div className="mt-6 text-[15px] leading-relaxed text-bone/70">
-                  <p>
-                    +91 [SAMPLE — replace before deploy]
-                  </p>
-                  <p className="mt-1 text-bone/72 text-[13px]">
+                  <ul className="space-y-1.5">
+                    <li className="flex flex-wrap items-baseline gap-x-2">
+                      <a
+                        href={`tel:+${telDigits(siteConfig.phoneDisplay)}`}
+                        className="hover:text-gold transition-colors"
+                      >
+                        {siteConfig.phoneDisplay}
+                      </a>
+                      <a
+                        href={`https://wa.me/${telDigits(siteConfig.phoneDisplay)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-bone/72 text-[13px] hover:text-gold transition-colors"
+                      >
+                        Call · WhatsApp
+                      </a>
+                    </li>
+                    <li className="flex flex-wrap items-baseline gap-x-2">
+                      <a
+                        href={`tel:+${telDigits(siteConfig.phoneAlt)}`}
+                        className="hover:text-gold transition-colors"
+                      >
+                        {siteConfig.phoneAlt}
+                      </a>
+                      <span className="text-bone/72 text-[13px]">Call</span>
+                    </li>
+                  </ul>
+                  <p className="mt-2 text-bone/72 text-[13px]">
                     Call for quotes and delivery times. WhatsApp for everything else.
                   </p>
                 </div>
@@ -100,6 +128,32 @@ export default function ContactPage() {
               <ContactForm />
             </div>
           </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-bone/10 bg-ink py-24 md:py-32">
+        <Container>
+          <Eyebrow label="DELIVERY" />
+          <h2 className="mt-8 font-display text-4xl leading-[1.05] text-bone md:text-5xl">
+            Where the truck goes
+          </h2>
+          <div className="mt-12 grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
+            {siteConfig.deliveryZones.map((zone) => (
+              <div key={zone.id}>
+                <h3 className="text-[10px] uppercase tracking-[0.45em] text-gold">
+                  {zone.label}
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-bone/79">
+                  {zone.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-14 max-w-3xl text-[13px] leading-relaxed text-bone/62">
+            Beyond roughly 150 km — {siteConfig.deliveryExcluded.join(", ")} — there is no
+            regular delivery route. Send the site address on WhatsApp and we will tell you
+            honestly whether a load can reach it.
+          </p>
         </Container>
       </section>
     </>

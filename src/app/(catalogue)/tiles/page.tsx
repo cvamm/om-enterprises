@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { ProductGrid } from "@/components/catalogue/ProductGrid";
+import { CatalogueFilters } from "@/components/catalogue/CatalogueFilters";
 import { SearchBar } from "@/components/catalogue/SearchBar";
 import { SortDropdown } from "@/components/catalogue/SortDropdown";
-import { CatalogueResults } from "@/components/catalogue/CatalogueResults";
+import { Pagination } from "@/components/catalogue/Pagination";
+import { getFacets, getProducts } from "@/lib/queries/products";
+import { readSearchParams, toFilters } from "@/lib/utils/filters";
 
 export const metadata: Metadata = {
   title: "Tile catalogue",
@@ -15,15 +19,27 @@ export const metadata: Metadata = {
 };
 
 /**
- * Full catalogue — static demo.
+ * Full catalogue.
  *
- * The hero is prerendered; the results below are a client island that filters
- * the sample set in the browser from the URL query string. On `master` this
- * is server-rendered from SQL, but GitHub Pages has no server, so the same
- * filter/sort/paginate logic runs client-side. Filter state still lives in the
- * URL, so a filtered view is shareable and the back button behaves.
+ * Search and filtering happen in SQL, not in the browser: the whole catalogue
+ * is never sent. Filter state lives in the URL so a filtered view can be
+ * shared, bookmarked, and reached from search engines.
+ *
+ * The facet sidebar is a client component reading and writing the query
+ * string; the results below are server-rendered. That split is deliberate —
+ * filtering feels instant, the page still renders on the server, and no
+ * catalogue data is duplicated into a JS payload.
  */
-export default function TilesPage() {
+export default async function TilesPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await readSearchParams(searchParams);
+  const filters = toFilters(params);
+
+  const [page, facets] = await Promise.all([getProducts(filters), getFacets()]);
+
   return (
     <>
       <section className="border-b border-bone/10 bg-ink py-24 md:py-32">
@@ -55,17 +71,43 @@ export default function TilesPage() {
         </Container>
       </section>
 
-      <Suspense
-        fallback={
-          <section className="bg-ink-2 py-24 md:py-32">
-            <Container>
-              <div className="h-96 w-full rounded-2xl bg-white/5" />
-            </Container>
-          </section>
-        }
-      >
-        <CatalogueResults />
-      </Suspense>
+      <section className="bg-ink-2 py-24 md:py-32">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[280px_1fr] lg:gap-12">
+            <Suspense fallback={null}>
+              <CatalogueFilters facets={facets} />
+            </Suspense>
+
+            <div>
+              <p className="mb-8 text-[11px] uppercase tracking-[0.24em] text-bone/73">
+                {page.total} {page.total === 1 ? "product" : "products"}
+                {filters.room !== undefined && ` for ${filters.room.replace(/-/g, " ")}`}
+              </p>
+
+              <ProductGrid
+                products={page.products}
+                emptyAction={{ href: "/tiles", label: "Browse all products" }}
+              />
+
+              {page.pageCount > 1 && (
+                <div className="mt-16">
+                  <Pagination page={page.page} pageCount={page.pageCount} />
+                </div>
+              )}
+            </div>
+          </div>
+        </Container>
+      </section>
     </>
   );
+}
+
+/** ISR: catalogue contents change when stock or prices change. */
+export const revalidate = 3600;
+
+export function generateStaticParams() {
+  // The catalogue is dynamic (filters in the URL), so there is nothing to
+  // prerender here. Page 1 with no filters is the only static shell worth
+  // having, and it is cheap enough to render per request.
+  return [];
 }

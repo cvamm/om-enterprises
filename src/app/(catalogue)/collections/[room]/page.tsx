@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { CatalogueResults } from "@/components/catalogue/CatalogueResults";
+import { ProductGrid } from "@/components/catalogue/ProductGrid";
+import { Pagination } from "@/components/catalogue/Pagination";
+import { SortDropdown } from "@/components/catalogue/SortDropdown";
+import { getProducts } from "@/lib/queries/products";
+import { toFilters, buildQuery, readSearchParams } from "@/lib/utils/filters";
 import { roomLabels, roomLabel } from "@/lib/utils/room-labels";
+
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return roomLabels.map(({ value }) => ({ room: value }));
@@ -26,21 +31,27 @@ export async function generateMetadata({
 }
 
 /**
- * Room-use category — static demo.
+ * Room-use category.
  *
- * The room is fixed by the segment and prerendered via generateStaticParams.
- * The grid below is a client island that filters the sample set in the browser
- * from the URL query string, so a filtered room view is still shareable.
+ * Server-rendered grid, client-side filters via the URL. The room is fixed by
+ * the segment; the remaining facets (material, finish, size, origin) read from
+ * the query string, so a filtered room view is shareable.
  */
 export default async function RoomPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ room: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { room } = await params;
   if (!roomLabels.some((r) => r.value === room)) {
     notFound();
   }
+
+  const raw = await readSearchParams(searchParams);
+  const filters = { ...toFilters(raw), room };
+  const page = await getProducts(filters);
 
   return (
     <>
@@ -69,17 +80,30 @@ export default async function RoomPage({
         </Container>
       </section>
 
-      <Suspense
-        fallback={
-          <section className="bg-ink-2 py-20 md:py-28">
-            <Container>
-              <div className="h-96 w-full rounded-2xl bg-white/5" />
-            </Container>
-          </section>
-        }
-      >
-        <CatalogueResults fixedRoom={room} />
-      </Suspense>
+      <section className="bg-ink-2 py-20 md:py-28">
+        <Container>
+          <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <p className="text-[11px] uppercase tracking-[0.24em] text-bone/73">
+              {page.total} {page.total === 1 ? "product" : "products"}
+            </p>
+            <SortDropdown />
+          </div>
+
+          <ProductGrid
+            products={page.products}
+            emptyAction={{
+              href: buildQuery({}, { room }),
+              label: "Browse all products",
+            }}
+          />
+
+          {page.pageCount > 1 && (
+            <div className="mt-16">
+              <Pagination page={page.page} pageCount={page.pageCount} />
+            </div>
+          )}
+        </Container>
+      </section>
     </>
   );
 }
