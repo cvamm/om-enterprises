@@ -55,96 +55,102 @@ export function Navbar() {
       transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
       className="border-bone/10 bg-ink/82 fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl"
     >
-      <Container className="flex h-16 items-center justify-between gap-6">
-        <Link href="/" onClick={close} className="flex items-center gap-2.5">
-          <span className="font-display text-bone text-[22px] leading-none">{siteConfig.name}</span>
-        </Link>
+      <Container>
+        <div className="flex h-16 items-center justify-between gap-6">
+          <Link href="/" onClick={close} className="flex items-center gap-2.5">
+            <span className="font-display text-bone text-[22px] leading-none">
+              {siteConfig.name} — TILES GRANITE MARBLE
+            </span>
+          </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
-          {NAV.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={active ? "page" : undefined}
-                className={cn(LINK_CLASS, active && "text-gold")}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-
-          <div
-            className="relative"
-            onMouseEnter={() => setOthersOpen(true)}
-            onMouseLeave={() => setOthersOpen(false)}
-          >
-            <button
-              type="button"
-              className={cn(
-                LINK_CLASS,
-                "flex items-center gap-1.5",
-                otherActive && "text-gold",
-              )}
-              aria-expanded={othersOpen}
-              aria-controls="others-menu"
-              onClick={() => setOthersOpen((v) => !v)}
-            >
-              Others
-              <span className="text-bone/45 text-[9px]" aria-hidden="true">
-                {othersOpen ? "▴" : "▾"}
-              </span>
-            </button>
-
-            <AnimatePresence>
-              {othersOpen ? (
-                <motion.div
-                  id="others-menu"
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 6 }}
-                  transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                  className="border-bone/10 bg-ink-2/96 absolute left-0 top-full z-50 mt-3 min-w-[220px] overflow-hidden rounded-2xl border backdrop-blur-xl"
-                >
-                  <div className="flex flex-col p-2">
-                    {OTHER_LINKS.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={cn(
-                          "text-bone/79 px-4 py-2.5 text-[12px] uppercase tracking-[0.14em] transition-colors duration-300 hover:text-bone",
-                          otherActive && "text-gold",
-                        )}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
-              ) : null}
-            </AnimatePresence>
+          <div className="hidden items-center gap-3 lg:flex">
+            <Button href="/contact" variant="secondary" size="sm">
+              Contact Us
+            </Button>
           </div>
-        </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <Button href="/contact" variant="secondary" size="sm">
-            Contact Us
-          </Button>
+          <button
+            type="button"
+            className="border-bone/14 text-bone/80 flex h-10 w-10 items-center justify-center rounded-full border lg:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span className="font-display text-xl" aria-hidden="true">
+              {open ? "×" : "≡"}
+            </span>
+          </button>
         </div>
 
-        <button
-          type="button"
-          className="border-bone/14 text-bone/80 flex h-10 w-10 items-center justify-center rounded-full border lg:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((value) => !value)}
-        >
-          <span className="font-display text-xl" aria-hidden="true">
-            {open ? "×" : "≡"}
-          </span>
-        </button>
+        <nav aria-label="Primary" className="hidden flex-col items-start lg:flex pb-3">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
+            {NAV.map((item) => {
+              const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(LINK_CLASS, active && "text-gold")}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+
+            <div
+              className="relative"
+              onMouseEnter={() => setOthersOpen(true)}
+              onMouseLeave={() => setOthersOpen(false)}
+            >
+              <button
+                type="button"
+                className={cn(
+                  LINK_CLASS,
+                  "flex items-center gap-1.5",
+                  otherActive && "text-gold",
+                )}
+                aria-expanded={othersOpen}
+                aria-controls="others-menu"
+                onClick={() => setOthersOpen((v) => !v)}
+              >
+                Products
+                <span className="text-bone/45 text-[9px]" aria-hidden="true">
+                  {othersOpen ? "▴" : "▾"}
+                </span>
+              </button>
+
+              <AnimatePresence>
+                {othersOpen ? (
+                  <motion.div
+                    id="others-menu"
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 6 }}
+                    transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                    className="border-bone/10 bg-ink-2/96 absolute left-0 top-full z-50 mt-3 min-w-[220px] overflow-hidden rounded-2xl border backdrop-blur-xl"
+                  >
+                    <div className="flex flex-col p-2">
+                      {OTHER_LINKS.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={cn(
+                            "text-bone/79 px-4 py-2.5 text-[12px] uppercase tracking-[0.14em] transition-colors duration-300 hover:text-bone",
+                            otherActive && "text-gold",
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                ) : null}
+              </AnimatePresence>
+            </div>
+          </div>
+        </nav>
       </Container>
 
       <AnimatePresence>
@@ -171,7 +177,7 @@ export function Navbar() {
               ))}
 
               <p className="text-gold pt-4 pb-1 text-[10px] uppercase tracking-[0.4em]">
-                Others
+                Products
               </p>
               {OTHER_LINKS.map((item) => (
                 <a
