@@ -114,20 +114,20 @@ function toProduct(row: ProductRow): Product {
   };
 }
 
-/** Build the ORDER BY fragment. Interpolated, but from a fixed union. */
-function orderBy(sort: ProductSort): string {
+/** Build the ORDER BY column and direction. */
+function orderBy(sort: ProductSort): { column: string; ascending: boolean } {
   switch (sort) {
     case "price-asc":
-      return "price_per_box_inr asc";
+      return { column: "price_per_box_inr", ascending: true };
     case "price-desc":
-      return "price_per_box_inr desc";
+      return { column: "price_per_box_inr", ascending: false };
     case "newest":
-      return "created_at desc";
+      return { column: "created_at", ascending: false };
     case "name":
-      return "name_en asc";
+      return { column: "name_en", ascending: true };
     case "featured":
     default:
-      return "featured_rank asc nulls last, created_at desc";
+      return { column: "created_at", ascending: true };
   }
 }
 
@@ -195,8 +195,9 @@ export const getProducts = cache(
     }
 
     const from = Math.max(0, (page - 1) * perPage);
+    const orderConfig = orderBy(sort);
     const { data, error, count } = await query
-      .order(orderBy(sort), { ascending: true })
+      .order(orderConfig.column, { ascending: orderConfig.ascending })
       .range(from, from + perPage - 1);
 
     if (error) {

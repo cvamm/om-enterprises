@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CATEGORIES } from "@/lib/utils/category-photos";
-import { CategoryPageBody } from "@/components/marketing/CategoryPageBody";
+import { StoneCategoryPage } from "@/components/marketing/StoneCategoryPage";
 
 const category = CATEGORIES.marbles;
 
@@ -10,10 +10,11 @@ export const metadata: Metadata = {
   alternates: { canonical: `/${category.slug}` },
 };
 
-export default function MarblesPage() {
+export default async function MarblesPage() {
   return (
-    <CategoryPageBody
+    <StoneCategoryPage
       category={category}
+      nameTerms={["marble", "onyx", "agate", "quartz", "crystal", "pearl", "statuario"]}
       related={[
         CATEGORIES.granite,
         CATEGORIES["washing-basins"],
