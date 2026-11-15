@@ -169,9 +169,6 @@ export function HeroGallery() {
                         backgroundImage: `url(${tile})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
-                        // The source tile photos have a thin black frame
-                        // baked in; insetting 6% crops it out of view.
-                        clipPath: "inset(6%)",
                       }}
                       aria-hidden="true"
                     />
