@@ -1,0 +1,3487 @@
+[
+  {
+    "slug": "granite-bagera-brown-granite",
+    "nameEn": "Bagera Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 460,
+    "desc": "Bagera Brown Granite, premium quality natural granite slab. Price range ₹43–48 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p005.jpg"
+    ]
+  },
+  {
+    "slug": "granite-blue-diamond-granite",
+    "nameEn": "Blue Diamond Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Blue Diamond Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p006.jpg"
+    ]
+  },
+  {
+    "slug": "granite-brasil-brown-granite",
+    "nameEn": "Brasil Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Brasil Brown Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p007.jpg"
+    ]
+  },
+  {
+    "slug": "granite-boss-paradizzo-granite",
+    "nameEn": "Boss Paradizzo Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 530,
+    "desc": "Boss Paradizzo Granite, premium quality natural granite slab. Price range ₹50–55 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p008.jpg"
+    ]
+  },
+  {
+    "slug": "granite-cat-eyes-brown-granite",
+    "nameEn": "Cat Eyes Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Cat Eyes Brown Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p009.jpg"
+    ]
+  },
+  {
+    "slug": "granite-cat-eyes-leather-granite",
+    "nameEn": "Cat Eyes Leather Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 630,
+    "desc": "Cat Eyes Leather Granite, premium quality natural granite slab. Price range ₹60–65 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p010.jpg"
+    ]
+  },
+  {
+    "slug": "granite-cherry-brown-granite",
+    "nameEn": "Cherry Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 530,
+    "desc": "Cherry Brown Granite, premium quality natural granite slab. Price range ₹50–55 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p011.jpg"
+    ]
+  },
+  {
+    "slug": "granite-chikku-black-granite",
+    "nameEn": "Chikku Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 460,
+    "desc": "Chikku Black Granite, premium quality natural granite slab. Price range ₹43–48 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p012.jpg"
+    ]
+  },
+  {
+    "slug": "granite-chima-pink-granite",
+    "nameEn": "Chima Pink Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Chima Pink Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p013.jpg"
+    ]
+  },
+  {
+    "slug": "granite-cira-grey-granite",
+    "nameEn": "Cira Grey Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 780,
+    "desc": "Cira Grey Granite, premium quality natural granite slab. Price range ₹75–80 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p014.jpg"
+    ]
+  },
+  {
+    "slug": "granite-classic-red-granite",
+    "nameEn": "Classic Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Classic Red Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p015.jpg"
+    ]
+  },
+  {
+    "slug": "granite-crystal-blue-granite",
+    "nameEn": "Crystal Blue Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Crystal Blue Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p016.jpg"
+    ]
+  },
+  {
+    "slug": "granite-devra-green-granite",
+    "nameEn": "Devra Green Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Devra Green Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p017.jpg"
+    ]
+  },
+  {
+    "slug": "granite-dungari-black-granite",
+    "nameEn": "Dungari Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 310,
+    "desc": "Dungari Black Granite, premium quality natural granite slab. Price range ₹28–33 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p018.jpg"
+    ]
+  },
+  {
+    "slug": "granite-fantasy-brown-granite",
+    "nameEn": "Fantasy Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Fantasy Brown Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p019.jpg"
+    ]
+  },
+  {
+    "slug": "granite-forest-brown-granite",
+    "nameEn": "Forest Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 460,
+    "desc": "Forest Brown Granite, premium quality natural granite slab. Price range ₹43–48 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p020.jpg"
+    ]
+  },
+  {
+    "slug": "granite-golden-crystal-granite",
+    "nameEn": "Golden Crystal Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Golden Crystal Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p021.jpg"
+    ]
+  },
+  {
+    "slug": "granite-himalayan-blue-granite",
+    "nameEn": "Himalayan Blue Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 680,
+    "desc": "Himalayan Blue Granite, premium quality natural granite slab. Price range ₹65–70 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p022.jpg"
+    ]
+  },
+  {
+    "slug": "granite-ice-blue-granite",
+    "nameEn": "Ice Blue Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Ice Blue Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p023.jpg"
+    ]
+  },
+  {
+    "slug": "granite-ivory-brown-granite",
+    "nameEn": "Ivory Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 460,
+    "desc": "Ivory Brown Granite, premium quality natural granite slab. Price range ₹43–48 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p024.jpg"
+    ]
+  },
+  {
+    "slug": "granite-kuppam-white-granite",
+    "nameEn": "Kuppam White Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Kuppam White Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p025.jpg"
+    ]
+  },
+  {
+    "slug": "granite-maple-brown-granite",
+    "nameEn": "Maple Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 410,
+    "desc": "Maple Brown Granite, premium quality natural granite slab. Price range ₹38–43 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p026.jpg"
+    ]
+  },
+  {
+    "slug": "granite-moon-white-granite",
+    "nameEn": "Moon White Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 530,
+    "desc": "Moon White Granite, premium quality natural granite slab. Price range ₹50–55 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p027.jpg"
+    ]
+  },
+  {
+    "slug": "granite-pearl-blue-granite",
+    "nameEn": "Pearl Blue Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Pearl Blue Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p028.jpg"
+    ]
+  },
+  {
+    "slug": "granite-platinum-white-granite",
+    "nameEn": "Platinum White Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 680,
+    "desc": "Platinum White Granite, premium quality natural granite slab. Price range ₹65–70 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p029.jpg"
+    ]
+  },
+  {
+    "slug": "granite-portoro-black-granite",
+    "nameEn": "Portoro Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 1350,
+    "desc": "Portoro Black Granite, premium quality natural granite slab. Price range ₹120–150 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p030.jpg"
+    ]
+  },
+  {
+    "slug": "granite-red-granite-premium",
+    "nameEn": "Red Granite Premium",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 630,
+    "desc": "Red Granite Premium, premium quality natural granite slab. Price range ₹60–65 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p031.jpg"
+    ]
+  },
+  {
+    "slug": "granite-royal-blue-granite",
+    "nameEn": "Royal Blue Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 780,
+    "desc": "Royal Blue Granite, premium quality natural granite slab. Price range ₹75–80 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p032.jpg"
+    ]
+  },
+  {
+    "slug": "granite-shivpuri-black-granite",
+    "nameEn": "Shivpuri Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 380,
+    "desc": "Shivpuri Black Granite, premium quality natural granite slab. Price range ₹35–40 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p033.jpg"
+    ]
+  },
+  {
+    "slug": "granite-silver-grey-granite",
+    "nameEn": "Silver Grey Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 480,
+    "desc": "Silver Grey Granite, premium quality natural granite slab. Price range ₹45–50 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p034.jpg"
+    ]
+  },
+  {
+    "slug": "granite-steel-grey-granite",
+    "nameEn": "Steel Grey Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Steel Grey Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p035.jpg"
+    ]
+  },
+  {
+    "slug": "granite-tan-brown-granite",
+    "nameEn": "Tan Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Tan Brown Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p036.jpg"
+    ]
+  },
+  {
+    "slug": "granite-tropical-brown-granite",
+    "nameEn": "Tropical Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 410,
+    "desc": "Tropical Brown Granite, premium quality natural granite slab. Price range ₹38–43 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p037.jpg"
+    ]
+  },
+  {
+    "slug": "granite-venice-brown-granite",
+    "nameEn": "Venice Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 460,
+    "desc": "Venice Brown Granite, premium quality natural granite slab. Price range ₹43–48 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p038.jpg"
+    ]
+  },
+  {
+    "slug": "granite-white-galaxy-granite",
+    "nameEn": "White Galaxy Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 850,
+    "desc": "White Galaxy Granite, premium quality natural granite slab. Price range ₹80–90 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p039.jpg"
+    ]
+  },
+  {
+    "slug": "granite-yellow-granite-premium",
+    "nameEn": "Yellow Granite Premium",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 450,
+    "desc": "Yellow Granite Premium, premium quality natural granite slab. Price range ₹42–47 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p040.jpg"
+    ]
+  },
+  {
+    "slug": "granite-black-galaxy-granite",
+    "nameEn": "Black Galaxy Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 950,
+    "desc": "Black Galaxy Granite, premium quality natural granite slab. Price range ₹90–100 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p041.jpg"
+    ]
+  },
+  {
+    "slug": "granite-blue-pearl-granite",
+    "nameEn": "Blue Pearl Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 900,
+    "desc": "Blue Pearl Granite, premium quality natural granite slab. Price range ₹85–95 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p042.jpg"
+    ]
+  },
+  {
+    "slug": "granite-brown-pearl-granite",
+    "nameEn": "Brown Pearl Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Brown Pearl Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p043.jpg"
+    ]
+  },
+  {
+    "slug": "granite-coffee-brown-granite",
+    "nameEn": "Coffee Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Coffee Brown Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p044.jpg"
+    ]
+  },
+  {
+    "slug": "granite-desert-brown-granite",
+    "nameEn": "Desert Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 450,
+    "desc": "Desert Brown Granite, premium quality natural granite slab. Price range ₹42–47 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p045.jpg"
+    ]
+  },
+  {
+    "slug": "granite-green-pearl-granite",
+    "nameEn": "Green Pearl Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 680,
+    "desc": "Green Pearl Granite, premium quality natural granite slab. Price range ₹65–70 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p046.jpg"
+    ]
+  },
+  {
+    "slug": "granite-grey-galaxy-granite",
+    "nameEn": "Grey Galaxy Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 630,
+    "desc": "Grey Galaxy Granite, premium quality natural granite slab. Price range ₹60–65 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p047.jpg"
+    ]
+  },
+  {
+    "slug": "granite-hassan-green-granite",
+    "nameEn": "Hassan Green Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 550,
+    "desc": "Hassan Green Granite, premium quality natural granite slab. Price range ₹52–57 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p048.jpg"
+    ]
+  },
+  {
+    "slug": "granite-jhansi-red-granite",
+    "nameEn": "Jhansi Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 480,
+    "desc": "Jhansi Red Granite, premium quality natural granite slab. Price range ₹45–50 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p049.jpg"
+    ]
+  },
+  {
+    "slug": "granite-kashmir-white-granite",
+    "nameEn": "Kashmir White Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 730,
+    "desc": "Kashmir White Granite, premium quality natural granite slab. Price range ₹70–75 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p050.jpg"
+    ]
+  },
+  {
+    "slug": "granite-lakha-red-granite",
+    "nameEn": "Lakha Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 430,
+    "desc": "Lakha Red Granite, premium quality natural granite slab. Price range ₹40–45 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p051.jpg"
+    ]
+  },
+  {
+    "slug": "granite-madurai-gold-granite",
+    "nameEn": "Madurai Gold Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 610,
+    "desc": "Madurai Gold Granite, premium quality natural granite slab. Price range ₹58–63 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p052.jpg"
+    ]
+  },
+  {
+    "slug": "granite-multi-red-granite",
+    "nameEn": "Multi Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Multi Red Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p053.jpg"
+    ]
+  },
+  {
+    "slug": "granite-navagraha-granite",
+    "nameEn": "Navagraha Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Navagraha Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p054.jpg"
+    ]
+  },
+  {
+    "slug": "granite-orion-black-granite",
+    "nameEn": "Orion Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 650,
+    "desc": "Orion Black Granite, premium quality natural granite slab. Price range ₹62–67 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p055.jpg"
+    ]
+  },
+  {
+    "slug": "granite-paradise-black-granite",
+    "nameEn": "Paradise Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 780,
+    "desc": "Paradise Black Granite, premium quality natural granite slab. Price range ₹75–80 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p056.jpg"
+    ]
+  },
+  {
+    "slug": "granite-punjab-black-granite",
+    "nameEn": "Punjab Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 380,
+    "desc": "Punjab Black Granite, premium quality natural granite slab. Price range ₹35–40 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p057.jpg"
+    ]
+  },
+  {
+    "slug": "granite-rajasthan-red-granite",
+    "nameEn": "Rajasthan Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 480,
+    "desc": "Rajasthan Red Granite, premium quality natural granite slab. Price range ₹45–50 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p058.jpg"
+    ]
+  },
+  {
+    "slug": "granite-sagar-black-granite",
+    "nameEn": "Sagar Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 450,
+    "desc": "Sagar Black Granite, premium quality natural granite slab. Price range ₹42–47 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p059.jpg"
+    ]
+  },
+  {
+    "slug": "granite-tanjore-black-granite",
+    "nameEn": "Tanjore Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Tanjore Black Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p060.jpg"
+    ]
+  },
+  {
+    "slug": "granite-udaipur-green-granite",
+    "nameEn": "Udaipur Green Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Udaipur Green Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p061.jpg"
+    ]
+  },
+  {
+    "slug": "granite-vizag-blue-granite",
+    "nameEn": "Vizag Blue Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 610,
+    "desc": "Vizag Blue Granite, premium quality natural granite slab. Price range ₹58–63 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p062.jpg"
+    ]
+  },
+  {
+    "slug": "granite-warangal-black-granite",
+    "nameEn": "Warangal Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 430,
+    "desc": "Warangal Black Granite, premium quality natural granite slab. Price range ₹40–45 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p063.jpg"
+    ]
+  },
+  {
+    "slug": "granite-yellandu-red-granite",
+    "nameEn": "Yellandu Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 550,
+    "desc": "Yellandu Red Granite, premium quality natural granite slab. Price range ₹52–57 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p064.jpg"
+    ]
+  },
+  {
+    "slug": "granite-absolute-black-granite",
+    "nameEn": "Absolute Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 1030,
+    "desc": "Absolute Black Granite, premium quality natural granite slab. Price range ₹95–110 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p065.jpg"
+    ]
+  },
+  {
+    "slug": "granite-andhra-brown-granite",
+    "nameEn": "Andhra Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 480,
+    "desc": "Andhra Brown Granite, premium quality natural granite slab. Price range ₹45–50 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p066.jpg"
+    ]
+  },
+  {
+    "slug": "granite-bengal-black-granite",
+    "nameEn": "Bengal Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Bengal Black Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p067.jpg"
+    ]
+  },
+  {
+    "slug": "granite-chamrajnagar-black-granite",
+    "nameEn": "Chamrajnagar Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 450,
+    "desc": "Chamrajnagar Black Granite, premium quality natural granite slab. Price range ₹42–47 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p068.jpg"
+    ]
+  },
+  {
+    "slug": "granite-coimbatore-grey-granite",
+    "nameEn": "Coimbatore Grey Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 410,
+    "desc": "Coimbatore Grey Granite, premium quality natural granite slab. Price range ₹38–43 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p069.jpg"
+    ]
+  },
+  {
+    "slug": "granite-dholpur-pink-granite",
+    "nameEn": "Dholpur Pink Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 380,
+    "desc": "Dholpur Pink Granite, premium quality natural granite slab. Price range ₹35–40 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p070.jpg"
+    ]
+  },
+  {
+    "slug": "granite-eluru-brown-granite",
+    "nameEn": "Eluru Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 470,
+    "desc": "Eluru Brown Granite, premium quality natural granite slab. Price range ₹44–49 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p071.jpg"
+    ]
+  },
+  {
+    "slug": "granite-forest-green-granite",
+    "nameEn": "Forest Green Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 550,
+    "desc": "Forest Green Granite, premium quality natural granite slab. Price range ₹52–57 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p072.jpg"
+    ]
+  },
+  {
+    "slug": "granite-gwalior-red-granite",
+    "nameEn": "Gwalior Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 430,
+    "desc": "Gwalior Red Granite, premium quality natural granite slab. Price range ₹40–45 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p073.jpg"
+    ]
+  },
+  {
+    "slug": "granite-hassan-white-granite",
+    "nameEn": "Hassan White Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Hassan White Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p074.jpg"
+    ]
+  },
+  {
+    "slug": "granite-iglas-white-granite",
+    "nameEn": "Iglas White Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Iglas White Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p075.jpg"
+    ]
+  },
+  {
+    "slug": "granite-jodhpur-red-granite",
+    "nameEn": "Jodhpur Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 450,
+    "desc": "Jodhpur Red Granite, premium quality natural granite slab. Price range ₹42–47 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p076.jpg"
+    ]
+  },
+  {
+    "slug": "granite-kanakapura-black-granite",
+    "nameEn": "Kanakapura Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 530,
+    "desc": "Kanakapura Black Granite, premium quality natural granite slab. Price range ₹50–55 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p077.jpg"
+    ]
+  },
+  {
+    "slug": "granite-khammam-red-granite",
+    "nameEn": "Khammam Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 410,
+    "desc": "Khammam Red Granite, premium quality natural granite slab. Price range ₹38–43 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p078.jpg"
+    ]
+  },
+  {
+    "slug": "granite-lingsugur-black-granite",
+    "nameEn": "Lingsugur Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 480,
+    "desc": "Lingsugur Black Granite, premium quality natural granite slab. Price range ₹45–50 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p079.jpg"
+    ]
+  },
+  {
+    "slug": "granite-mango-yellow-granite",
+    "nameEn": "Mango Yellow Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Mango Yellow Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p080.jpg"
+    ]
+  },
+  {
+    "slug": "granite-nagpur-black-granite",
+    "nameEn": "Nagpur Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 430,
+    "desc": "Nagpur Black Granite, premium quality natural granite slab. Price range ₹40–45 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p081.jpg"
+    ]
+  },
+  {
+    "slug": "granite-orissa-green-granite",
+    "nameEn": "Orissa Green Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Orissa Green Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p082.jpg"
+    ]
+  },
+  {
+    "slug": "granite-pondicherry-grey-granite",
+    "nameEn": "Pondicherry Grey Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 450,
+    "desc": "Pondicherry Grey Granite, premium quality natural granite slab. Price range ₹42–47 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p083.jpg"
+    ]
+  },
+  {
+    "slug": "granite-raichur-black-granite",
+    "nameEn": "Raichur Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 410,
+    "desc": "Raichur Black Granite, premium quality natural granite slab. Price range ₹38–43 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p084.jpg"
+    ]
+  },
+  {
+    "slug": "granite-salem-pink-granite",
+    "nameEn": "Salem Pink Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 480,
+    "desc": "Salem Pink Granite, premium quality natural granite slab. Price range ₹45–50 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p085.jpg"
+    ]
+  },
+  {
+    "slug": "granite-tirunelveli-black-granite",
+    "nameEn": "Tirunelveli Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 530,
+    "desc": "Tirunelveli Black Granite, premium quality natural granite slab. Price range ₹50–55 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p086.jpg"
+    ]
+  },
+  {
+    "slug": "granite-udaipur-black-granite",
+    "nameEn": "Udaipur Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 450,
+    "desc": "Udaipur Black Granite, premium quality natural granite slab. Price range ₹42–47 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p087.jpg"
+    ]
+  },
+  {
+    "slug": "granite-visakhapatnam-blue-granite",
+    "nameEn": "Visakhapatnam Blue Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Visakhapatnam Blue Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p088.jpg"
+    ]
+  },
+  {
+    "slug": "granite-warangal-red-granite",
+    "nameEn": "Warangal Red Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 430,
+    "desc": "Warangal Red Granite, premium quality natural granite slab. Price range ₹40–45 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p089.jpg"
+    ]
+  },
+  {
+    "slug": "granite-yadgir-black-granite",
+    "nameEn": "Yadgir Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 410,
+    "desc": "Yadgir Black Granite, premium quality natural granite slab. Price range ₹38–43 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p090.jpg"
+    ]
+  },
+  {
+    "slug": "granite-zamin-granite",
+    "nameEn": "Zamin Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 380,
+    "desc": "Zamin Granite, premium quality natural granite slab. Price range ₹35–40 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p091.jpg"
+    ]
+  },
+  {
+    "slug": "granite-additional-black-granite",
+    "nameEn": "Additional Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 480,
+    "desc": "Additional Black Granite, premium quality natural granite slab. Price range ₹45–50 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p092.jpg"
+    ]
+  },
+  {
+    "slug": "granite-premium-white-granite",
+    "nameEn": "Premium White Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 680,
+    "desc": "Premium White Granite, premium quality natural granite slab. Price range ₹65–70 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p093.jpg"
+    ]
+  },
+  {
+    "slug": "granite-royal-black-granite",
+    "nameEn": "Royal Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 580,
+    "desc": "Royal Black Granite, premium quality natural granite slab. Price range ₹55–60 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p094.jpg"
+    ]
+  },
+  {
+    "slug": "granite-super-black-granite",
+    "nameEn": "Super Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 510,
+    "desc": "Super Black Granite, premium quality natural granite slab. Price range ₹48–53 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p095.jpg"
+    ]
+  },
+  {
+    "slug": "granite-ultra-black-granite",
+    "nameEn": "Ultra Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 530,
+    "desc": "Ultra Black Granite, premium quality natural granite slab. Price range ₹50–55 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p096.jpg"
+    ]
+  },
+  {
+    "slug": "granite-velvet-black-granite",
+    "nameEn": "Velvet Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 610,
+    "desc": "Velvet Black Granite, premium quality natural granite slab. Price range ₹58–63 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p097.jpg"
+    ]
+  },
+  {
+    "slug": "granite-premium-brown-granite",
+    "nameEn": "Premium Brown Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 550,
+    "desc": "Premium Brown Granite, premium quality natural granite slab. Price range ₹52–57 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p098.jpg"
+    ]
+  },
+  {
+    "slug": "granite-imperial-black-granite",
+    "nameEn": "Imperial Black Granite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "wall-cladding",
+      "kitchen",
+      "living-room"
+    ],
+    "price": 630,
+    "desc": "Imperial Black Granite, premium quality natural granite slab. Price range ₹60–65 per sq ft. Available in multiple thicknesses.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/granite-p099.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rustica-beige",
+    "nameEn": "Rustica Beige",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 900,
+    "desc": "Rustica Beige, rustica collection natural marble. Price range ₹85–95 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-r01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rustica-grey",
+    "nameEn": "Rustica Grey",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 900,
+    "desc": "Rustica Grey, rustica collection natural marble. Price range ₹85–95 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-r01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rustica-brown",
+    "nameEn": "Rustica Brown",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 900,
+    "desc": "Rustica Brown, rustica collection natural marble. Price range ₹85–95 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-r01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rustica-red",
+    "nameEn": "Rustica Red",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 900,
+    "desc": "Rustica Red, rustica collection natural marble. Price range ₹85–95 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-r01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rustica-cream",
+    "nameEn": "Rustica Cream",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 900,
+    "desc": "Rustica Cream, rustica collection natural marble. Price range ₹85–95 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-r02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rustica-gold",
+    "nameEn": "Rustica Gold",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 950,
+    "desc": "Rustica Gold, rustica collection natural marble. Price range ₹90–100 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-r02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rustica-black",
+    "nameEn": "Rustica Black",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 900,
+    "desc": "Rustica Black, rustica collection natural marble. Price range ₹85–95 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-r02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rustica-white",
+    "nameEn": "Rustica White",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 900,
+    "desc": "Rustica White, rustica collection natural marble. Price range ₹85–95 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-r02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-cream-nova",
+    "nameEn": "Cream Nova",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 600,
+    "desc": "Cream Nova, classique collection natural marble. Price range ₹55–65 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-perlato-rosso",
+    "nameEn": "Perlato Rosso",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 600,
+    "desc": "Perlato Rosso, classique collection natural marble. Price range ₹55–65 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-crema-marfil",
+    "nameEn": "Crema Marfil",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 650,
+    "desc": "Crema Marfil, classique collection natural marble. Price range ₹60–70 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-beige-serpeggiante",
+    "nameEn": "Beige Serpeggiante",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 600,
+    "desc": "Beige Serpeggiante, classique collection natural marble. Price range ₹55–65 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-dyna-sardania-beige",
+    "nameEn": "Dyna Sardania Beige",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 600,
+    "desc": "Dyna Sardania Beige, classique collection natural marble. Price range ₹55–65 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-omani-beige",
+    "nameEn": "Omani Beige",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 600,
+    "desc": "Omani Beige, classique collection natural marble. Price range ₹55–65 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-crema-siana",
+    "nameEn": "Crema Siana",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 650,
+    "desc": "Crema Siana, classique collection natural marble. Price range ₹60–70 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-desert-beige",
+    "nameEn": "Desert Beige",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 600,
+    "desc": "Desert Beige, classique collection natural marble. Price range ₹55–65 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-bulgari-grey",
+    "nameEn": "Bulgari Grey",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 750,
+    "desc": "Bulgari Grey, classique collection natural marble. Price range ₹70–80 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-vegas-gold",
+    "nameEn": "Vegas Gold",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 800,
+    "desc": "Vegas Gold, classique collection natural marble. Price range ₹75–85 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-golden-dragon",
+    "nameEn": "Golden Dragon",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 800,
+    "desc": "Golden Dragon, classique collection natural marble. Price range ₹75–85 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-brescia-marina",
+    "nameEn": "Brescia Marina",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 750,
+    "desc": "Brescia Marina, classique collection natural marble. Price range ₹70–80 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-antique-beige",
+    "nameEn": "Antique Beige",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 650,
+    "desc": "Antique Beige, classique collection natural marble. Price range ₹60–70 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-yellow-valencia",
+    "nameEn": "Yellow Valencia",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 650,
+    "desc": "Yellow Valencia, classique collection natural marble. Price range ₹60–70 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-moon-creme",
+    "nameEn": "Moon Creme",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 650,
+    "desc": "Moon Creme, classique collection natural marble. Price range ₹60–70 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-crema-live",
+    "nameEn": "Crema Live",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 650,
+    "desc": "Crema Live, classique collection natural marble. Price range ₹60–70 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-imperial-beige",
+    "nameEn": "Imperial Beige",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 700,
+    "desc": "Imperial Beige, classique collection natural marble. Price range ₹65–75 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-turkey-dyna",
+    "nameEn": "Turkey Dyna",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 700,
+    "desc": "Turkey Dyna, classique collection natural marble. Price range ₹65–75 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-el-dorado-beige",
+    "nameEn": "El Dorado Beige",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 750,
+    "desc": "El Dorado Beige, classique collection natural marble. Price range ₹70–80 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-moon-light-crema",
+    "nameEn": "Moon Light Crema",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 700,
+    "desc": "Moon Light Crema, classique collection natural marble. Price range ₹65–75 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rosalia",
+    "nameEn": "Rosalia",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 650,
+    "desc": "Rosalia, classique collection natural marble. Price range ₹60–70 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-brescia-aurora",
+    "nameEn": "Brescia Aurora",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 700,
+    "desc": "Brescia Aurora, classique collection natural marble. Price range ₹65–75 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-caramelo-beige",
+    "nameEn": "Caramelo Beige",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 650,
+    "desc": "Caramelo Beige, classique collection natural marble. Price range ₹60–70 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-classic-fino",
+    "nameEn": "Classic Fino",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 700,
+    "desc": "Classic Fino, classique collection natural marble. Price range ₹65–75 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-c06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-pink-onyx",
+    "nameEn": "Pink Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Pink Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-white-onyx-classico",
+    "nameEn": "White Onyx Classico",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1800,
+    "desc": "White Onyx Classico, opera collection natural marble. Price range ₹160–200 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-grey-crystal-onyx",
+    "nameEn": "Grey Crystal Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "Grey Crystal Onyx, opera collection natural marble. Price range ₹170–210 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-spider-onyx",
+    "nameEn": "Spider Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2250,
+    "desc": "Spider Onyx, opera collection natural marble. Price range ₹200–250 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-blue-onyx",
+    "nameEn": "Blue Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Blue Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-grey-classic-onyx",
+    "nameEn": "Grey Classic Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1800,
+    "desc": "Grey Classic Onyx, opera collection natural marble. Price range ₹160–200 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-tiger-onyx",
+    "nameEn": "Tiger Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Tiger Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-emotion-grey-onyx",
+    "nameEn": "Emotion Grey Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "Emotion Grey Onyx, opera collection natural marble. Price range ₹170–210 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-exotic-blue-onyx",
+    "nameEn": "Exotic Blue Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Exotic Blue Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-glacier-onyx",
+    "nameEn": "Glacier Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2250,
+    "desc": "Glacier Onyx, opera collection natural marble. Price range ₹200–250 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-cappuccino-onyx",
+    "nameEn": "Cappuccino Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Cappuccino Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-travo-onyx",
+    "nameEn": "Travo Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1800,
+    "desc": "Travo Onyx, opera collection natural marble. Price range ₹160–200 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-crystal-white-onyx",
+    "nameEn": "Crystal White Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Crystal White Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-green-onyx",
+    "nameEn": "Green Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "Green Onyx, opera collection natural marble. Price range ₹170–210 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-royal-cappuccino-onyx",
+    "nameEn": "Royal Cappuccino Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2250,
+    "desc": "Royal Cappuccino Onyx, opera collection natural marble. Price range ₹200–250 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-zebra-onyx",
+    "nameEn": "Zebra Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2150,
+    "desc": "Zebra Onyx, opera collection natural marble. Price range ₹190–240 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-smokey-onyx",
+    "nameEn": "Smokey Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2250,
+    "desc": "Smokey Onyx, opera collection natural marble. Price range ₹200–250 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-spyra-onyx",
+    "nameEn": "Spyra Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Spyra Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-mexican-onyx",
+    "nameEn": "Mexican Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2500,
+    "desc": "Mexican Onyx, opera collection natural marble. Price range ₹220–280 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-mango-onyx",
+    "nameEn": "Mango Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "Mango Onyx, opera collection natural marble. Price range ₹170–210 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-pink-crystal-onyx",
+    "nameEn": "Pink Crystal Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Pink Crystal Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-white-onyx",
+    "nameEn": "White Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1800,
+    "desc": "White Onyx, opera collection natural marble. Price range ₹160–200 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-alfredo-onyx",
+    "nameEn": "Alfredo Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Alfredo Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-white-tiger-onyx",
+    "nameEn": "White Tiger Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "White Tiger Onyx, opera collection natural marble. Price range ₹170–210 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-black-onyx",
+    "nameEn": "Black Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Black Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o07-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-honey-onyx",
+    "nameEn": "Honey Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "Honey Onyx, opera collection natural marble. Price range ₹170–210 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o07-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-mexican-gold-onyx",
+    "nameEn": "Mexican Gold Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2500,
+    "desc": "Mexican Gold Onyx, opera collection natural marble. Price range ₹220–280 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o07-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-wine-onyx",
+    "nameEn": "Wine Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2000,
+    "desc": "Wine Onyx, opera collection natural marble. Price range ₹180–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o07-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-golden-onyx",
+    "nameEn": "Golden Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2250,
+    "desc": "Golden Onyx, opera collection natural marble. Price range ₹200–250 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o08-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-bannoffe-onyx",
+    "nameEn": "Bannoffe Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "Bannoffe Onyx, opera collection natural marble. Price range ₹170–210 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o08-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-mexican-spider-onyx",
+    "nameEn": "Mexican Spider Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2500,
+    "desc": "Mexican Spider Onyx, opera collection natural marble. Price range ₹220–280 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o08-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-champaign-onyx",
+    "nameEn": "Champaign Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1800,
+    "desc": "Champaign Onyx, opera collection natural marble. Price range ₹160–200 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o08-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-ondulutu-onyx",
+    "nameEn": "Ondulutu Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "Ondulutu Onyx, opera collection natural marble. Price range ₹170–210 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o09-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-grazia-onyx",
+    "nameEn": "Grazia Onyx",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1800,
+    "desc": "Grazia Onyx, opera collection natural marble. Price range ₹160–200 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-o09-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-mother-of-pearl",
+    "nameEn": "Mother Of Pearl",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2400,
+    "desc": "Mother Of Pearl, bejewel collection natural marble. Price range ₹200–280 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-white-quartz",
+    "nameEn": "White Quartz",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1750,
+    "desc": "White Quartz, bejewel collection natural marble. Price range ₹150–200 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-tiger-eye-black",
+    "nameEn": "Tiger Eye Black",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2100,
+    "desc": "Tiger Eye Black, bejewel collection natural marble. Price range ₹180–240 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-tiger-eye-brown",
+    "nameEn": "Tiger Eye Brown",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2100,
+    "desc": "Tiger Eye Brown, bejewel collection natural marble. Price range ₹180–240 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-fire-agate",
+    "nameEn": "Fire Agate",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2400,
+    "desc": "Fire Agate, bejewel collection natural marble. Price range ₹200–280 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-red-agate",
+    "nameEn": "Red Agate",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2100,
+    "desc": "Red Agate, bejewel collection natural marble. Price range ₹180–240 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-malachite",
+    "nameEn": "Malachite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2600,
+    "desc": "Malachite, bejewel collection natural marble. Price range ₹220–300 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-petrified-wood",
+    "nameEn": "Petrified Wood",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2100,
+    "desc": "Petrified Wood, bejewel collection natural marble. Price range ₹180–240 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-blue-agate",
+    "nameEn": "Blue Agate",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2400,
+    "desc": "Blue Agate, bejewel collection natural marble. Price range ₹200–280 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-amethyst",
+    "nameEn": "Amethyst",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2600,
+    "desc": "Amethyst, bejewel collection natural marble. Price range ₹220–300 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-yellow-agate",
+    "nameEn": "Yellow Agate",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2100,
+    "desc": "Yellow Agate, bejewel collection natural marble. Price range ₹180–240 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-black-mother-of-pearl",
+    "nameEn": "Black Mother of Pearl",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2400,
+    "desc": "Black Mother of Pearl, bejewel collection natural marble. Price range ₹200–280 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-rose-quartz",
+    "nameEn": "Rose Quartz",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 2100,
+    "desc": "Rose Quartz, bejewel collection natural marble. Price range ₹180–240 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-smoky-quartz",
+    "nameEn": "Smoky Quartz",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 1900,
+    "desc": "Smoky Quartz, bejewel collection natural marble. Price range ₹160–220 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-b04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-marinace-gold",
+    "nameEn": "Marinace Gold",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Marinace Gold, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-sodalite-gold",
+    "nameEn": "Sodalite Gold",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Sodalite Gold, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-blue-jeans",
+    "nameEn": "Blue Jeans",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3300,
+    "desc": "Blue Jeans, exotica collection natural marble. Price range ₹280–380 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-sal-unhyui",
+    "nameEn": "Sal Unhyui",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Sal Unhyui, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x01-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-marinace-green",
+    "nameEn": "Marinace Green",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Marinace Green, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-dolce-vita",
+    "nameEn": "Dolce Vita",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3100,
+    "desc": "Dolce Vita, exotica collection natural marble. Price range ₹260–360 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-patagonia",
+    "nameEn": "Patagonia",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3300,
+    "desc": "Patagonia, exotica collection natural marble. Price range ₹280–380 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-blue-crystallo",
+    "nameEn": "Blue Crystallo",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Blue Crystallo, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x02-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-temptation-blue",
+    "nameEn": "Temptation Blue",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3500,
+    "desc": "Temptation Blue, exotica collection natural marble. Price range ₹300–400 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-azul-bahia",
+    "nameEn": "Azul Bahia",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3300,
+    "desc": "Azul Bahia, exotica collection natural marble. Price range ₹280–380 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-sky-gold",
+    "nameEn": "Sky Gold",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Sky Gold, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-fusion-grey",
+    "nameEn": "Fusion Grey",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3100,
+    "desc": "Fusion Grey, exotica collection natural marble. Price range ₹260–360 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x03-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-illusion",
+    "nameEn": "Illusion",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3700,
+    "desc": "Illusion, exotica collection natural marble. Price range ₹320–420 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-illusion-3d",
+    "nameEn": "Illusion 3D",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3700,
+    "desc": "Illusion 3D, exotica collection natural marble. Price range ₹320–420 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-splendor-gold",
+    "nameEn": "Splendor Gold",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3300,
+    "desc": "Splendor Gold, exotica collection natural marble. Price range ₹280–380 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-kosmus",
+    "nameEn": "Kosmus",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Kosmus, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x04-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-reno-quartzite",
+    "nameEn": "Reno Quartzite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Reno Quartzite, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-ijen-blue",
+    "nameEn": "Ijen Blue",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3500,
+    "desc": "Ijen Blue, exotica collection natural marble. Price range ₹300–400 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-black-beauty",
+    "nameEn": "Black Beauty",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3300,
+    "desc": "Black Beauty, exotica collection natural marble. Price range ₹280–380 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-azul-macaubas",
+    "nameEn": "Azul Macaubas",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3700,
+    "desc": "Azul Macaubas, exotica collection natural marble. Price range ₹320–420 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x05-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-fusion-quartzite",
+    "nameEn": "Fusion Quartzite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3100,
+    "desc": "Fusion Quartzite, exotica collection natural marble. Price range ₹260–360 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-labradorite",
+    "nameEn": "Labradorite",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3500,
+    "desc": "Labradorite, exotica collection natural marble. Price range ₹300–400 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-cosmic-black",
+    "nameEn": "Cosmic Black",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3300,
+    "desc": "Cosmic Black, exotica collection natural marble. Price range ₹280–380 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-blue-lapis",
+    "nameEn": "Blue Lapis",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3500,
+    "desc": "Blue Lapis, exotica collection natural marble. Price range ₹300–400 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x06-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-shadow-storm",
+    "nameEn": "Shadow Storm",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3700,
+    "desc": "Shadow Storm, exotica collection natural marble. Price range ₹320–420 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x07-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-dolce-feather",
+    "nameEn": "Dolce Feather",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3300,
+    "desc": "Dolce Feather, exotica collection natural marble. Price range ₹280–380 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x07-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-calcite-palace",
+    "nameEn": "Calcite Palace",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Calcite Palace, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x08-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-sequoia-brown-polish",
+    "nameEn": "Sequoia Brown Polish",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3300,
+    "desc": "Sequoia Brown Polish, exotica collection natural marble. Price range ₹280–380 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x08-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-sequoia-brown-leather",
+    "nameEn": "Sequoia Brown Leather",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3100,
+    "desc": "Sequoia Brown Leather, exotica collection natural marble. Price range ₹260–360 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x09-tl.jpg"
+    ]
+  },
+  {
+    "slug": "marble-green-spring",
+    "nameEn": "Green Spring",
+    "materialType": "natural-stone",
+    "finish": "polished",
+    "roomUses": [
+      "flooring",
+      "living-room",
+      "wall-cladding",
+      "bedroom"
+    ],
+    "price": 3000,
+    "desc": "Green Spring, exotica collection natural marble. Price range ₹250–350 per sq ft. Available in multiple finishes.",
+    "photoUrls": [
+      "https://fpefdhzeqagducnoipsz.supabase.co/storage/v1/object/public/tiles/marble-x09-tl.jpg"
+    ]
+  }
+]

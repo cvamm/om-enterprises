@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CATEGORIES } from "@/lib/utils/category-photos";
-import { CategoryPageBody } from "@/components/marketing/CategoryPageBody";
+import { StoneCategoryPage } from "@/components/marketing/StoneCategoryPage";
 
 const category = CATEGORIES.granite;
 
@@ -10,10 +10,11 @@ export const metadata: Metadata = {
   alternates: { canonical: `/${category.slug}` },
 };
 
-export default function GranitePage() {
+export default async function GranitePage() {
   return (
-    <CategoryPageBody
+    <StoneCategoryPage
       category={category}
+      nameTerms={["granite"]}
       related={[
         CATEGORIES.marbles,
         CATEGORIES["tiles-adhesive"],
