@@ -15,9 +15,5 @@ export default async function AdminAddProductPage() {
     redirect("/admin/login");
   }
 
-  return (
-    <div className="min-h-screen bg-ink">
-      <AdminAddProduct />
-    </div>
-  );
+  return <AdminAddProduct />;
 }

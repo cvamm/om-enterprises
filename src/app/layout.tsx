@@ -2,9 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { CSSProperties } from "react";
 import "./globals.css";
 import { AppProviders } from "@/components/providers/AppProviders";
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/Footer";
-import { WhatsAppFab } from "@/components/marketing/WhatsAppFab";
+import { PublicChrome } from "@/components/marketing/PublicChrome";
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
@@ -83,11 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
         <AppProviders>
-          <a href="#main" className="skip-link">Skip to content</a>
-          <Navbar />
-          {children}
-          <Footer />
-          <WhatsAppFab />
+          <PublicChrome>{children}</PublicChrome>
         </AppProviders>
       </body>
     </html>
