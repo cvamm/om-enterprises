@@ -43,8 +43,21 @@ export function SpecTable({ product }: { product: Product }) {
 
 type Row = { label: string; value: string; note?: string };
 
+/**
+ * A spec row only exists when there is something to say. Fields that do not
+ * apply to this product (a fixture has no nominal size, an adhesive has no
+ * shape) are left 0/empty by the importer and are hidden rather than shown
+ * as a blank or a "0 mm" that reads as a mistake.
+ */
+function isMeaningful(value: string): boolean {
+  if (value === "" || value === "—" || value === "none") return false;
+  // "0", "0 mm", "0 sq.ft" are empty states, not real specs.
+  if (/^0(\.0+)?(\s*(mm|sq\.ft|piece|pieces|pcs))?$/.test(value)) return false;
+  return true;
+}
+
 function deriveRows(product: Product): Row[] {
-  const rows: Row[] = [
+  const candidates: Row[] = [
     {
       label: "Material",
       value: product.materialType.replace(/-/g, " "),
@@ -53,7 +66,10 @@ function deriveRows(product: Product): Row[] {
     { label: "Shape", value: product.shape.replace(/-/g, " ") },
     {
       label: "Nominal size",
-      value: `${product.dimensionsMm[0]} × ${product.dimensionsMm[1]} mm`,
+      value:
+        product.dimensionsMm[0] > 0 && product.dimensionsMm[1] > 0
+          ? `${product.dimensionsMm[0]} × ${product.dimensionsMm[1]} mm`
+          : "0",
     },
     {
       label: "Thickness",
@@ -69,12 +85,18 @@ function deriveRows(product: Product): Row[] {
     },
     {
       label: "Price per sq.ft",
-      value: inr(product.pricePerBoxInr / product.boxAreaSqft),
+      value:
+        product.boxAreaSqft > 0
+          ? inr(product.pricePerBoxInr / product.boxAreaSqft)
+          : "",
       note: "derived from the box price",
     },
     {
       label: "Pieces per sq.ft",
-      value: (product.tilesPerBox / product.boxAreaSqft).toFixed(2),
+      value:
+        product.boxAreaSqft > 0
+          ? (product.tilesPerBox / product.boxAreaSqft).toFixed(2)
+          : "0",
       note: "derived",
     },
     {
@@ -85,13 +107,13 @@ function deriveRows(product: Product): Row[] {
   ];
 
   if (product.roomUses.length > 0) {
-    rows.push({
+    candidates.push({
       label: "Recommended for",
       value: product.roomUses.map((r) => r.replace(/-/g, " ")).join(", "),
     });
   }
 
-  return rows;
+  return candidates.filter((row) => isMeaningful(row.value));
 }
 
 function inr(value: number): string {

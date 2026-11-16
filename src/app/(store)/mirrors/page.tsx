@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import type { Product } from "@/types";
 import { CATEGORIES } from "@/lib/utils/category-photos";
+import { SECTION_MATERIAL } from "@/lib/utils/section-material";
 import { CategoryPageBody } from "@/components/marketing/CategoryPageBody";
 
 const category = CATEGORIES.mirrors;
+const material = SECTION_MATERIAL.mirrors;
 
 export const metadata: Metadata = {
   title: `${category.name}`,
@@ -10,10 +13,13 @@ export const metadata: Metadata = {
   alternates: { canonical: `/${category.slug}` },
 };
 
-export default function MirrorsPage() {
+export default async function MirrorsPage() {
+  const products = await getSectionProducts(material);
+
   return (
     <CategoryPageBody
       category={category}
+      products={products}
       related={[
         CATEGORIES["washing-basins"],
         CATEGORIES["western-toilets"],
@@ -21,4 +27,14 @@ export default function MirrorsPage() {
       ]}
     />
   );
+}
+
+async function getSectionProducts(material: string): Promise<Product[]> {
+  try {
+    const mod = await import("@/lib/queries/products");
+    const page = await mod.getProducts({ material, sort: "featured", page: 1, perPage: 200 });
+    return page.products;
+  } catch {
+    return [];
+  }
 }

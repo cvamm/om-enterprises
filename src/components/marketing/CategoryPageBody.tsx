@@ -3,25 +3,82 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ProductCard } from "@/components/catalogue/ProductCard";
+import type { Product } from "@/types";
 import type { Category } from "@/lib/utils/category-photos";
 import { SECTION_TILES } from "@/lib/utils/section-tiles";
 import { SAMPLE_PRODUCTS } from "@/data/seeds/products.sample";
+import { formatProductPricing } from "@/lib/utils/pricing";
+
+/**
+ * Compact product tile for the store-line pages: image, name and price only.
+ * Deliberately simpler than ProductCard — no material, finish, dimensions or
+ * stock badge, just the three things a customer needs to scan a grid.
+ */
+function MinimalProductCard({ product, priority }: { product: Product; priority: boolean }) {
+  const cover = product.photoUrls[0];
+  const { formattedPricePerBox } = formatProductPricing(product);
+  const onRequest = product.pricePerBoxInr === 0;
+
+  return (
+    <Link
+      href={`/tiles/${product.slug}`}
+      className="group block rounded-2xl border border-bone/10 bg-ink transition-colors duration-300 hover:border-bone/30"
+    >
+      <div className="relative h-52 overflow-hidden md:h-60">
+        {cover !== undefined ? (
+          <Image
+            src={cover}
+            alt={product.nameEn}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+            priority={priority}
+            loading={priority ? "eager" : "lazy"}
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center bg-ink-2 text-bone/40">
+            No photo yet
+          </div>
+        )}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+      </div>
+      <div className="p-4 md:p-5">
+        <h3 className="line-clamp-2 text-[14px] leading-snug text-bone group-hover:text-gold">
+          {product.nameEn}
+        </h3>
+        <p className="mt-2 font-display text-lg leading-none text-bone">
+          {onRequest ? (
+            <span className="text-gold">On request</span>
+          ) : (
+            <>
+              {formattedPricePerBox}
+              <span className="ml-1 text-[10px] uppercase tracking-[0.24em] text-bone/73">/ box</span>
+            </>
+          )}
+        </p>
+      </div>
+    </Link>
+  );
+}
 
 /**
  * Shared body for a store line (marbles, granite, western toilets, …).
  *
- * Every line follows the same shape: an intro band that states what the
- * material or service actually is, a grid of stand-in Pexels textures, and a
- * strip of the shop's own catalogue tiles for that line (resolved from
- * `SECTION_TILES`) so each page carries real stock, not only stock photos.
+ * Intro band stating what the line actually is. If the page passes
+ * `products` (fetched from the catalogue) those product cards are shown —
+ * the stand-in Pexels photos only appear when no products exist yet, so the
+ * page never looks empty.
  */
 export function CategoryPageBody({
   category,
   related,
+  products = [],
 }: {
   category: Category;
   /** Other lines shown in a "keep looking" strip at the bottom. */
   related: Category[];
+  /** Catalogue products for this line; replaces the photo grid when present. */
+  products?: Product[];
 }) {
   const tiles = (
     SECTION_TILES[category.key] ?? []
@@ -49,24 +106,36 @@ export function CategoryPageBody({
 
       <section className="bg-ink-2 py-24 md:py-32">
         <Container>
-          <div className="grid gap-5 sm:grid-cols-2 md:gap-8">
-            {category.photos.map((photo) => (
-              <figure
-                key={photo.src}
-                className="group relative h-[330px] overflow-hidden rounded-2xl border border-bone/10 md:h-[420px]"
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
-                  loading="lazy"
+          {products.length > 0 ? (
+            <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
+              {products.map((product, index) => (
+                <MinimalProductCard
+                  key={product.id}
+                  product={product}
+                  priority={index < 4}
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-2/70 via-transparent to-transparent" />
-              </figure>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid gap-5 sm:grid-cols-2 md:gap-8">
+              {category.photos.map((photo) => (
+                <figure
+                  key={photo.src}
+                  className="group relative h-[330px] overflow-hidden rounded-2xl border border-bone/10 md:h-[420px]"
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-2/70 via-transparent to-transparent" />
+                </figure>
+              ))}
+            </div>
+          )}
 
           {tiles.length > 0 && (
             <div className="mt-20">
