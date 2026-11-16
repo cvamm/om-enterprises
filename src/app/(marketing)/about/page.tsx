@@ -6,7 +6,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 export const metadata: Metadata = {
   title: "About the shop",
   description:
-    "Parbat Stone Works is a tiles and natural stone shop in Kanpur. What we carry, how we source it, and why the supply chain matters to a customer.",
+    "OM Enterprises is a tiles and natural stone shop in Kanpur. What we carry, how we source it, and why the supply chain matters to a customer.",
   alternates: { canonical: "/about" },
 };
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="mt-8 max-w-2xl text-[15px] leading-relaxed text-bone/79">
-              Parbat Stone Works carries glazed vitrified, full body,
+              OM Enterprises carries glazed vitrified, full body,
               marble look and natural stone, sourced from specific quarries
               and kilns in Rajasthan, Tamil Nadu and other Indian states.
               Every box has an origin. We can tell you which one.
@@ -70,8 +70,10 @@ export default function AboutPage() {
                   THE SHOP
                 </h3>
                 <p className="mt-4 text-[15px] leading-relaxed text-bone/79">
-                  [SAMPLE — replace before deploy]
-                  Amdadi Road, near the old clock tower, Kanpur, UP 226 001
+                  Run by a retired Army officer who measures everything the way
+                  he was trained to: straight, level, and to the last
+                  millimetre. Bamba Road, Naubasta, Kanpur — come and see the
+                  stone before you buy it.
                 </p>
               </div>
 
