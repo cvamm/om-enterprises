@@ -22,15 +22,24 @@ export async function StoneCategoryPage({
   nameTerms: string[];
   related: Category[];
 }) {
-  // First fetch all natural stone products
+  // Fetch both granite and marble products
   const result = await getProducts({
     material: "natural-stone",
     perPage: 999,
   });
+  
+  // Also fetch granite products separately
+  const graniteResult = await getProducts({
+    material: "granite",
+    perPage: 999,
+  });
+  
+  // Combine results
+  const allProducts = [...result.products, ...graniteResult.products];
 
   // Filter to only products whose name matches at least one search term
   const terms = nameTerms.map((t) => t.toLowerCase());
-  const products = result.products.filter((p) => {
+  const products = allProducts.filter((p) => {
     const name = p.nameEn.toLowerCase();
     return terms.some((t) => name.includes(t));
   });
