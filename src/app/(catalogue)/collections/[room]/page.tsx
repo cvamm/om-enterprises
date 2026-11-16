@@ -34,8 +34,8 @@ export async function generateMetadata({
   const { room } = await params;
   const label = roomLabel(room);
   return {
-    title: `${label} tiles`,
-    description: `${label} tiles and stone, priced per box. Browse and filter by material, finish and size.`,
+    title: `${label} Tiles in Kanpur — OM Enterprises`,
+    description: `${label} tiles and stone, priced per box, delivered across Kanpur. Browse and filter by material, finish and size.`,
     alternates: { canonical: `/collections/${room}` },
   };
 }

@@ -7,11 +7,11 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { RoomCollectionGrid } from "@/components/marketing/RoomCollectionGrid";
 import { ToolTeaser } from "@/components/marketing/ToolTeaser";
-import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: { absolute: siteConfig.name },
-  description: siteConfig.description,
+  title: { absolute: "Tiles, Marble & Granite in Kanpur | OM Enterprises" },
+  description:
+    "OM Enterprises — tiles, marble and granite shop in Naubasta, Kanpur. Glazed vitrified, full body, natural stone sourced across India. Free delivery in Kanpur city. Call +91 80099 30761.",
 };
 
 /**

@@ -5,9 +5,9 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { roomLabels } from "@/lib/utils/room-labels";
 
 export const metadata: Metadata = {
-  title: "Browse by room",
+  title: "Browse Tiles by Room — Kanpur | OM Enterprises",
   description:
-    "Choose the room you are fitting and start from the tiles that actually suit it — bathroom, kitchen, living room, balcony, exterior, commercial.",
+    "Bathroom, kitchen, living room, balcony or commercial — find the right tiles for each room in Kanpur. Filter by material, finish and size. Free delivery available.",
   alternates: { canonical: "/collections" },
 };
 

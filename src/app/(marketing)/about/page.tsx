@@ -4,9 +4,9 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export const metadata: Metadata = {
-  title: "About the shop",
+  title: "About OM Enterprises — Tiles & Stone Shop in Kanpur",
   description:
-    "OM Enterprises is a tiles and natural stone shop in Kanpur. What we carry, how we source it, and why the supply chain matters to a customer.",
+    "OM Enterprises is a trusted tiles, marble and granite shop in Naubasta, Kanpur. Here's what we carry, how we source it, and why the supply chain matters.",
   alternates: { canonical: "/about" },
 };
 

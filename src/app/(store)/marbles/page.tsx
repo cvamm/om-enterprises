@@ -5,7 +5,7 @@ import { StoneCategoryPage } from "@/components/marketing/StoneCategoryPage";
 const category = CATEGORIES.marbles;
 
 export const metadata: Metadata = {
-  title: `${category.name}`,
+  title: `Marble in Kanpur — ${category.name}`,
   description: category.intro,
   alternates: { canonical: `/${category.slug}` },
 };

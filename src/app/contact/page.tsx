@@ -7,9 +7,9 @@ import { WhatsAppCta } from "@/components/contact/WhatsAppCta";
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Visit or contact us",
+  title: "Contact OM Enterprises — Tile & Stone Shop, Bamba Road, Kanpur",
   description:
-    "OM Enterprises — marble, granites and tiles in Kanpur. Walk in, call, or send a WhatsApp message with what you are fitting.",
+    "Visit our tile and stone shop in Naubasta, Kanpur. Call +91 80099 30761 or WhatsApp us with your tile requirements. Free delivery across Kanpur city and nearby districts.",
   alternates: { canonical: "/contact" },
 };
 

@@ -5,7 +5,7 @@ import { StoneCategoryPage } from "@/components/marketing/StoneCategoryPage";
 const category = CATEGORIES.granite;
 
 export const metadata: Metadata = {
-  title: `${category.name}`,
+  title: `Granite in Kanpur — ${category.name}`,
   description: category.intro,
   alternates: { canonical: `/${category.slug}` },
 };
