@@ -50,6 +50,12 @@ export function AdminProductsList() {
           <p className="text-bone/60 mt-1">Total: {total} products</p>
         </div>
         <div className="flex gap-3">
+          <Link
+            href="/admin/products/new"
+            className="px-4 py-2 bg-gold text-ink font-medium rounded-lg text-sm hover:bg-gold/90"
+          >
+            + Add New Product
+          </Link>
           <input
             type="text"
             placeholder="Search products..."
