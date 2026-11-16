@@ -23,6 +23,18 @@ import finishingUrl from "@/assets/categories/finishing-1.jpg";
 import finishingAltUrl from "@/assets/categories/finishing-2.jpg";
 import finishingAlt2Url from "@/assets/categories/finishing-3.jpg";
 import finishingAlt3Url from "@/assets/categories/finishing-4.jpg";
+import chemicalUrl from "@/assets/categories/chemical-1.jpg";
+import chemicalAltUrl from "@/assets/categories/chemical-2.jpg";
+import chemicalAlt2Url from "@/assets/categories/chemical-3.jpg";
+import ceramicUrl from "@/assets/tiles/ceramic.jpg";
+import vitrifiedUrl from "@/assets/tiles/vitrified.jpg";
+import naturalStoneUrl from "@/assets/tiles/natural-stone.jpg";
+import engineeredMarbleUrl from "@/assets/tiles/engineered-marble.jpg";
+import quartzUrl from "@/assets/tiles/quartz.jpg";
+import mosaicUrl from "@/assets/tiles/mosaic.jpg";
+import woodPlankUrl from "@/assets/tiles/wood-plank.jpg";
+import terrazzoUrl from "@/assets/tiles/terrazzo.jpg";
+import type { MaterialType } from "@/types";
 
 /**
  * Real product photography for the store's non-tile lines, licensed under the
@@ -52,7 +64,8 @@ export type CategoryKey =
   | "mirrors"
   | "washing-basins"
   | "taps"
-  | "house-finishing";
+  | "house-finishing"
+  | "miscellaneous";
 
 export type Category = {
   key: CategoryKey;
@@ -291,6 +304,50 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
       },
     ],
   },
+  miscellaneous: {
+    key: "miscellaneous",
+    slug: "miscellaneous",
+    name: "Miscellaneous",
+    eyebrow: "MISC",
+    intro:
+      "Everything else the job needs — cleaners, adhesives, small items that do not fit one line.",
+    body:
+      "Not every product in the shop fits a named line, and the ones that do not get shelved quietly. Cleaners, grout and sealer, sealants, hardware and the oddity that comes up mid-job: if the installer asks for it, it is here. Bring the list and we will set it out; or ask us by phone and we will tell you what we hold before you travel.",
+    photos: [
+      {
+        src: chemicalUrl.src,
+        alt: "White spray bottle labelled multi-purpose cleaner held against a pale wall",
+        pexels: "[SAMPLE — replace before deploy]",
+      },
+      {
+        src: chemicalAltUrl.src,
+        alt: "Clear spray bottle of cleaner held in a hand against a black background",
+        pexels: "[SAMPLE — replace before deploy]",
+      },
+      {
+        src: chemicalAlt2Url.src,
+        alt: "White spray bottle of cleaner and a sponge on a wooden shelf",
+        pexels: "[SAMPLE — replace before deploy]",
+      },
+    ],
+  },
+};
+
+/**
+ * Material → representative image URL. Used as a fallback when a Supabase
+ * product has no `photo_urls` — the product card shows this instead of a blank
+ * placeholder so the grid always has visible tiles.
+ */
+export const MATERIAL_IMAGE_MAP: Record<MaterialType, string> = {
+  ceramic: ceramicUrl.src,
+  vitrified: vitrifiedUrl.src,
+  porcelain: vitrifiedUrl.src,
+  "natural-stone": naturalStoneUrl.src,
+  "engineered-marble": engineeredMarbleUrl.src,
+  quartz: quartzUrl.src,
+  mosaic: mosaicUrl.src,
+  "wood-plank": woodPlankUrl.src,
+  terrazzo: terrazzoUrl.src,
 };
 
 /** All categories in page order, matching the header grouping. */
@@ -303,4 +360,5 @@ export const CATEGORIES_LIST: Category[] = [
   CATEGORIES["washing-basins"],
   CATEGORIES.taps,
   CATEGORIES["house-finishing"],
+  CATEGORIES.miscellaneous,
 ];

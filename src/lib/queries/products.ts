@@ -3,6 +3,7 @@ import { getServerSupabase } from "@/lib/supabase/server";
 import type { Product, RoomUse } from "@/types";
 import { SAMPLE_PRODUCTS } from "@/data/seeds/products.sample";
 import { samplePage, sampleSort } from "@/lib/catalogue/sample";
+import { MATERIAL_IMAGE_MAP } from "@/lib/utils/category-photos";
 
 /**
  * Product reads for Server Components.
@@ -82,8 +83,13 @@ type ProductRow = {
   updated_at: string;
 };
 
+/** Sample product keyed by slug so DB rows without photos can fall back. */
+const sampleBySlug = new Map(SAMPLE_PRODUCTS.map((p) => [p.slug, p]));
+
 function toProduct(row: ProductRow): Product {
   const dims = row.nominal_dimensions_mm;
+  const samplePhotos = sampleBySlug.get(row.slug)?.photoUrls;
+  const materialUrl = MATERIAL_IMAGE_MAP[row.material_type];
   return {
     id: row.id,
     slug: row.slug,
@@ -95,15 +101,26 @@ function toProduct(row: ProductRow): Product {
     roomUses: row.room_uses as RoomUse[],
     shape: row.shape,
     dimensionsMm: [dims[0] ?? 0, dims[1] ?? 0, dims[2] ?? 0],
-    // Postgres numeric comes back as a string over the wire to avoid float
-    // drift. Parse at the boundary so the rest of the app sees numbers.
     boxAreaSqft: Number(row.box_area_sqft),
     tilesPerBox: row.tiles_per_box,
     pricePerBoxInr: Number(row.price_per_box_inr),
     moqBoxes: row.moq_boxes,
     grade: row.grade,
     stockStatus: row.stock_status,
-    photoUrls: row.photo_urls ?? [],
+    photoUrls:
+      row.photo_urls !== undefined &&
+      row.photo_urls !== null &&
+      Array.isArray(row.photo_urls) &&
+      row.photo_urls.length > 0
+        ? row.photo_urls
+        : samplePhotos !== undefined &&
+          samplePhotos !== null &&
+          Array.isArray(samplePhotos) &&
+          samplePhotos.length > 0
+          ? samplePhotos
+          : materialUrl !== undefined && materialUrl !== null
+            ? [materialUrl]
+            : [],
     videoUrls: row.video_urls ?? [],
     featured: row.featured_rank !== null,
     active: row.active,
