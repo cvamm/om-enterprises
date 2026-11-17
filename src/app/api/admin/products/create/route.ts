@@ -59,6 +59,7 @@ export async function POST(request: Request) {
       moq_boxes: num(body.moq_boxes, 1),
       grade: body.grade,
       stock_status: body.stock_status,
+      section_tag: body.section_tag ?? "tile",
       photo_urls: Array.isArray(body.photo_urls) ? body.photo_urls : [],
       video_urls: [],
       featured_rank: null,

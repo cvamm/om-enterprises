@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import type { Product } from "@/types";
 import { CATEGORIES } from "@/lib/utils/category-photos";
-import { SECTION_MATERIAL } from "@/lib/utils/section-material";
+import { SECTION_TAG, SECTION_MATERIAL } from "@/lib/utils/section-material";
 import { CategoryPageBody } from "@/components/marketing/CategoryPageBody";
 
 const category = CATEGORIES.mirrors;
-const material = SECTION_MATERIAL.mirrors;
+const tag = SECTION_TAG.mirrors;
 
 export const metadata: Metadata = {
   title: `${category.name}`,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function MirrorsPage() {
-  const products = await getSectionProducts(material);
+  const products = await getSectionProducts(tag, SECTION_MATERIAL.mirrors);
 
   return (
     <CategoryPageBody
@@ -29,10 +29,16 @@ export default async function MirrorsPage() {
   );
 }
 
-async function getSectionProducts(material: string): Promise<Product[]> {
+async function getSectionProducts(
+  tag: string | null,
+  material: string
+): Promise<Product[]> {
   try {
     const mod = await import("@/lib/queries/products");
-    const page = await mod.getProducts({ material, sort: "featured", page: 1, perPage: 200 });
+    // Use section_tag if set; fall back to material for legacy rows.
+    const page = tag !== null
+      ? await mod.getProducts({ sectionTag: tag, sort: "featured", page: 1, perPage: 200 })
+      : await mod.getProducts({ material, sort: "featured", page: 1, perPage: 200 });
     return page.products;
   } catch {
     return [];

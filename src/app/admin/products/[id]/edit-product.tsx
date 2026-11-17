@@ -3,6 +3,16 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
+const SECTIONS = [
+  { value: "tile", label: "Main Catalogue (Tiles & Stone)" },
+  { value: "tiles-adhesive", label: "Tiles Adhesive" },
+  { value: "washing-basins", label: "Washing Basins" },
+  { value: "western-toilets", label: "Western Toilets" },
+  { value: "mirrors", label: "Mirrors" },
+  { value: "taps", label: "Taps" },
+  { value: "miscellaneous", label: "Miscellaneous" },
+];
+
 export function AdminEditProduct({ productId }: { productId: string }) {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -27,6 +37,7 @@ export function AdminEditProduct({ productId }: { productId: string }) {
     grade: string;
     shape: string;
     description_en: string;
+    section_tag: string;
   }
 
   useEffect(() => {
@@ -42,6 +53,10 @@ export function AdminEditProduct({ productId }: { productId: string }) {
           nominal_dimensions_mm: Array.isArray(data.nominal_dimensions_mm)
             ? data.nominal_dimensions_mm
             : [0, 0, 0],
+          section_tag:
+            typeof data.section_tag === "string" && data.section_tag.length > 0
+              ? data.section_tag
+              : "tile",
         };
         setProduct(p);
         setLoading(false);
@@ -205,6 +220,21 @@ export function AdminEditProduct({ productId }: { productId: string }) {
               <option value="made-to-order">Made to Order</option>
               <option value="preorder">Preorder</option>
               <option value="sold-out">Sold Out</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm text-bone/70 mb-2">Product Section</label>
+            <select
+              value={product.section_tag}
+              onChange={(e) => updateField("section_tag", e.target.value)}
+              className="w-full px-4 py-2 bg-ink-2 border border-bone/10 rounded-lg text-bone focus:outline-none focus:border-gold/50"
+            >
+              {SECTIONS.map((s) => (
+                <option key={s.value} value={s.value}>
+                  {s.label}
+                </option>
+              ))}
             </select>
           </div>
 

@@ -12,6 +12,7 @@ interface Product {
   room_uses: string[];
   photo_urls: string[];
   created_at: string;
+  section_tag: string | null;
 }
 
 export function AdminProductsList() {
@@ -21,6 +22,7 @@ export function AdminProductsList() {
   const [search, setSearch] = useState("");
   const [room, setRoom] = useState("");
   const [loading, setLoading] = useState(true);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -41,6 +43,19 @@ export function AdminProductsList() {
     void loadProducts();
     return () => controller.abort();
   }, [page, search, room]);
+
+  async function handleDelete(id: string, name: string) {
+    if (!window.confirm(`Delete "${name}"? This cannot be undone.`)) return;
+    setDeletingId(id);
+    const res = await fetch(`/api/admin/products/${id}`, { method: "DELETE" });
+    setDeletingId(null);
+    if (res.ok) {
+      setProducts((prev) => prev.filter((p) => p.id !== id));
+      setTotal((t) => Math.max(0, t - 1));
+    } else {
+      window.alert("Failed to delete product");
+    }
+  }
 
   return (
     <div className="max-w-7xl mx-auto p-8">
@@ -105,7 +120,10 @@ export function AdminProductsList() {
                 <div className="flex-1 min-w-0">
                   <h3 className="text-bone font-medium truncate">{product.name_en}</h3>
                   <p className="text-bone/60 text-sm">{product.slug}</p>
-                  <div className="flex gap-2 mt-1">
+                  <div className="flex gap-2 mt-1 flex-wrap">
+                    <span className="text-xs px-2 py-0.5 bg-gold/15 text-gold rounded">
+                      {product.section_tag ?? "tile"}
+                    </span>
                     {Array.isArray(product.room_uses) && product.room_uses.length > 0 ? product.room_uses.map((r) => (
                       <span key={r} className="text-xs px-2 py-0.5 bg-bone/10 rounded text-bone/70">
                         {r}
@@ -123,6 +141,13 @@ export function AdminProductsList() {
                 >
                   Edit
                 </Link>
+                <button
+                  onClick={() => void handleDelete(product.id, product.name_en)}
+                  disabled={deletingId === product.id}
+                  className="px-4 py-2 bg-red-500/10 text-red-400 border border-red-500/30 rounded-lg hover:bg-red-500/20 text-sm font-medium disabled:opacity-50"
+                >
+                  {deletingId === product.id ? "Deleting..." : "Delete"}
+                </button>
               </div>
             ))}
           </div>

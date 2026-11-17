@@ -63,6 +63,16 @@ const STOCK = [
   { value: "sold-out", label: "Sold Out" },
 ];
 
+const SECTIONS = [
+  { value: "tile", label: "Main Catalogue (Tiles & Stone)" },
+  { value: "tiles-adhesive", label: "Tiles Adhesive" },
+  { value: "washing-basins", label: "Washing Basins" },
+  { value: "western-toilets", label: "Western Toilets" },
+  { value: "mirrors", label: "Mirrors" },
+  { value: "taps", label: "Taps" },
+  { value: "miscellaneous", label: "Miscellaneous" },
+];
+
 export function AdminAddProduct() {
   const [name, setName] = useState("");
   const [nameHi, setNameHi] = useState("");
@@ -77,6 +87,7 @@ export function AdminAddProduct() {
   const [moq, setMoq] = useState(1);
   const [grade, setGrade] = useState("aaa");
   const [stock, setStock] = useState("in-stock");
+  const [section, setSection] = useState("tile");
   const [description, setDescription] = useState("");
   const [photos, setPhotos] = useState<string[]>([]);
 
@@ -138,6 +149,7 @@ export function AdminAddProduct() {
         moq_boxes: moq,
         grade,
         stock_status: stock,
+        section_tag: section,
         photo_urls: photos,
         description_en: description !== "" ? description : null,
       }),
@@ -246,6 +258,17 @@ export function AdminAddProduct() {
             <label className={labelCls}>Stock Status</label>
             <select value={stock} onChange={(e) => setStock(e.target.value)} className={inputCls}>
               {STOCK.map((s) => (
+                <option key={s.value} value={s.value}>
+                  {s.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label className={labelCls}>Product Section (where it will show on the website)</label>
+            <select value={section} onChange={(e) => setSection(e.target.value)} className={inputCls}>
+              {SECTIONS.map((s) => (
                 <option key={s.value} value={s.value}>
                   {s.label}
                 </option>

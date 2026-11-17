@@ -25,7 +25,7 @@ export const metadata: Metadata = {
  * format and high wastage.
  */
 export default async function CalculatorPage() {
-  const { products } = await getProducts({ perPage: 500 });
+  const { products } = await getProducts({ sectionTag: "tile", perPage: 500 });
 
   return (
     <>

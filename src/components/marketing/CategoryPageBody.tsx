@@ -72,7 +72,7 @@ function MinimalProductCard({ product, priority }: { product: Product; priority:
 export function CategoryPageBody({
   category,
   related,
-  products = [],
+  products,
 }: {
   category: Category;
   /** Other lines shown in a "keep looking" strip at the bottom. */
@@ -106,7 +106,7 @@ export function CategoryPageBody({
 
       <section className="bg-ink-2 py-24 md:py-32">
         <Container>
-          {products.length > 0 ? (
+          {products !== undefined && products.length > 0 ? (
             <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
               {products.map((product, index) => (
                 <MinimalProductCard
@@ -115,6 +115,22 @@ export function CategoryPageBody({
                   priority={index < 4}
                 />
               ))}
+            </div>
+          ) : products !== undefined ? (
+            <div className="rounded-2xl border border-bone/10 bg-ink p-10 text-center md:p-16">
+              <p className="font-display text-2xl text-bone">
+                New stock for this line is being photographed
+              </p>
+              <p className="mx-auto mt-3 max-w-md text-[15px] leading-relaxed text-bone/70">
+                Everything in {category.name} is stocked at our Bamba Road
+                showroom. Message us for what is available right now.
+              </p>
+              <Link
+                href="/contact"
+                className="mt-8 inline-block rounded-full bg-[#c9a96a] px-6 py-3 text-[11px] uppercase tracking-[0.24em] text-black transition-colors duration-300 hover:bg-ink"
+              >
+                Ask us
+              </Link>
             </div>
           ) : (
             <div className="grid gap-5 sm:grid-cols-2 md:gap-8">

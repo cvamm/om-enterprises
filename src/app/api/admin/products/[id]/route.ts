@@ -55,3 +55,21 @@ export async function PUT(
 
   return Response.json(data);
 }
+
+export async function DELETE(
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  if (!(await getSession())) {
+    return Response.json({ error: "Unauthorized" } as const, { status: 401 });
+  }
+
+  const { id } = await params;
+  const { error } = await supabase.from("products").delete().eq("id", id);
+
+  if (error) {
+    return Response.json({ error: "Failed to delete" } as const, { status: 500 });
+  }
+
+  return Response.json({ success: true });
+}

@@ -53,6 +53,15 @@ export type Shape = "square" | "rectangular" | "hexagonal" | "herringbone" | "ti
 export type StockStatus = "in-stock" | "made-to-order" | "preorder" | "sold-out";
 export type Grade = "aaa" | "aa" | "a" | "b";
 
+export type SectionTag =
+  | "tile"
+  | "tiles-adhesive"
+  | "washing-basins"
+  | "western-toilets"
+  | "mirrors"
+  | "taps"
+  | "miscellaneous";
+
 export type DeliveryPref = "pickup" | "home-delivery" | "site-delivery";
 
 export type EnquirySource =
@@ -103,6 +112,8 @@ export type Product = {
   active: boolean;
   descriptionEn: string | null;
   descriptionHi: string | null;
+  /** Which storefront section this product belongs to. Default "tile". */
+  sectionTag: SectionTag;
   createdAt: string;
   updatedAt: string;
 };

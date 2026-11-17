@@ -1,6 +1,6 @@
 import { cache } from "react";
 import { getServerSupabase } from "@/lib/supabase/server";
-import type { Product, RoomUse } from "@/types";
+import type { Product, RoomUse, SectionTag } from "@/types";
 import { SAMPLE_PRODUCTS } from "@/data/seeds/products.sample";
 import { samplePage, sampleSort } from "@/lib/catalogue/sample";
 import { MATERIAL_IMAGE_MAP } from "@/lib/utils/category-photos";
@@ -31,6 +31,8 @@ export type ProductFilters = {
   finish?: string;
   /** Nominal length in mm. Broad bucket match, not exact. */
   size?: string;
+  /** Filter by the product's section_tag column (tile, washing-basins, etc.) */
+  sectionTag?: string;
   q?: string;
   sort?: ProductSort;
   page?: number;
@@ -45,7 +47,7 @@ const PRODUCT_COLUMNS = `
   room_uses, shape, nominal_dimensions_mm, box_area_sqft, tiles_per_box,
   price_per_box_inr, moq_boxes, grade, stock_status, photo_urls, video_urls,
   featured_rank, description_en, description_hi, default_wastage_pct,
-  active, created_at, updated_at
+  active, created_at, updated_at, section_tag
 `;
 
 /**
@@ -81,6 +83,7 @@ type ProductRow = {
   active: boolean;
   created_at: string;
   updated_at: string;
+  section_tag: SectionTag | null;
 };
 
 /** Sample product keyed by slug so DB rows without photos can fall back. */
@@ -126,6 +129,7 @@ function toProduct(row: ProductRow): Product {
     active: row.active,
     descriptionEn: row.description_en,
     descriptionHi: row.description_hi,
+    sectionTag: row.section_tag ?? "tile",
     createdAt: row.created_at,
     updatedAt: row.updated_at,
   };
@@ -164,6 +168,7 @@ export const getProducts = cache(
       material,
       finish,
       size,
+      sectionTag,
       q,
       sort = "featured",
       page = 1,
@@ -184,6 +189,9 @@ export const getProducts = cache(
     if (origin !== undefined) query = query.eq("origin_id", origin);
     if (material !== undefined) query = query.eq("material_type", material);
     if (finish !== undefined) query = query.eq("finish", finish);
+    if (sectionTag !== undefined && sectionTag !== "") {
+      query = query.eq("section_tag", sectionTag);
+    }
 
     if (q !== undefined && q !== "") {
       // Full-text first; trigram similarity is the fallback for typos and

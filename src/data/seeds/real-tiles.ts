@@ -176,6 +176,7 @@ function makeTile(
     active: true,
     descriptionEn: collection + " collection, 600x1200mm. Price on request.",
     descriptionHi: null,
+    sectionTag: "tile",
     createdAt: "2026-01-30T00:00:00Z",
     updatedAt: "2026-01-30T00:00:00Z",
   };
