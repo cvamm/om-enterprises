@@ -333,10 +333,10 @@
     transform: scale(1.1);
   }
 
-  /* ── Static tile wall. Mobile hero (below 768px) and the desktop fallback
-     on weak connections / reduce-motion render as a dimmed, masked
-     backdrop so the tiles stay visible where the full 3D rig falls back.
-     Costs nothing to download. ─────────────────────────────────────────── */
+  /* ── Static tile wall. Rendered by the static fallback hero (weak
+     connections / reduce-motion) as a dimmed, masked backdrop so the
+     tiles stay visible where the full 3D rig falls back. Costs nothing
+     to download. ───────────────────────────────────────────────────────── */
   .tile-wall {
     position: absolute;
     inset: 0;
@@ -361,8 +361,7 @@
   }
 
   @media (min-width: 768px) {
-    /* Desktop fallback keeps the wider 6-column wall; the static hero is
-       the default experience below 768px. */
+    /* Desktop fallback keeps the wider 6-column wall. */
     .tile-wall {
       grid-template-columns: repeat(6, 1fr);
       gap: 0;
