@@ -33,7 +33,17 @@ export function AdminEditProduct({ productId }: { productId: string }) {
     fetch(`/api/admin/products/${productId}`)
       .then((r) => r.json())
       .then((data) => {
-        setProduct(data);
+        // Normalise nullable fields so the form never renders from a null.
+        const p: Product = {
+          ...data,
+          description_en: data.description_en ?? "",
+          room_uses: Array.isArray(data.room_uses) ? data.room_uses : [],
+          photo_urls: Array.isArray(data.photo_urls) ? data.photo_urls : [],
+          nominal_dimensions_mm: Array.isArray(data.nominal_dimensions_mm)
+            ? data.nominal_dimensions_mm
+            : [0, 0, 0],
+        };
+        setProduct(p);
         setLoading(false);
       })
       .catch(() => setLoading(false));
