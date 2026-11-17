@@ -333,10 +333,10 @@
     transform: scale(1.1);
   }
 
-  /* ── Static tile wall, shown by the fallback hero on weak connections
-     and reduce-motion. Same colorful CSS-gradient tiles as the scroll hero,
-     but rendered as a dimmed, masked backdrop so the tiles stay visible
-     where the full rig falls back. Costs nothing to download. ───────────── */
+  /* ── Static tile wall. Mobile hero (below 768px) and the desktop fallback
+     on weak connections / reduce-motion render as a dimmed, masked
+     backdrop so the tiles stay visible where the full 3D rig falls back.
+     Costs nothing to download. ─────────────────────────────────────────── */
   .tile-wall {
     position: absolute;
     inset: 0;
@@ -352,20 +352,22 @@
     mask-image: linear-gradient(to bottom, #000 55%, transparent 96%);
   }
 
-  @media (min-width: 768px) {
-    .tile-wall {
-      grid-template-columns: repeat(6, 1fr);
-      gap: 0;
-      padding: 0;
-    }
-  }
-
   .tile-wall__cell {
     overflow: hidden;
     background-color: var(--color-ink-2);
     background-size: cover;
     background-position: center;
     aspect-ratio: 1;
+  }
+
+  @media (min-width: 768px) {
+    /* Desktop fallback keeps the wider 6-column wall; the static hero is
+       the default experience below 768px. */
+    .tile-wall {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      padding: 0;
+    }
   }
 
   /* ── Dev-only placeholder, never shipped as content ─────────────────────── */

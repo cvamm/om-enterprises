@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   motion,
   useReducedMotion,
@@ -37,7 +37,20 @@ const SITE_EYEBROW = "KANPUR STONE HOUSE";
 export function HeroGallery() {
   const sectionRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion() ?? false;
+  const [isDesktop, setIsDesktop] = useState(false);
   const [weak, setWeak] = useState(false);
+
+  // Narrow screens always get the static hero: the 4-column slab wall
+  // cannot unfurl inside 100vw. isDesktop stays false on the first
+  // render so the 3D rig never flashes on phones before the media
+  // query resolves.
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    setIsDesktop(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
 
   // Weak connection falls back to the static hero. The scroll animation
   // downloads nothing (gradient tiles + transforms), so 3G is fine; only
@@ -91,7 +104,9 @@ export function HeroGallery() {
   const showroomOpacity = useTransform(spring, [0.72, 1], [0, 1]);
   const showroomScale = useTransform(spring, [0.72, 1], [1.12, 1]);
 
-  if (reduceMotion || weak) return <HeroStatic />;
+  // isDesktop starts false on first render, so the rig never flashes on
+  // phones before the media query resolves — static hero paints instead.
+  if (reduceMotion || weak || !isDesktop) return <HeroStatic />;
 
   // The wall shows the shop's own catalogue tiles (Endless marble + Livenza
   // wood), not painted swatches — the material moment should be their stock.
@@ -188,8 +203,8 @@ export function HeroGallery() {
         >
           <div className="text-center">
             <Eyebrow index="01" label={SITE_EYEBROW} className="mb-7 justify-center" />
-            <h1 className="font-display text-[15vw] leading-[0.95] md:text-[9rem]">Stone</h1>
-            <p className="font-italic-em mt-2 text-2xl text-bone/77 md:text-4xl">
+            <h1 className="font-display text-[13vw] leading-[0.95] md:text-[9rem]">Stone</h1>
+            <p className="font-italic-em mt-3 text-2xl text-bone/77 md:text-4xl">
               kept in Kanpur
             </p>
           </div>
