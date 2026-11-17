@@ -24,6 +24,7 @@ const OTHER_LINKS = [
   { href: "/washing-basins", label: "Washing Basins" },
   { href: "/tiles-adhesive", label: "Tiles Adhesive" },
   { href: "/western-toilets", label: "Western Toilets" },
+  { href: "/taps", label: "Taps" },
   { href: "/miscellaneous", label: "Miscellaneous" },
 ] as const;
 
