@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import {
   motion,
   useReducedMotion,
@@ -29,6 +29,12 @@ const SITE_EYEBROW = "KANPUR STONE HOUSE";
  *   0.30 -> 0.80 mid-scroll statement
  *   0.84 -> 1.00 hand-off line
  *
+ * Mobile tuning: on narrow viewports (< 768px) the 4-column slab wall
+ * cannot survive a steep -45deg rotateY without spilling past 100vw,
+ * so the 3D rig runs at flatter angles (rotateY -30 -> -6, rotateX
+ * 15 -> 2, rotateZ 8 -> 1) so the wall fits inside the viewport
+ * throughout the scroll. Desktops keep the original drama.
+ *
  * Built with framer-motion DOM transforms rather than Three.js. The transform
  * math is a CSS 3D hierarchy, so a WebGL context on the LCP path would add a
  * 300-500KB lazy chunk plus GPU work on a Moto G over 4G for no expressive
@@ -37,20 +43,8 @@ const SITE_EYEBROW = "KANPUR STONE HOUSE";
 export function HeroGallery() {
   const sectionRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion() ?? false;
-  const [isDesktop, setIsDesktop] = useState(false);
   const [weak, setWeak] = useState(false);
-
-  // Narrow screens always get the static hero: the 4-column slab wall
-  // cannot unfurl inside 100vw. isDesktop stays false on the first
-  // render so the 3D rig never flashes on phones before the media
-  // query resolves.
-  useEffect(() => {
-    const mq = window.matchMedia("(min-width: 768px)");
-    setIsDesktop(mq.matches);
-    const onChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Weak connection falls back to the static hero. The scroll animation
   // downloads nothing (gradient tiles + transforms), so 3G is fine; only
@@ -60,6 +54,16 @@ export function HeroGallery() {
     if (conn && (conn.saveData || conn.effectiveType === "2g")) {
       setWeak(true);
     }
+  }, []);
+
+  // Track narrow viewports so the 3D rig can use flatter angles on phones.
+  // The animation still runs on mobile — we just fit the geometry to 100vw.
+  useLayoutEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -74,10 +78,13 @@ export function HeroGallery() {
   const bannerHeight = useTransform(spring, (v) => `${80 + v * 20}vh`);
   const borderRadius = useTransform(spring, (v) => `${48 - v * 48}px`);
 
-  // The 3D matrix settles between 15% and 60%.
-  const rotateY = useTransform(spring, [0.15, 0.6], [-45, -8]);
-  const rotateX = useTransform(spring, [0.15, 0.6], [25, 4]);
-  const rotateZ = useTransform(spring, [0.15, 0.6], [15, 2]);
+  // The 3D matrix settles between 15% and 60%. Mobile uses a flatter
+  // angle: on a narrow screen the 4-column slab wall can't survive a
+  // steep -45deg rotateY without spilling past 100vw, so phones start
+  // at -30/15/8 and settle at -6/2/1. Desktops keep the original drama.
+  const rotateY = useTransform(spring, [0.15, 0.6], [isMobile ? -30 : -45, isMobile ? -6 : -8]);
+  const rotateX = useTransform(spring, [0.15, 0.6], [isMobile ? 15 : 25, isMobile ? 2 : 4]);
+  const rotateZ = useTransform(spring, [0.15, 0.6], [isMobile ? 8 : 15, isMobile ? 1 : 2]);
 
   // Four columns parallaxing on Y at different rates.
   const colY = [
@@ -104,9 +111,7 @@ export function HeroGallery() {
   const showroomOpacity = useTransform(spring, [0.72, 1], [0, 1]);
   const showroomScale = useTransform(spring, [0.72, 1], [1.12, 1]);
 
-  // isDesktop starts false on first render, so the rig never flashes on
-  // phones before the media query resolves — static hero paints instead.
-  if (reduceMotion || weak || !isDesktop) return <HeroStatic />;
+  if (reduceMotion || weak) return <HeroStatic />;
 
   // The wall shows the shop's own catalogue tiles (Endless marble + Livenza
   // wood), not painted swatches — the material moment should be their stock.
@@ -116,7 +121,10 @@ export function HeroGallery() {
     <section ref={sectionRef} className="relative h-[560vh] bg-ink">
       <div
         className="sticky top-0 h-[100svh] overflow-hidden"
-        style={{ perspective: "1600px", perspectiveOrigin: "50% 42%" }}
+        style={{
+          perspective: isMobile ? "900px" : "1600px",
+          perspectiveOrigin: "50% 42%",
+        }}
       >
         {/* Showroom photo. Reveals as the tile wall melts away at the end of
             the scroll — a real Indian slab yard, dimmed with a wash. */}
@@ -202,9 +210,9 @@ export function HeroGallery() {
           className="absolute inset-0 z-[4] flex items-center justify-center px-5"
         >
           <div className="text-center">
-            <Eyebrow index="01" label={SITE_EYEBROW} className="mb-7 justify-center" />
+            <Eyebrow index="01" label={SITE_EYEBROW} className="mb-6 justify-center" />
             <h1 className="font-display text-[13vw] leading-[0.95] md:text-[9rem]">Stone</h1>
-            <p className="font-italic-em mt-3 text-2xl text-bone/77 md:text-4xl">
+            <p className="font-italic-em mt-3 text-xl text-bone/77 md:text-4xl">
               kept in Kanpur
             </p>
           </div>
@@ -242,7 +250,7 @@ export function HeroGallery() {
 }
 
 /**
- * Static hero used on mobile, `prefers-reduced-motion`, and weak connections.
+ * Static hero used on `prefers-reduced-motion` and weak connections.
  * Same voice, no scroll rig: the LCP element is then a plain <h1>.
  *
  * It still carries the signature tile wall, dimmed and masked, so the brand's
